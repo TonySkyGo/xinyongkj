@@ -70,6 +70,33 @@ jQuery.validator.addMethod("isMobile", function(value, element) {
     return this.optional(element) || (length == 11 && mobile.test(value));
 }, "请正确填写您的手机号码");
 
+jQuery.validator.addMethod("isProvince", function(value, element) {
+    var isProvince=false
+    if(value=="省份")
+    	isProvince = false;
+    else 
+    	isProvince = true;
+    return this.optional(element) || (isProvince == true);
+}, "请选择省份");
+
+jQuery.validator.addMethod("isCity", function(value, element) {
+    var isCity=false
+    if(value=="地级市")
+    	isCity = false;
+    else 
+    	isCity = true;
+    return this.optional(element) || (isCity == true);
+}, "请选择地级市");
+
+jQuery.validator.addMethod("isArea", function(value, element) {
+    var isArea=false
+    if(value=="市、县级市")
+    	isArea = false;
+    else 
+    	isArea = true;
+    return this.optional(element) || (isArea == true);
+}, "请选择县级市或区");
+
 $(function () {
 	topExpend();
 	watchClassification();

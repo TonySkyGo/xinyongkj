@@ -400,11 +400,22 @@
 .qysx-item label.error{
 	color: #E60012;
 	padding-left: 24px;
-	height: 36px;
-	line-height: 36px;
+	height: auto;
+	line-height: 16px;
 	width: 200px;
 	background: url(../img/personal/icon_cuowu.png) no-repeat left center;
 	position: absolute;
 	top:0px;
-	left: 320px;
+	left: 500px;
+}
+.submit-items-chandi label.error{
+	display: inline-block;
+	color: #E60012;
+	padding-left: 24px;
+	height: auto;
+	line-height: 16px;
+	width: 150px;
+	margin-left: 20px;
+	background: url(../img/personal/icon_cuowu.png) no-repeat left center;
+	vertical-align: middle;
 }
