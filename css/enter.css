@@ -337,7 +337,7 @@
 	/*margin-left: 30px;*/
 	border: none;
 	outline: none;
-	background: #fff url(../img/personal/add-picture.png) no-repeat left top;
+	background: #fff url(../img/enter/add-picture.png) no-repeat left top;
 }
 .submit-bottom{
 	padding-bottom: 134px;
@@ -392,7 +392,7 @@
 	line-height: 36px;
 	width: 200px;
 	margin-left: 20px;
-	background: url(../img/personal/icon_cuowu.png) no-repeat left center;
+	background: url(../img/enter/icon_cuowu.png) no-repeat left center;
 }
 .seller-information label.error{
 	vertical-align:top;
@@ -403,10 +403,10 @@
 	height: auto;
 	line-height: 16px;
 	width: 200px;
-	background: url(../img/personal/icon_cuowu.png) no-repeat left center;
+	background: url(../img/enter/icon_cuowu.png) no-repeat left center;
 	position: absolute;
 	top:0px;
-	left: 500px;
+	left: 608px;
 }
 .submit-items-chandi label.error{
 	display: inline-block;
@@ -416,6 +416,65 @@
 	line-height: 16px;
 	width: 150px;
 	margin-left: 20px;
-	background: url(../img/personal/icon_cuowu.png) no-repeat left center;
+	background: url(../img/enter/icon_cuowu.png) no-repeat left center;
 	vertical-align: middle;
+}
+
+/*上传附件照片*/
+.addPictureTitle{
+	border-bottom: 1px solid #E6E6E6;
+}
+.addPictureTitleText{
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 64px;
+	background: #35d198;
+	
+}
+.picture-part{
+	
+}
+.picture-wrap{
+	padding: 0 64px;
+}
+.picture-notice{
+	font-size: 14px;
+	color: #333;
+	height: 36px;
+	line-height: 44px;
+}
+.picture-items{
+	padding: 0 20px;
+}
+.picture-item{
+	float: left;
+	width: 344px;
+	height: 258px;
+	padding-top: 26px;
+	position: relative;
+}
+.picture-img{
+	display: block;
+	width: 240px;
+	height: 150px;
+	margin: 0 auto;
+}
+.picture-text{
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+	margin-top: 30px;
+}
+.picture-close{
+	width: 14px;
+	height: 14px;
+	background: url(../img/enter/delete.png) no-repeat left top;
+	position: absolute;
+	right: 60px;
+	top: 30px;
+	cursor: pointer;
 }

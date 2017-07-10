@@ -17,7 +17,7 @@
 		<div class="container container-bg-color clear">	
 			<div class="sellerAppication">
 				<div class="statusBar">
-					<img class="statusNow" src="img/personal/process001.png" alt="" />
+					<img class="statusNow" src="img/enter/process001.png" alt="" />
 				</div>
 				<h4 class="pageTitle">供应商入驻资料填写</h4>
 				<div class="submit-contents">
@@ -55,8 +55,8 @@
 							</div>
 							<div class="submit-items qysx-item">
 								<label class="submit-label"><span>*</span>申请会员类型:</label>
-								<label for="member-type1" class="sellertype-item first-item"><input type="radio" name="memberType" id="member-type1" class="seller-type"/>&nbsp;高级企业会员</label>
-								<label for="member-type2" class="sellertype-item"><input type="radio" name="memberType" id="member-type2" class="seller-type"/>&nbsp;授信企业会员</label>
+								<label for="member-type1" class="sellertype-item first-item"><input type="radio" name="memberType" id="member-type1" class="seller-type" checked="checked"  disabled="disabled"/>&nbsp;高级企业会员</label>
+								<label for="member-type2" class="sellertype-item"><input type="radio" name="memberType" id="member-type2" class="seller-type" disabled="disabled"/>&nbsp;授信企业会员</label>
 							</div>
 							<div class="optional-item">
 								<div class="submit-items submit-item-chanye">
@@ -116,8 +116,8 @@
 							<p class="submit-text">2.授信企业会员年费 6300元/类 （入驻后6-12个月内累计平台营业额达1000万以上方可申请）</p>
 							<p class="submit-text">&nbsp;&nbsp;（注：品牌商/制造商按品牌分类收费；服务商按企业收费）</p>
 							<p class="submit-subtitle">增值服务</p>
-							<label for="add-server1" class="" class="add-server"><input type="radio" name="add-server" id="add-server1" class=""/>技术服务 6000元/年 （含20个品类以内的细分产品，一年三次的升级服务）</label>
-							<label for="add-server2" class="add-server"><input type="radio" name="add-server" id="add-server2" class=""/>品牌卖场专卖店 18000元/年  （含50个品类以内的细分产品，一年五次的升级服务）</label>
+							<label for="add-server1" class="" class="add-server"><input type="checkbox" name="add-server1" id="add-server1" class=""/>&nbsp;技术服务 6000元/年 （含20个品类以内的细分产品，一年三次的升级服务）</label>
+							<label for="add-server2" class="add-server"><input type="checkbox" name="add-server2" id="add-server2" class=""/>&nbsp;品牌卖场专卖店 18000元/年  （含50个品类以内的细分产品，一年五次的升级服务）</label>
 							<p  class="submit-text">&nbsp;&nbsp;（注：以上服务内容以服务协议内容为准）</p>
 							<p class="submit-subtitle">账户信息：</p>
 							<p class="submit-text">公司名：信用空间（厦门）信息科技股份有限公司</p>
@@ -147,15 +147,21 @@
 
     $(function(){
 
-		$(function() {
 		    $("#datepicker").datepicker();
-		  });
-
 
         _init_area();
 
         $(".fancybox").fancybox();
 
+
+		if(($("input[id='seller-type1']").is(":checked"))||$("input[id='seller-type2']").is(":checked"))
+		{
+			sellerType1Click();
+		}
+		if($("input[id='seller-type3']").is(":checked"))
+		{
+			sellerType3Click();
+		}
 //      $(".add-photo").click(function(){
 ////					insertPhoto();
 //          $(".inputFile").click();
@@ -174,7 +180,6 @@
                 servicePrice: {required: true},
                 yewu: {required: true},
                 sellerType:{required: true},
-                memberType:{required: true},
                 sProvince:{isProvince:true},
                 sCity:{isCity:true},
                 sCounty:{isArea:true}
@@ -191,12 +196,18 @@
                 goodsPrice: {required: "请填写商品价格"},
                 servicePrice: {required: "请填写服务价格"},
                 yewu: {required: "请填写主营业务"},
-                sellerType:{required: "请选择企业属性"},
-                memberType:{required: "请选择会员类型"}
+                sellerType:{required: "请选择企业属性"}
             }
        });
         
         $("#seller-type1,#seller-type2").click(function(){
+        	sellerType1Click();
+        });
+        $("#seller-type3").click(function(){
+        	sellerType3Click();
+        })
+        
+        function sellerType1Click(){
         	$(".optional-item").show();
         	$(".submit-item-chanye").show();
         	$(".submit-items-chandi").show();
@@ -206,8 +217,8 @@
         	$(".submit-items-yewu").hide();
 //      	$(".submit-items-zizhi").hide();
         	$(".service-price-item").hide();
-        });
-        $("#seller-type3").click(function(){
+        }
+        function sellerType3Click(){
         	$(".optional-item").show();
         	$(".submit-items-yewu").show();
 //      	$(".submit-items-zizhi").show();
@@ -217,7 +228,7 @@
         	$(".submit-items-chandi").hide();
 //      	$(".zizhis").hide();
         	$(".product-price-item").hide();
-        })
+        }
     })
 
 //  function insertPhoto(){
