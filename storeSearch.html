@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>店铺搜索列表</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/yixin.css">
+    <link rel="stylesheet" href="css/pack.css">
+</head>
+<body>
+
+<div class="container clear">
+    <div class="bread-con">
+        全部结果&gt;&nbsp;“衣服”, 共找到 <span class="active">4</span> 家店铺
+    </div>
+    <div class="clear">
+        <div class="shop-div">
+            <a class="shop-img" href="#"><img src="img/home/good2.png"></a>
+            <div class="shop-content fl">
+                <a href="#" class="shop-name" title="哪里淘免购旗舰店">哪里淘免购旗舰店</a>
+                <p class="shop-introduction">简介：小米官方授权，手机、智能硬件小米官方授权，手机、智能硬件</p>
+                <p class="shop-address">福建 厦门</p>
+                <p class="shop-follow"></p>
+                <p class="shop-follow2 disnone"></p>
+            </div>
+            <div class="shopproduct">
+                <div class="shop-product">
+                    <a class="shopproduct-img"><img src="img/home/good2.png"> </a>
+                    <p class="shopprice">¥ 785.51</p>
+                </div>
+                <div class="shop-product">
+                    <a class="shopproduct-img"><img src="img/home/good2.png"> </a>
+                    <p class="shopprice">¥ 785.51</p>
+                </div>
+                <div class="shop-product">
+                    <a class="shopproduct-img"><img src="img/home/good2.png"> </a>
+                    <p class="shopprice">¥ 785.51</p>
+                </div>
+                <div class="shop-product">
+                    <a class="shopproduct-img"><img src="img/home/good2.png"> </a>
+                    <p class="shopprice">¥ 785.51</p>
+                </div>
+                <div class="shop-product">
+                    <a class="shopproduct-img"><img src="img/home/good2.png"> </a>
+                    <p class="shopprice">¥ 785.51</p>
+                </div>
+                <a class="shopmore fr" href="#"></a>
+            </div>
+            <p class="store-bg"></p>
+            <div class="cancel-store">
+                <p class="cancel-p"></p>
+                <p style="text-align: center;">
+                    <span class="cancel-pas cancel-close">取消</span>
+                    <a href="#" class="cancel-pas">确定</a>
+                </p>
+            </div>
+        </div>
+        <div class="shop-div">
+            <a class="shop-img" href="#"><img src="img/home/good2.png"></a>
+            <div class="shop-content fl">
+                <a href="#" class="shop-name" title="哪里淘免购旗舰店">哪里淘免购旗舰店</a>
+                <p class="shop-introduction">简介：小米官方授权，手机、智能硬件小米官方授权，手机、智能硬件</p>
+                <p class="shop-address">福建 厦门</p>
+                <p class="shop-follow disnone"></p>
+                <p class="shop-follow2"></p>
+            </div>
+            <div class="shopproduct">
+                <div class="shop-product">
+                    <a class="shopproduct-img"><img src="img/home/good2.png"> </a>
+                    <p class="shopprice">¥ 785.51</p>
+                </div>
+                <div class="shop-product">
+                    <a class="shopproduct-img"><img src="img/home/good2.png"> </a>
+                    <p class="shopprice">¥ 785.51</p>
+                </div>
+                <div class="shop-product">
+                    <a class="shopproduct-img"><img src="img/home/good2.png"> </a>
+                    <p class="shopprice">¥ 785.51</p>
+                </div>
+                <div class="shop-product">
+                    <a class="shopproduct-img"><img src="img/home/good2.png"> </a>
+                    <p class="shopprice">¥ 785.51</p>
+                </div>
+                <div class="shop-product">
+                    <a class="shopproduct-img"><img src="img/home/good2.png"> </a>
+                    <p class="shopprice">¥ 785.51</p>
+                </div>
+                <a class="shopmore fr" href="#"></a>
+            </div>
+            <p class="store-bg"></p>
+            <div class="cancel-store">
+                <p class="cancel-p"></p>
+                <p style="text-align: center;">
+                    <span class="cancel-pas cancel-close">取消</span>
+                    <a href="#" class="cancel-pas">确定</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <form class="pagination-con">
+            <a href="" class="count">上一页</a>
+            <span class="count-none">上一页</span>
+            <a href="" class="count">1</a>
+            <a href="" class="count check">2</a>
+            <a href="" class="count">3</a>
+            <a href="" class="count">4</a>
+            <a href="" class="count">5</a>
+            <a href="" class="count">下一页</a>
+            <span class="count-none">下一页</span>
+            <span class="count-total">共&nbsp;15&nbsp;页</span>
+            <span class="count-topage">到第<input type="text" class="count-page" name="page">页</span>
+            <input type="submit" class="count-submit" value="确定">
+        </form>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    //收藏
+    $(".shop-follow").click(function () {
+        $(this).parents(".shop-div").find(".cancel-p").html("确定收藏？");
+        $(this).parents(".shop-div").addClass("container-product-close");
+    });
+    //取消收藏
+    $(".shop-follow2").click(function () {
+        $(this).parents(".shop-div").find(".cancel-p").html("确定取消收藏？");
+        $(this).parents(".shop-div").addClass("container-product-close");
+    });
+    //取消（取消收藏）
+    $(".cancel-close").click(function () {
+        $(this).parents(".shop-div").removeClass("container-product-close");
+    });
+</script>
+</body>
+</html>

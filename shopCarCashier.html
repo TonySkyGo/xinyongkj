@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>购物车购买成功</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/yixin.css">
+    <link rel="stylesheet" href="css/pack.css">
+</head>
+<body>
+<div class="login-header">
+    <div class="login-header-con">
+        <img src="img/login/logo.png" alt="" class="login-header-img">
+        <span class="regist-hint">收银台</span>
+        <!--3个状态 status1 2 3-->
+        <img src="img/shopcar/shopStatus3.png" alt="" class="car-status">
+    </div>
+</div>
+<div class="container">
+    <div class="pay-middle">
+        <div class="pay-info">
+            <span class="pay-merge2">订单提交成功，请您尽快付款！ 订单号：39367934823</span>
+            <span class="pay-merge3">订单详情</span>
+            <span class="pay-refresh"></span>
+            <span class="pay-total">应付金额：<span>￥ 1410.00</span></span>
+        </div>
+        <div class="pay-detail">
+            <table class="pay-table">
+                <tr>
+                    <td class="pay-td">订单名称</td>
+                    <td class="pay-td">店铺</td>
+                    <td class="pay-td">金额</td>
+                </tr>
+                <tr>
+                    <td class="pay-title">
+                        <p class="pay-caption">123132</p>
+                        <p class="pay-sort">123132</p>
+                    </td>
+                    <td rowspan="2">店铺</td>
+                    <td rowspan="2">
+                        <p>￥700.00</p>
+                        <p>（运费：10.00）</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="pay-title">
+                        <p class="pay-caption">123132</p>
+                        <p class="pay-sort">123132</p>
+                    </td>
+                </tr>
+            </table>
+            <table class="pay-table">
+                <tr>
+                    <td class="pay-title">
+                        <p class="pay-caption">123132</p>
+                        <p class="pay-sort">123132</p>
+                    </td>
+                    <td>店铺</td>
+                    <td>
+                        <p>￥700.00</p>
+                        <p>（运费：10.00）</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <form action="" id="payform">
+            <div class="pay-bottom">
+                <div class="pay-password-con">
+                    <span class="pay-passleft">请选择支付方式：</span>
+                </div>
+                <div class="pay-way-con">
+                    <div class="pay-way">
+                        <img src="img/shopcar/pay-alipay.png" alt="">
+                        <span>支付宝支付</span>
+                    </div>
+                    <div class="pay-way">
+                        <img src="img/shopcar/pay-wechat.png" alt="">
+                        <span>微信支付</span>
+                    </div>
+                    <div class="pay-way">
+                        <img src="img/shopcar/pay-ecoin.png" alt="">
+                        <span>e币支付</span>
+                    </div>
+                    <div class="pay-way">
+                        <img src="img/shopcar/pay-bankcard.png" alt="">
+                        <span>银行卡支付</span>
+                    </div>
+                </div>
+            </div>
+            <div class="payment">
+                <input type="hidden" name="type" id="type" value=""/>
+                <input type="submit" class="payment-submit" value="确认支付">
+                <div class="payment-left"><span class="payment-fact">实际应付金额：<span class="payment-price">￥1410.00</span></span></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    //展开订单详情
+    $('.pay-merge3').on('click', function () {
+        $(this).toggleClass("check");
+        $('.pay-detail').slideToggle();
+    });
+    //选择支付方式
+    $('.pay-way').on('click', function () {
+        var i = $(this).index() + 1;
+        $("#type").val(i);
+        $(this).addClass('check').siblings().removeClass('check');
+    });
+</script>
+</body>
+</html>

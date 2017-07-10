@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>登录</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/yixin.css">
+    <link rel="stylesheet" href="css/pack.css">
+</head>
+<body>
+<div class="login-header">
+    <div class="login-header-con">
+        <img src="img/login/logo.png" alt="" class="login-header-img">
+        <span class="login-hint">Hi，欢迎来到信用空间商城</span>
+    </div>
+</div>
+<div class="login-banner">
+    <a href="" class="login-banner-img" style="background-image: url('img/login/pic_bg.png')"></a>
+    <div class="login-con">
+        <div class="login-scan-con">
+            <div class="login-tel-head">手机扫码，安全登录</div>
+            <img src="img/login/qrcode.jpg" alt="" class="login-code">
+            <p class="login-free">还没有信用空间账号？ <a href="" class="active">免费注册</a></p>
+            <span class="login-way">手机登录</span>
+            <span class="login-way">|</span>
+            <span class="login-way">密码登录</span>
+            <div class="login-pc"></div>
+        </div>
+        <div class="login-tel-con disnone">
+            <div class="login-tel-head clear">
+                <span class="login-mode login-tel hover active">手机登录</span>
+                <span class="login-mode-border">|</span>
+                <span class="login-mode login-secret hover">密码登录</span>
+            </div>
+            <form class="login-code-con" id="valiForm">
+                <input type="text" class="login-input" name="user" placeholder="请输入手机号">
+                <div class="vali-con">
+                    <input type="text" class="login-input" name="vali" placeholder="请输入手机验证码">
+                    <button type="button" class="vali-btn">获取验证码</button>
+                </div>
+                <div class="vali-con">
+                    <input type="text" class="login-input" name="code" placeholder="请输入验证码">
+                    <img src="img/login/icon_jinggao.png" alt="" class="vali-btn">
+                </div>
+                <div class="login-error"></div>
+                <input type="submit" class="login-submit" value="登录"/>
+                <p class="login-free">还没有信用空间账号？ <a href="" class="active">免费注册</a> <a href="" class="login-forget-pwd">忘记密码？</a>
+                </p>
+            </form>
+            <div class="login-wap"></div>
+        </div>
+        <div class="login-secret-con disnone">
+            <div class="login-tel-head clear">
+                <span class="login-mode login-tel hover active">手机登录</span>
+                <span class="login-mode-border">|</span>
+                <span class="login-mode login-secret hover">密码登录</span>
+            </div>
+            <form class="login-code-con" id="pwdForm">
+                <input type="text" class="login-input" name="user" placeholder="请输入手机号">
+                <input type="password" class="login-input" name="pwd" placeholder="请输入密码">
+                <div class="vali-con">
+                    <input type="text" class="login-input" name="code" placeholder="请输入验证码">
+                    <img src="img/login/icon_jinggao.png" alt="" class="vali-btn">
+                </div>
+                <div class="login-error"></div>
+                <input type="submit" class="login-submit" value="登录"/>
+                <p class="login-free">还没有信用空间账号？ <a href="" class="active">免费注册</a> <a href="" class="login-forget-pwd">忘记密码？</a>
+                </p>
+            </form>
+            <div class="login-wap"></div>
+        </div>
+    </div>
+</div>
+<div class="login-footer">Copyright©2017-2020信用空间</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    $(function () {
+        //聚焦添加边框高亮
+        $(".login-input").focus(function (e) {
+            $(this).addClass("outline");
+        });
+        $(".login-input").blur(function () {
+            $(this).removeClass("outline");
+        });
+        //切换手机、密码登录
+        $(".login-tel").on("click", function () {
+            $(".login-tel-con").show().siblings().hide();
+        });
+        $(".login-secret").on("click", function () {
+            $(".login-secret-con").show().siblings().hide();
+        });
+        $(".login-pc").on("click", function () {
+            $(".login-tel-con").show().siblings().hide();
+        });
+        $(".login-wap").on("click", function () {
+            $(".login-scan-con").show().siblings().hide();
+        });
+        $("#pwdForm").validate({
+            rules: {
+                user: {required: true},
+                pwd: {required: true},
+                code: {required: true}
+            },
+            messages: {
+                user: {required: "请输入手机号"},
+                pwd: {required: "请输入密码"},
+                code: {required: "请输入验证码"}
+            },
+            groups: {
+                username: "user pwd code"
+            },
+            errorPlacement: function (error, element) {
+                console.log(element);
+                if (element.attr("name") == "user" || element.attr("name") == "pwd" || element.attr("name") == "code") {
+                    error.appendTo(".login-error");//查找到符合groups封好的属性组，就添加到某个div下方
+                }
+                else {
+                    error.appendTo(element);//否则直接插入到当前元素后面
+                }
+            }
+        });
+        $("#valiForm").validate({
+            rules: {
+                user: {required: true},
+                vali: {required: true},
+                code: {required: true}
+            },
+            messages: {
+                user: {required: "请输入手机号"},
+                vali: {required: "请输入手机验证码"},
+                code: {required: "请输入验证码"}
+            },
+            groups: {
+                username: "user vali code"
+            },
+            errorPlacement: function (error, element) {
+                console.log(element);
+                if (element.attr("name") == "user" || element.attr("name") == "vali" || element.attr("name") == "code") {
+                    error.appendTo(".login-error");//查找到符合groups封好的属性组，就添加到某个div下方
+                    return;
+                }
+                else {
+                    console.log(111);
+                    return;
+                    error.appendTo(element);//否则直接插入到当前元素后面
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

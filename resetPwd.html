@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>找回密码</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/yixin.css">
+    <link rel="stylesheet" href="css/pack.css">
+</head>
+<body>
+<div class="login-header">
+    <div class="login-header-con">
+        <img src="img/login/logo.png" alt="" class="login-header-img">
+        <span class="regist-hint">找回密码</span>
+        <a href="" class="regist-login"><span class="regist-already">已有账号，</span>我要登录</a>
+    </div>
+</div>
+
+<div class="regist-body">
+    <form class="regist-con" id="resetForm">
+        <div class="regist-cont">
+            <span class="regist-key">中国+86</span>
+            <input type="text" name="tel" class="regist-value" placeholder="请输入手机号"/>
+            <span class="regist-must">* 必填</span>
+        </div>
+        <div class="regist-cont">
+            <span class="regist-key">手机验证码</span>
+            <input type="text" name="code" class="regist-value" placeholder="请输入手机验证码"/>
+            <button type="button" class="get-telcode">获取验证码</button>
+            <!--获取验证码倒计时-->
+            <!--<button type="button" class="get-telcode wait-telcode">60s</button>-->
+            <span class="regist-must">* 必填</span>
+        </div>
+        <div class="regist-cont">
+            <span class="regist-key">设置新密码</span>
+            <input type="password" name="pwd" class="regist-value" placeholder="请输入密码"/>
+            <p class="regist-move">建议使用字母、数字和符号两种及以上胡组合，6－20个字符</p>
+            <span class="regist-must">* 必填</span>
+        </div>
+        <div class="regist-cont">
+            <span class="regist-key">确认新密码</span>
+            <input type="password" name="correctpwd" class="regist-value" placeholder="请再次输入密码"/>
+            <p class="regist-move">请再次输入密码</p>
+            <span class="regist-must">* 必填</span>
+        </div>
+        <input type="submit" class="regist-submit" value="完成" style="margin-top: 46px;"/>
+    </form>
+</div>
+
+<div class="login-footer">Copyright©2017-2020信用空间</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    $(function () {
+        //聚焦显示提示
+        $(".regist-value").focus(function () {
+           $(this).siblings(".regist-move").show();
+        });
+        $(".regist-value").blur(function () {
+            $(this).siblings(".regist-move").hide();
+        });
+        $("#resetForm").validate({
+            rules: {
+                tel: {required: true},
+                code: {required: true},
+                pwd: {required: true},
+                correctpwd: {required: true,equalTo: "pwd"}
+            },
+            messages: {
+                tel: {required: "请输入手机号"},
+                code: {required: "请输入手机验证码"},
+                pwd: {required: "请输入密码"},
+                correctpwd: {required: "请输入确认密码",equalTo: "两次密码输入不一致"}
+            }
+        });
+    });
+</script>
+</body>
+</html>
