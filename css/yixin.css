@@ -358,9 +358,10 @@
 }
 
 /*宝贝、店铺搜索*/
-.bread-con{
+.bread-con {
     margin-top: 20px;
 }
+
 .search-choose-con {
     margin: 20px 0;
 }
@@ -424,6 +425,7 @@
 .search-operate.check {
     background: url("../img/search/searchshrink.png");
 }
+
 .search-condition {
     height: 50px;
     margin: 20px auto;
@@ -466,7 +468,7 @@
     color: #333333;
 }
 
-.search-submit{
+.search-submit {
     float: left;
     width: 60px;
     height: 32px;
@@ -1381,15 +1383,17 @@
 }
 
 /*开通店铺*/
-.store-open{
+.store-open {
     text-align: center;
 }
-.open-must{
+
+.open-must {
     line-height: 160px;
     font-size: 20px;
     color: #666;
 }
-.open-step{
+
+.open-step {
 
 }
 
@@ -1647,7 +1651,7 @@
     background-color: #dbdbdb;
 }
 
-.icon-exit{
+.icon-exit {
     float: right;
     width: 26px;
     height: 26px;
@@ -1657,7 +1661,7 @@
     cursor: pointer;
 }
 
-.icon-exit:hover{
+.icon-exit:hover {
     background-color: #e60012;
 }
 
@@ -2110,7 +2114,7 @@
     border: 1px solid #e6e6e6;
 }
 
-.apply-img-con img{
+.apply-img-con img {
     width: 100%;
     height: 100%;
 }
@@ -2135,7 +2139,7 @@
     cursor: pointer;
 }
 
-.apply-upload input{
+.apply-upload input {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -2144,7 +2148,7 @@
     cursor: pointer;
 }
 
-.apply-submit{
+.apply-submit {
     width: 110px;
     line-height: 42px;
     margin-left: 105px;
@@ -2155,7 +2159,7 @@
     cursor: pointer;
 }
 
-.apply-explain{
+.apply-explain {
     float: left;
     margin: 0 10px;
     padding: 6px 0;
@@ -2164,12 +2168,12 @@
     color: #4d4d4d;
 }
 
-.apply-img-count{
+.apply-img-count {
     color: #f95555;
 }
 
 /*售后申请成功*/
-.success-info{
+.success-info {
     padding-top: 180px;
     font-size: 24px;
     color: #4c4c4c;
@@ -2189,32 +2193,32 @@
     border-left: 1px solid #e6e6e6;
 }
 
-.message-con{
+.message-con {
     padding: 10px 30px;
     line-height: 30px;
     color: #666;
-    border:1px solid #e6e6e6;
+    border: 1px solid #e6e6e6;
 }
 
-.message-img{
+.message-img {
     margin: 20px 0 10px 0;
     overflow: hidden;
 }
 
-.message-img img{
+.message-img img {
     float: left;
     width: 60px;
     height: 60px;
     margin-right: 20px;
 }
 
-.message-word{
+.message-word {
     line-height: 48px;
     text-indent: 30px;
     color: #666;
 }
 
-.message-text{
+.message-text {
     width: 100%;
     height: 90px;
     line-height: 20px;
@@ -2223,7 +2227,7 @@
     border: 1px solid #e6e6e6;
 }
 
-.reply-submit{
+.reply-submit {
     width: 110px;
     line-height: 42px;
     margin-top: 10px;
@@ -2244,7 +2248,7 @@
     margin: 20px 17px 0 0;
 }
 
-.container-product:nth-child(5n){
+.container-product:nth-child(5n) {
     margin-right: 0;
 }
 
@@ -2310,7 +2314,7 @@
     cursor: pointer;
 }
 
-.cancel-close{
+.cancel-close {
     color: #333;
     background: #fff;
 }
@@ -2409,7 +2413,7 @@
     cursor: pointer;
 }
 
-.shop-follow2{
+.shop-follow2 {
     width: 66px;
     height: 24px;
     padding-left: 33px;
@@ -2453,7 +2457,6 @@
     background: url(../img/center/storemore.png) center center no-repeat;
 }
 
-
 /*店铺设置*/
 .storeset-con {
     margin-bottom: 10px;
@@ -2466,7 +2469,7 @@
     text-align: center;
 }
 
-.storeset-input{
+.storeset-input {
     float: left;
     width: 300px;
     height: 32px;
@@ -2484,7 +2487,7 @@
     cursor: pointer;
 }
 
-.storeset-upload input{
+.storeset-upload input {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -2502,7 +2505,7 @@
     cursor: pointer;
 }
 
-.banner-upload input{
+.banner-upload input {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -2520,7 +2523,7 @@
     border: 1px solid #999;
 }
 
-.banner-img-con img{
+.banner-img-con img {
     width: 100%;
     height: 100%;
 }
@@ -2536,7 +2539,7 @@
     cursor: pointer;
 }
 
-.storeset-submit{
+.storeset-submit {
     width: 110px;
     line-height: 42px;
     margin-left: 130px;
@@ -2548,20 +2551,23 @@
 }
 
 /*购物车*/
-.car-status{
+.car-status {
     float: right;
     margin: 36px 20px;
 }
-.back-index{
+
+.back-index {
     display: block;
     line-height: 30px;
     color: #e60012;
 }
+
 .shop-prosit {
     line-height: 100px;
     font-size: 24px;
     color: #4c4c4c;
 }
+
 .shop-back {
     display: block;
     width: 200px;
@@ -2611,7 +2617,7 @@
     background: url("../img/shopcar/spread.png") right center no-repeat;
 }
 
-.pay-merge3.check{
+.pay-merge3.check {
     background: url("../img/shopcar/shrink.png") right center no-repeat;
 }
 
@@ -2648,7 +2654,7 @@
     border-bottom: 1px solid #ccc;
 }
 
-.pay-table:last-child{
+.pay-table:last-child {
     border: none;
 }
 
@@ -2715,17 +2721,17 @@
     border: 1px dashed #ccc;
 }
 
-.pay-way.check{
+.pay-way.check {
     background: url("../img/shopcar/select04.png") no-repeat;
     background-size: 100% 100%;
 }
 
-.pay-way span{
+.pay-way span {
     display: inline-block;
     vertical-align: middle;
 }
 
-.pay-way img{
+.pay-way img {
     display: inline-block;
     margin: 0 25px;
     vertical-align: middle;
@@ -2762,49 +2768,50 @@
     border: 1px solid #ccc;
 }
 
-.payment-price{
+.payment-price {
     font-size: 18px;
     color: #e60012;
 }
 
 /*购物车列表*/
-.cart-top{
+.cart-top {
     height: 40px;
     line-height: 40px;
     background-color: #ffebeb;
     border: 1px solid #e6e6e6;
 }
-.cart-box{
+
+.cart-box {
     float: left;
     width: 470px;
 }
 
-.cart-box2{
+.cart-box2 {
     float: left;
     width: 145px;
     text-align: center;
 }
 
-.cart-check-all{
+.cart-check-all {
     margin: 0 12px;
 }
 
-.cart-shop-info{
+.cart-shop-info {
     margin-left: 110px;
 }
 
-.cart-operate{
+.cart-operate {
     height: 45px;
     line-height: 45px;
     margin-top: 10px;
     overflow: hidden;
 }
 
-.cart-check-part{
+.cart-check-part {
     margin: 0 12px;
 }
 
-.cart-store{
+.cart-store {
     display: inline-block;
     padding-right: 30px;
     color: #4d4d4d;
@@ -2812,18 +2819,18 @@
     background: url("../img/store/lianximaijia.png") right center no-repeat;
 }
 
-.cart-freight{
+.cart-freight {
     float: right;
     color: #4d4d4d;
     font-weight: bold;
 }
 
-.cart-table{
+.cart-table {
     width: 100%;
     border: 1px solid #e6e6e6;
 }
 
-.cart-table tr:last-child td{
+.cart-table tr:last-child td {
     border: none;
 }
 
@@ -2831,32 +2838,32 @@
     background-color: #e5f0fc;
 }
 
-.cart-td{
+.cart-td {
     width: 145px;
     height: 110px;
     text-align: center;
     border-bottom: 1px solid #e6e6e6;
 }
 
-.cart-td2{
+.cart-td2 {
     width: 130px;
     height: 110px;
     border-bottom: 1px solid #e6e6e6;
 }
 
-.cart-td3{
+.cart-td3 {
     width: 340px;
     height: 110px;
     padding-left: 10px;
     border-bottom: 1px solid #e6e6e6;
 }
 
-.cart-check{
+.cart-check {
     float: left;
     margin: 48px 12px;
 }
 
-.cart-cover{
+.cart-cover {
     float: left;
     width: 82px;
     height: 82px;
@@ -2864,27 +2871,27 @@
     border: 1px solid #e6e6e6;
 }
 
-.cart-cover img{
+.cart-cover img {
     width: 100%;
     height: 100%;
 }
 
-.cart-name-con{
+.cart-name-con {
     float: right;
     width: 330px;
     height: 100%;
 }
 
-.cart-name{
+.cart-name {
     line-height: 20px;
     color: #333;
 }
 
-.cart-attr{
+.cart-attr {
     line-height: 23px;
 }
 
-.cart-count{
+.cart-count {
     width: 110px;
     height: 30px;
     margin: 0 auto;
@@ -2892,33 +2899,33 @@
     overflow: hidden;
 }
 
-.cart-minus{
+.cart-minus {
     float: left;
     width: 31px;
     height: 30px;
     cursor: pointer;
 }
 
-.cart-num{
+.cart-num {
     float: left;
     width: 48px;
     height: 30px;
     text-align: center;
 }
 
-.cart-plus{
+.cart-plus {
     float: left;
     width: 31px;
     height: 30px;
     cursor: pointer;
 }
 
-.cart-delete{
+.cart-delete {
     color: #333;
     cursor: pointer;
 }
 
-.invalid{
+.invalid {
     background-color: #eee;
 }
 
@@ -2935,21 +2942,21 @@
     border-radius: 5px;
 }
 
-.invalid .cart-name{
+.invalid .cart-name {
     color: #b2b2b2;
 }
 
-.invalid .cart-td{
+.invalid .cart-td {
     color: #b2b2b2;
 }
 
-.payment-fact{
+.payment-fact {
     float: right;
     height: 74px;
     color: #656565;
 }
 
-.cart-check-all2{
+.cart-check-all2 {
     float: left;
     margin: 31px 12px;
 }
@@ -2961,56 +2968,56 @@
 }
 
 /*购物车 确认订单信息*/
-.confirm-top{
+.confirm-top {
     height: 55px;
     line-height: 55px;
 }
 
-.add-address{
+.add-address {
     float: right;
     width: 160px;
     text-align: center;
     color: #333;
 }
 
-.confirm-container{
+.confirm-container {
     padding: 15px 40px;
     border: 1px solid #e6e6e6;
 }
 
-.confirm-shop-info{
+.confirm-shop-info {
     margin-left: 170px;
 }
 
-.cart-box3{
+.cart-box3 {
     float: left;
     width: 181px;
     text-align: center;
 }
 
-.confirm-cover{
+.confirm-cover {
     margin-left: 37px;
 }
 
-.cart-td4{
+.cart-td4 {
     width: 181px;
     height: 110px;
     text-align: center;
     border-bottom: 1px solid #e6e6e6;
 }
 
-.order-leave{
+.order-leave {
     padding: 25px 45px;
     background-color: #ffebeb;
     border: 1px solid #e6e6e6;
 }
 
-.leave-key{
+.leave-key {
     float: left;
     margin-right: 10px;
 }
 
-.leave-text{
+.leave-text {
     float: left;
     width: 520px;
     height: 70px;
@@ -3018,26 +3025,29 @@
     padding: 5px 10px;
     resize: none;
 }
-.leave-count{
+
+.leave-count {
     float: right;
     color: #4d4d4d;
     font-weight: bold;
 }
-.leave-freight{
+
+.leave-freight {
     line-height: 35px;
     text-align: right;
 }
 
-.leave-price{
+.leave-price {
     font-size: 18px;
     color: #e60012;
 }
 
-.confirm-addr{
+.confirm-addr {
     height: 30px;
     margin: 10px 0;
 }
-.confirm-btn{
+
+.confirm-btn {
     float: left;
     width: 144px;
     height: 30px;
@@ -3048,28 +3058,28 @@
     cursor: pointer;
 }
 
-.confirm-btn.check{
+.confirm-btn.check {
     background: url("../img/shopcar/select03.png") no-repeat;
-    border:none;
+    border: none;
 }
 
-.confirm-addr:hover{
+.confirm-addr:hover {
     background-color: #ffebeb;
 }
 
-.confirm-detail{
+.confirm-detail {
     float: left;
     overflow: hidden;
 }
 
-.confirm-val{
+.confirm-val {
     float: left;
     height: 30px;
     line-height: 30px;
     margin-left: 25px;
 }
 
-.confirm-default-btn{
+.confirm-default-btn {
     display: none;
     float: right;
     width: 85px;
@@ -3082,11 +3092,11 @@
     border-radius: 4px;
 }
 
-.confirm-con{
+.confirm-con {
     float: right;
 }
 
-.confirm-con a{
+.confirm-con a {
     display: none;
     float: left;
     line-height: 30px;
@@ -3094,15 +3104,15 @@
     margin: 0 15px;
 }
 
-.confirm-addr:hover .confirm-edit,.confirm-addr:hover .confirm-delete,.confirm-addr:hover .confirm-set{
+.confirm-addr:hover .confirm-edit, .confirm-addr:hover .confirm-delete, .confirm-addr:hover .confirm-set {
     display: block;
 }
 
-.confirm-default .confirm-default-btn{
+.confirm-default .confirm-default-btn {
     display: block;
 }
 
-.confirm-default:hover .confirm-set{
+.confirm-default:hover .confirm-set {
     display: none;
 }
 
@@ -3118,6 +3128,7 @@
     border: 9px solid #999;
     border-radius: 10px;
 }
+
 .overlay-addr-title {
     line-height: 30px;
     font-size: 18px;
@@ -3131,35 +3142,65 @@
     height: 90px;
 }
 
-.enter-nav-btn{
+.enter-nav-btn {
     float: left;
-    margin-left: 45px;
+    width: 145px;
+    height: 90px;
     line-height: 90px;
+    text-align: center;
     font-size: 16px;
     color: #323232;
 }
 
-.enter-nav-btn:hover{
+.enter-nav-btn:hover {
     color: #35d198;
 }
 
-.enter-nav-btn.check{
+.enter-nav-btn.check {
     color: #35d198;
     background: url("../img/enter/navline.png") center 65px no-repeat;
 }
 
+.enter-fixed {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+}
+
+.enter-fixed-line {
+    display: none;
+    height: 90px;
+}
+
+.enter-nav-now {
+    float: right;
+    width: 120px;
+    height: 90px;
+    line-height: 90px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background-color: #35d198;
+}
+
 /*入驻首页*/
-.enter-banner{
+.enter-banner {
     position: relative;
     height: 400px;
     overflow: hidden;
 }
-.enter-img{
+
+.enter-img {
     width: 1920px;
     height: 400px;
     text-align: center;
 }
-.enter-mid{
+
+.enter-mid {
     position: absolute;
     left: 50%;
     top: 30px;
@@ -3168,7 +3209,8 @@
     height: 340px;
     background-color: #fff;
 }
-.enter-login{
+
+.enter-login {
     float: left;
     width: 280px;
     height: 340px;
@@ -3176,18 +3218,21 @@
     text-align: center;
     background-color: #424242;
 }
-.enter-logo{
+
+.enter-logo {
     width: 120px;
     height: 120px;
     margin: 24px auto 0;
     border-radius: 100%;
     overflow: hidden;
 }
-.enter-logo img{
+
+.enter-logo img {
     width: 100%;
     height: 100%;
 }
-.enter-login-btn{
+
+.enter-login-btn {
     display: block;
     width: 110px;
     height: 40px;
@@ -3198,11 +3243,13 @@
     font-weight: bold;
     background-color: #35d198;
 }
-.enter-login-hint{
+
+.enter-login-hint {
     line-height: 60px;
     color: #fffefe;
 }
-.enter-login-name{
+
+.enter-login-name {
     height: 45px;
     line-height: 40px;
     margin-bottom: 10px;
@@ -3210,18 +3257,18 @@
     border-bottom: 1px dashed #fefefe;
 }
 
-.enter-hint{
+.enter-hint {
     line-height: 20px;
     text-align: left;
     text-indent: 16px;
     color: #fffefe;
 }
 
-.enter-hint span{
+.enter-hint span {
     color: #e60012;
 }
 
-.enter-do-btn{
+.enter-do-btn {
     display: inline-block;
     width: 76px;
     height: 30px;
@@ -3230,24 +3277,225 @@
     color: #fff;
     background-color: #35d198;
 }
-.enter-step-con{
+
+.enter-step-con {
     height: 340px;
     padding: 0 35px;
+    overflow: hidden;
 }
 
-.enter-step-btn{
+.enter-step-btn {
+    float: left;
+    width: 102px;
     margin: 103px 55px 0 55px;
     padding-top: 102px;
+    line-height: 60px;
     color: #343434;
+    text-align: center;
 }
 
-.enter-step-btn:hover{
+.enter-step-btn:hover {
     color: #35d198;
 }
 
-.enter-step1{
+.enter-step1 {
     background: url("../img/enter/icon_ruzhubiaozhun01.png") center top no-repeat;
     background-size: 102px 102px;
 }
 
+.enter-step2 {
+    background: url("../img/enter/icon_ruzhubiaozhun01.png") center top no-repeat;
+    background-size: 102px 102px;
+}
 
+.enter-step3 {
+    background: url("../img/enter/icon_hezuoxize01.png") center top no-repeat;
+    background-size: 102px 102px;
+}
+
+.enter-step4 {
+    background: url("../img/enter/icon_hezuopingpai01.png") center top no-repeat;
+    background-size: 102px 102px;
+}
+
+.enter-step1:hover {
+    background: url("../img/enter/icon_ruzhubiaozhun02.png") center top no-repeat;
+    background-size: 102px 102px;
+}
+
+.enter-step2:hover {
+    background: url("../img/enter/icon_ruzhubiaozhun02.png") center top no-repeat;
+    background-size: 102px 102px;
+}
+
+.enter-step3:hover {
+    background: url("../img/enter/icon_ruzhubiaozhun02.png") center top no-repeat;
+    background-size: 102px 102px;
+}
+
+.enter-step4:hover {
+    background: url("../img/enter/icon_ruzhubiaozhun02.png") center top no-repeat;
+    background-size: 102px 102px;
+}
+
+.enter-con {
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.enter-container {
+    padding: 16px 0;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.enter-top {
+    height: 64px;
+    line-height: 64px;
+    padding-left: 65px;
+    font-size: 20px;
+    border-bottom: 1px solid #35d198;
+}
+
+.enter-top-ruzhu {
+    background: url("../img/enter/stepruzhu.png") 8px center no-repeat;
+}
+
+.enter-top-shouxin {
+    background: url("../img/enter/stepshouxin.png") 8px center no-repeat;
+}
+
+.enter-top-hezuo {
+    background: url("../img/enter/stepxize.png") 8px center no-repeat;
+}
+
+.enter-top-pinpai {
+    background: url("../img/enter/steppinpai.png") 8px center no-repeat;
+}
+
+.enter-body {
+    padding-top: 30px;
+}
+
+.enter-bg {
+    height: 40px;
+    margin-bottom: 45px;
+    background: url("../img/enter/stepbg.png") center center no-repeat;
+}
+
+.step-start {
+    height: 50px;
+    line-height: 50px;
+    color: #35d198;
+    text-align: center;
+}
+
+.step-box {
+    width: 620px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    color: #35d198;
+    border: 1px solid #35d198;
+}
+
+.step-title {
+    line-height: 25px;
+    font-size: 16px;
+}
+
+.step-hint {
+    line-height: 20px;
+}
+
+.step-icon {
+    height: 60px;
+    background: url("../img/enter/stepnext.png") center center no-repeat;
+}
+
+.enter-standard-box{
+    width: 1130px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+.enter-standard{
+    height: 30px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+.enter-standard-circle{
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #35d198;
+    border-radius: 100%;
+}
+.enter-standard-explain{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+
+.enter-content {
+    width: 1180px;
+    margin: 0 auto;
+    border-top: 1px solid #e6e6e6;
+}
+
+.enter-content2{
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.step-tip {
+    padding-left: 15px;
+    margin: 30px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-left: 3px solid #35d198;
+}
+
+.step-detail {
+    padding-left: 20px;
+    margin-bottom: 30px;
+    line-height: 25px;
+    color: #3a3b3a;
+}
+
+.enter-table{
+    margin-bottom: 30px;
+}
+
+.enter-table tr td {
+    height: 40px;
+    padding-left: 30px;
+    border: 1px solid #e6e6e6;
+}
+
+.enter-table tr td:first-child {
+    width: 360px;
+}
+
+.enter-table tr td:last-child {
+    width: 720px;
+}
+
+.enter-brand-box {
+    width: 1100px;
+    margin: 10px auto;
+}
+
+.enter-brand {
+    float: left;
+    width: 200px;
+    height: 120px;
+    line-height: 120px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    background: center center no-repeat;
+}
