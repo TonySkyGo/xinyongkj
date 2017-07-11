@@ -61,7 +61,9 @@
 	        <div class="file-choose">
 	        	<label for="" class="file-label"><span class="need">*</span>请选择要上传的图片:</label>
 	        	<img src="img/enter/add-picture.png" alt="" class="choose-picture"/>
-	        	<img class="add-img disnone" src="" alt="" />
+	        	<div class="add-img disnone" style="">
+	        		<!--<img class="add-img disnone" src="" alt="" />-->
+	        	</div>
 	        </div>
 	        <div class="file-submit">
 	        	<button type="button" class="prev-next-btn file-submit-btn">确定</button>
@@ -218,6 +220,18 @@
                 } else {
                 	
                 }
+                
+                if (window.FileReader) {    
+            var reader = new FileReader();    
+            reader.readAsDataURL(this.files[0]);    
+            //监听文件读取结束后事件    
+          reader.onloadend = function (e) {
+          	
+          	$(".add-img").removeClass("disnone").attr("style","background-image: url("+e.target.result+");");
+            //$(".img").attr("src",e.target.result);    //e.target.result就是最后的路径地址
+            };    
+       } 
+                
                 var file_size = 0;
                 if ($.browser.msie) {
                     var img = new Image();
@@ -246,8 +260,11 @@
                     }
                 }
                 if(objUrl){
+                	
                 	$(".choose-picture").hide();
-                	$(".add-img").removeClass("disnone").attr("src",objUrl);
+//              	$(".add-img").removeClass("disnone").attr("src",objUrl);
+					//alert(objUrl);
+					$(".add-img").removeClass("disnone").attr("style","background-image: url("+objUrl+");");
                 }
                 return true;
             });

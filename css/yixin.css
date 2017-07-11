@@ -3498,6 +3498,7 @@
     text-align: center;
     border: 1px solid #e6e6e6;
     background: center center no-repeat;
+<<<<<<< HEAD
 }
 
 /*商品管理*/
@@ -3619,4 +3620,7 @@
 .open-small{
     font-size: 12px;
     text-align: center;
+=======
+    background-size: contain;
+>>>>>>> 9f7c7160c7a0a4f3b953c19eb3114b8b1af10f7a
 }
