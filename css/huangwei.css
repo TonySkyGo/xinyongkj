@@ -1694,7 +1694,7 @@
 .add-img{
 	display: inline-block;
 	width: 100px;
-	height: 100px;
+	height: auto;
 	margin-left: 10px;
 }
 
