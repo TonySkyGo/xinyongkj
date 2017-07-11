@@ -1596,7 +1596,7 @@
 
 .overlay-cont-addpicture{
     position: fixed;
-    top: 260px;
+    top: 200px;
     left: 50%;
     margin-left: -230px;
     padding: 20px 20px 40px;
@@ -1633,7 +1633,8 @@
 	text-align: center;
 }
 .file-submit-btn{
-	
+	outline: none;
+	background: none;
 }
 .file-submit-cancle{
 	margin-left: 16px;
@@ -1677,6 +1678,24 @@
 	line-height: 20px;
 	font-size: 12px;
 	text-align: center;
+}
+
+.choose-picture{
+	display: inline-block;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.add-img-wrap{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin-left: 10px;
+}
+.add-img{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin-left: 10px;
 }
 
 /*入驻申请审核中*/

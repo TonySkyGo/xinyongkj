@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form action="" method="">
+
 	<div class="center-bg">
 		<div class="container clear">
 			<div class="table-wrap">
@@ -35,12 +35,13 @@
 			</div>
 			<div class="prev-next clear">
 				<a href="" class="prev-next-btn prev-step">上一步</a>
-				<input type="submit" value="提交" class="prev-next-btn next-step"></input>
+				<a href="javascript:void(0);" class="prev-next-btn next-step">下一步</a>
 			</div>
 		</div>
 	</div>
 
 	<div class="overlay disnone">
+		<form action="" method="">
 	    <div class="overlay-cont-addpicture">
 	       	<input type="file" name="fileInput" id="" value="" class="file-input"/>
 	        <div class="file-choose">
@@ -57,30 +58,37 @@
 	       		<label for="" class="file-label"><span class="need">*</span>请填写要上传的资质材料类型:</label>
 	       		<input type="text" name="" id="" value="" class="file-select type-input" />
 	        </div>
+	        <div class="file-choose">
+	        	<label for="" class="file-label"><span class="need">*</span>请选择要上传的图片:</label>
+	        	<img src="img/enter/add-picture.png" alt="" class="choose-picture"/>
+	        	<img class="add-img disnone" src="" alt="" />
+	        </div>
 	        <div class="file-submit">
-	       		<span class="prev-next-btn file-submit-btn"/>确定</span>
+	        	<button type="button" class="prev-next-btn file-submit-btn">确定</button>
 	       		<span class="prev-next-btn file-submit-cancle">取消</span>
 	    	</div>	
 	    </div>
+	    </form>
 	</div>
-</form>
+
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-1.2.1.min.js"></script><!--低版本jq兼容fancybox-->
 <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
 
 <script type="text/javascript">
-	function insertPhoto(){
-        var imgNew = '<div class="picture-item"><a class="fancybox" rel="group" href="img/enter/zhizhao.png"><img src="img/enter/zhizhao.png" alt="" class="picture-img" /></a><p class="picture-text">制造生产资质许可</p><div class="picture-close"></div></div>'
+	function insertPhoto(data){
+		
+        var imgNew = '<div class="picture-item"><a class="fancybox" rel="group" href="img/enter/zhizhao.png"><img src="'+data.imgSrc+'" alt="" class="picture-img" /></a><p class="picture-text">'+data.imgName+'</p><div class="picture-close"></div></div>'
         $(".add-img-btn").before(imgNew);
         opAfterInsert();
     }
 	
 	function opAfterInsert(){
-		$(".picture-img").hover(function(){
-			$(this).parents(".picture-item").find(".picture-close").show();
+		$(".picture-item").hover(function(){
+			$(this).find(".picture-close").show();
 		},function(){
-			$(this).parents(".picture-item").find(".picture-close").hide()
+			$(this).find(".picture-close").hide()
 		})
 		
 		$(".picture-close").click(function(event){
@@ -88,33 +96,102 @@
 			$(this).parents(".picture-item").hide();
 		});
 	}
+	//获取选择图片路径
+	function getObjectURL(file){		//获取上传图片地址
+        var url=null
+        if(window.createObjectURL!=undefined){ // basic
+            url=window.createObjectURL(file);
+        }else if(window.URL!=undefined){ // mozilla(firefox)
+            url=window.URL.createObjectURL(file);
+        } else if(window.webkitURL!=undefined){ // webkit or chrome
+            url=window.webkitURL.createObjectURL(file);
+        }
+        return url;
+    }
 	
 	$(function(){
 		
 		$(".fancybox").fancybox();
+		
+		$(".next-step").click(function(){
+			if($(".picture-item").length<=1)
+			{
+				alert("请上传资质材料");
+			}
+			else
+			{
+				window.location.href="";
+			}
+		})
 		
 		$(".add-picture").click(function(){
 			$(".overlay").removeClass("disnone");
 		//	insertPhoto();
 		});
 		
+		$(".choose-picture").click(function(){
+			$(".file-input").click();
+		})
+		
+		
 		$(".file-submit-btn").click(function(){
+			
 			if($(".file-select").val()==5)			//5--表示“其他”
 			{
 				if($(".type-input").val()=="")
 				{
-					alert("请输入要提交的企业资质类型名称")
+					alert("请输入要提交的企业资质类型名称");
 				}
 				else
 				{
-					$(".overlay").addClass("disnone");
-					$(".file-input").click();
+					if($(".file-input").val()=="")
+					{
+						alert("请上传图片");
+					}
+					else
+					{
+						$.ajax({
+						type:"post",
+						url:"",
+						data:{
+								imgUrl : $(".file-input").val(),
+								imgTpye : $(".file-select").val(),
+								imgInput : $(".type-input").val()
+							},
+							success:function(res){
+								insertPhoto(res);
+								$(".choose-picture").show();
+	                			$(".add-img").addClass("disnone").attr("src","");
+	                			$(".overlay").addClass("disnone");
+							}
+						});
+					}					
 				}
 			}
 			else
 			{
-				$(".overlay").addClass("disnone");
-				$(".file-input").click();
+				if($(".file-input").val()=="")
+				{
+					alert("请上传图片");
+				}
+				else
+				{
+					
+					$.ajax({
+						type:"post",
+						url:"",
+						data:{
+							imgUrl : $(".file-input").val(),
+							imgTpye : $(".file-select").val()
+						},
+						success:function(res){
+							insertPhoto(res);
+							$(".choose-picture").show();
+                			$(".add-img").addClass("disnone").attr("src","");
+                			$(".overlay").addClass("disnone");
+						}
+					});
+				}			
 			}
 			
 		});
@@ -123,17 +200,15 @@
 			$(".overlay").addClass("disnone");
 		})
 		
-		
-		
 		$(".file-select").change(function(){
 			if($(".file-select").val()==5)		//5--表示其他
 				$(".file-text").show();
 			else
 				$(".file-text").hide();
 		})
-		
-		
+			
 		$(".file-input").change(function () {
+				var objUrl=getObjectURL(this.files[0]);
                 var filepath = $("input[name='fileInput']").val();
                 var extStart = filepath.lastIndexOf(".");
                 var ext = filepath.substring(extStart, filepath.length).toUpperCase();
@@ -170,10 +245,13 @@
 //                      $("#fileSize").text(num02 + " KB");
                     }
                 }
+                if(objUrl){
+                	$(".choose-picture").hide();
+                	$(".add-img").removeClass("disnone").attr("src",objUrl);
+                }
                 return true;
             });
 	});
-	
 		
 </script>
 </body>
