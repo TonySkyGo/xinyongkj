@@ -5,61 +5,176 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<title>上传附件</title>
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css"/>
 	<link rel="stylesheet" type="text/css" href="css/enter.css" />
 	<link rel="stylesheet" type="text/css" href="css/yixin.css"/>
 	<link rel="stylesheet" href="css/pack.css">
 </head>
 <body>
 
-
-<div class="center-bg">
-	<div class="container clear">
-		<div class="table-wrap">
-			<div class="statusBar">
-				<img class="statusNow" src="img/enter/process002.png" alt="" />
-			</div>
-			<div class="addPictureTitle">
-				<div class="addPictureTitleText">上传本地图片</div>
-			</div>
-			<div class="picture-part">
-				<div class="picture-wrap">
-					<p class="picture-notice">温馨提示：请上传彩色有效图片，格式为JPEG、BMP、PNG、大小不超过10M。</p>
-					<div class="picture-items clear">
-						<div class="picture-item">
-							<img src="img/enter/zhizhao.png" alt="" class="picture-img" />
-							<p class="picture-text">制造生产资质许可</p>
-							<div class="picture-close"></div>
-						</div>
-						<div class="picture-item">
-							<img src="img/enter/zhizhao.png" alt="" class="picture-img" />
-							<p class="picture-text">制造生产资质许可</p>
-							<div class="picture-close"></div>
-						</div>
-						<div class="picture-item">
-							<img src="img/enter/img_mask.png" alt="" />
+<form action="" method="">
+	<div class="center-bg">
+		<div class="container clear">
+			<div class="table-wrap">
+				<div class="statusBar">
+					<img class="statusNow" src="img/enter/process002.png" alt="" />
+				</div>
+				<div class="addPictureTitle">
+					<div class="addPictureTitleText">上传本地图片</div>
+				</div>
+				<div class="picture-part">
+					<div class="picture-wrap">
+						<p class="picture-notice">温馨提示：请上传彩色有效图片，格式为JPEG、BMP、PNG、大小不超过10M。</p>						
+						<div class="picture-items clear">
+							<div class="picture-item add-img-btn">
+								<img src="img/enter/img_mask.png" alt="" class="picture-img add-picture"/>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="prev-next clear">
-			<a href="" class="prev-next-btn prev-step">上一步</a>
-			<a href="" class="prev-next-btn next-step">提 交</a>
+			<div class="prev-next clear">
+				<a href="" class="prev-next-btn prev-step">上一步</a>
+				<input type="submit" value="提交" class="prev-next-btn next-step"></input>
+			</div>
 		</div>
 	</div>
-</div>
 
-<div class="overlay disnone">
-    <div class="overlay-cont">
-        <div class="overlay-title">提示<span class="icon-exit"></span></div>
-        <div class="overlay-word">发货提醒已发送成功！</div>
-        <div class="overlay-operate">
-            <a href="" class="btn-agree">确认</a>
-            <a href="javascript:;" class="btn-cancel">取消</a>
-        </div>
-    </div>
-</div>
+	<div class="overlay disnone">
+	    <div class="overlay-cont-addpicture">
+	       	<input type="file" name="fileInput" id="" value="" class="file-input"/>
+	        <div class="file-choose">
+	       		<label for="" class="file-label"><span class="need">*</span>请选择上传的资质材料类型:</label>
+	       		<select name="" class="file-select">
+	       			<option value="1">制造生产资质许可</option>
+	       			<option value="2">品牌商标著作权/归属权</option>
+	       			<option value="3">进口流通许可证</option>
+	       			<option value="4">中国区品牌唯一代理授权证</option>
+	       			<option value="5">其他</option>
+	       		</select>
+	        </div>
+	        <div class="file-choose file-text">
+	       		<label for="" class="file-label"><span class="need">*</span>请填写要上传的资质材料类型:</label>
+	       		<input type="text" name="" id="" value="" class="file-select type-input" />
+	        </div>
+	        <div class="file-submit">
+	       		<span class="prev-next-btn file-submit-btn"/>确定</span>
+	       		<span class="prev-next-btn file-submit-cancle">取消</span>
+	    	</div>	
+	    </div>
+	</div>
+</form>
 
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script><!--低版本jq兼容fancybox-->
+<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+
+<script type="text/javascript">
+	function insertPhoto(){
+        var imgNew = '<div class="picture-item"><a class="fancybox" rel="group" href="img/enter/zhizhao.png"><img src="img/enter/zhizhao.png" alt="" class="picture-img" /></a><p class="picture-text">制造生产资质许可</p><div class="picture-close"></div></div>'
+        $(".add-img-btn").before(imgNew);
+        opAfterInsert();
+    }
+	
+	function opAfterInsert(){
+		$(".picture-img").hover(function(){
+			$(this).parents(".picture-item").find(".picture-close").show();
+		},function(){
+			$(this).parents(".picture-item").find(".picture-close").hide()
+		})
+		
+		$(".picture-close").click(function(event){
+			event.stopPropagation();
+			$(this).parents(".picture-item").hide();
+		});
+	}
+	
+	$(function(){
+		
+		$(".fancybox").fancybox();
+		
+		$(".add-picture").click(function(){
+			$(".overlay").removeClass("disnone");
+		//	insertPhoto();
+		});
+		
+		$(".file-submit-btn").click(function(){
+			if($(".file-select").val()==5)			//5--表示“其他”
+			{
+				if($(".type-input").val()=="")
+				{
+					alert("请输入要提交的企业资质类型名称")
+				}
+				else
+				{
+					$(".overlay").addClass("disnone");
+					$(".file-input").click();
+				}
+			}
+			else
+			{
+				$(".overlay").addClass("disnone");
+				$(".file-input").click();
+			}
+			
+		});
+		
+		$(".file-submit-cancle").click(function(){
+			$(".overlay").addClass("disnone");
+		})
+		
+		
+		
+		$(".file-select").change(function(){
+			if($(".file-select").val()==5)		//5--表示其他
+				$(".file-text").show();
+			else
+				$(".file-text").hide();
+		})
+		
+		
+		$(".file-input").change(function () {
+                var filepath = $("input[name='fileInput']").val();
+                var extStart = filepath.lastIndexOf(".");
+                var ext = filepath.substring(extStart, filepath.length).toUpperCase();
+                if (ext != ".BMP" && ext != ".PNG" && ext != ".JPEG") {
+                    alert("图片限于bmp,png,jpeg格式");
+                    return false;
+                } else {
+                	
+                }
+                var file_size = 0;
+                if ($.browser.msie) {
+                    var img = new Image();
+                    img.src = filepath;
+                    while (true) {
+                        if (img.fileSize > 0) {
+                            if (img.fileSize > 3 * 1024 * 1024) {
+                                alert("图片不大于100MB。");
+                            } else {
+//                              var num03 = img.fileSize / 1024;
+//                              num04 = num03.toFixed(2)
+//                              $("#fileSize").text(num04 + "KB");
+                            }
+                            break;
+                        }
+                    }
+                } else {
+                    file_size = this.files[0].size;
+                    var size = file_size / 1024;
+                    if (size > 10240) {
+                        alert("上传的图片大小不能超过10M！");
+                    } else {
+//                      var num01 = file_size / 1024;
+//                      num02 = num01.toFixed(2);
+//                      $("#fileSize").text(num02 + " KB");
+                    }
+                }
+                return true;
+            });
+	});
+	
+		
+</script>
 </body>
 </html>

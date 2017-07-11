@@ -219,6 +219,7 @@
 	line-height: 38px;
 	border: 1px solid #e60012;
 	border-radius: 4px;
+	cursor: pointer;
 }
 .prev-next-btn:hover{
 	color: #fff;
@@ -228,7 +229,9 @@
 	margin-right: 64px;
 }
 .next-step{
-	
+	background: none;
+	outline: none;
+	cursor: pointer;
 }
 /*入驻申请资料填写*/
 .sellerAppication{
@@ -321,12 +324,12 @@
 	width: 100px;
 	height: 100px;
 }
-.fancybox{
+/*.fancybox{
 	margin-right: 8px;
 }
 .fancybox:last-of-type{
 	margin-right: 30px;
-}
+}*/
 .inputFile{
 	display: none;
 }
@@ -393,6 +396,23 @@
 	width: 200px;
 	margin-left: 20px;
 	background: url(../img/enter/icon_cuowu.png) no-repeat left center;
+}
+.area-part{
+	display: inline-block;
+}
+.area-saved{
+	display: inline-block;
+}
+.area-edit{
+	font-size: 14px;
+	color: #000;
+	display: inline-block;
+	border: 1px solid #999;
+	background-color: #ddd;
+	cursor: pointer;
+}
+.area-hide{
+	display: none;
 }
 .seller-information label.error{
 	vertical-align:top;
@@ -463,6 +483,9 @@
 	height: 150px;
 	margin: 0 auto;
 }
+.add-picture{
+	cursor: pointer;
+}
 .picture-text{
 	font-size: 14px;
 	color: #333;
@@ -470,6 +493,7 @@
 	margin-top: 30px;
 }
 .picture-close{
+	display: none;
 	width: 14px;
 	height: 14px;
 	background: url(../img/enter/delete.png) no-repeat left top;
@@ -477,4 +501,51 @@
 	right: 60px;
 	top: 30px;
 	cursor: pointer;
+}
+.overlay-cont-addpicture{
+    position: fixed;
+    top: 260px;
+    left: 50%;
+    margin-left: -230px;
+    padding: 20px 20px 40px;
+    width: 460px;
+    background-color: #fff;
+}
+.file-input{
+	visibility: hidden;
+}
+.file-choose{
+	margin-bottom: 20px;
+}
+.file-label{
+	display: block;
+	font-size: 16px;
+	color: #333333;
+	height: 32px;
+	line-height: 32px;
+	margin-bottom: 10px;
+}
+.need{
+	color: #ff0000;
+}
+.file-select{
+	margin-left: 20px;
+	width: 400px;
+	height: 36px;
+}
+.file-input{
+	
+}
+.file-submit{
+	margin-top: 40px;
+	text-align: center;
+}
+.file-submit-btn{
+	
+}
+.file-submit-cancle{
+	margin-left: 16px;
+}
+.file-text{
+	display: none;
 }

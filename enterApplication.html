@@ -29,7 +29,7 @@
 							</div>
 							<div class="submit-items">
 								<label for="datepicker" class="submit-label"><span>*</span>注册时间:</label>
-								<input type="text" name="registTime" id="datepicker" class="submit-input" readonly="readonly"/>
+								<input type="text" name="registTime" id="datepicker" class="submit-input" readonly="readonly" value="07/10/2017"/>
 							</div>
 							<div class="submit-items">
 								<label for="owerner" class="submit-label"><span>*</span>企业法人:</label>
@@ -77,9 +77,13 @@
 								</div>
 								<div class="submit-items submit-items-chandi">
 									<label for="" class="submit-label"><span>*</span>所在产地:</label>
-									<select id="s_province" name="sProvince"></select>
-									<select id="s_city" name="sCity" ></select>
-									<select id="s_county" name="sCounty"></select>
+									<div class="area-part">
+										<select id="s_province" name="sProvince"></select>
+										<select id="s_city" name="sCity" ></select>
+										<select id="s_county" name="sCounty"></select>
+									</div>
+									<div class="area-saved area-hide">福建省 厦门市 集美区</div>
+									<span class="area-edit area-hide">编辑</span>
 								</div>
 								<div class="submit-items submit-items-yewu">
 									<label for="" class="submit-label yewu-label"><span>*</span>主营业务:</label>
@@ -205,6 +209,12 @@
         });
         $("#seller-type3").click(function(){
         	sellerType3Click();
+        })
+        
+        $(".area-edit").click(function(){
+        	$(".area-saved").hide();
+        	$(this).hide();
+        	$(".area-part").show();
         })
         
         function sellerType1Click(){
