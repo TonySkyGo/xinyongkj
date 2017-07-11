@@ -1690,12 +1690,15 @@
 	width: 100px;
 	height: 100px;
 	margin-left: 10px;
+	
 }
 .add-img{
 	display: inline-block;
 	width: 100px;
-	height: auto;
+	height: 100px;
 	margin-left: 10px;
+	background: center center no-repeat;
+	background-size: contain; 
 }
 
 /*入驻申请审核中*/

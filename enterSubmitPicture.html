@@ -61,7 +61,9 @@
 	        <div class="file-choose">
 	        	<label for="" class="file-label"><span class="need">*</span>请选择要上传的图片:</label>
 	        	<img src="img/enter/add-picture.png" alt="" class="choose-picture"/>
-	        	<img class="add-img disnone" src="" alt="" />
+	        	<div class="add-img disnone" style="">
+	        		<!--<img class="add-img disnone" src="" alt="" />-->
+	        	</div>
 	        </div>
 	        <div class="file-submit">
 	        	<button type="button" class="prev-next-btn file-submit-btn">确定</button>
@@ -247,7 +249,8 @@
                 }
                 if(objUrl){
                 	$(".choose-picture").hide();
-                	$(".add-img").removeClass("disnone").attr("src",objUrl);
+//              	$(".add-img").removeClass("disnone").attr("src",objUrl);
+					$(".add-img").removeClass("disnone").attr("style","background-image: url("+objUrl+");");
                 }
                 return true;
             });
