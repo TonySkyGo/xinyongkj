@@ -1195,152 +1195,12 @@
 }
 
 
-/*个人中心-入驻申请*/
-.sellerAppication{
-	float: right;
-	width: 1070px;
-	padding-bottom: 72px;
-	background: #f5f5f5;
-}
-.statusBar{
-	height: 100px;
-	overflow: hidden;
-}
-.statusNow{
-	display: block;
-	margin: 30px auto;
-}
-.pageTitle{
-	font-size: 16px;
-	font-weight: normal;
-	color: #000000;
-	text-indent: 40px;
-	height: 50px;
-	line-height: 50px;
-	background: #fff;
-}
-.submit-contents{
-	margin-top: 12px;
-	padding-top: 2px;
-	padding-left: 36px;
-	padding-right: 36px;
-	background: #fff;
-}
-.submit-inner{
-	
-}
-.submit-top{
-	overflow: hidden;
-	padding-bottom: 36px;
-	border-bottom: 1px dashed #dbdbdb;
-}
-.submit-items{
-	margin-top: 20px;
-}
-.submit-label{
-	display: inline-block;
-	font-size: 14px;
-	text-align: right;
-	color: #333;
-	width: 124px;
-	
-}
-.submit-label span{
-	color: #ff0000;
-}
-.submit-input{
-	width: 311px;
-	height: 34px;
-	text-indent: 14px;
-}
-.sellertype-item{
-	display: inline-block;
-	margin-left: 80px;
-}
-.first-item{
-	margin-left: 16px;
-}
-.yewu-label,.zizhi-label{
-	vertical-align: top;
-}
-.yewu{
-	width: 756px;
-	height: 100px;
-	resize: none;
-}
-.certificate-item{
-	margin-left: 18px;
-}
-.certificate-photos{
-	margin-top: 35px;
-}
-.photos-wrap{
-	margin-left: 150px;
-	width: 760px;
-}
-.certificate-photo{
-	display: inline-block; 
-	width: 100px;
-	height: 100px;
-}
-.fancybox{
-	margin-right: 8px;
-}
-.fancybox:last-of-type{
-	margin-right: 30px;
-}
-.inputFile{
-	display: none;
-}
-.add-photo{
-	width: 100px;
-	height: 100px;
-	cursor: pointer;
-	/*margin-left: 30px;*/
-	border: none;
-	outline: none;
-	background: #fff url(../img/personal/add-picture.png) no-repeat left top;
-}
-.submit-bottom{
-	padding-bottom: 134px;
-	width: 762px;
-	margin-left: 128px;
-}
-.submit-subtitle{
-	height: 40px;
-	line-height: 40px;
-}
-.submit-text{
-	line-height: 24px;
-}
-.add-server{
-	display: block;
-	margin-top:4px;
-}
-.submit-text1{
-	margin-top: 20px;
-}
-.submitBtn-part{
-	height: 140px;
-	padding-top: 30px;
-	background: #f5f5f5;
-}
-.submit-btn{
-	display: block;
-	font-size: 20px;
-	color: #fff;
-	width: 108px;
-	height: 40px;
-	cursor: pointer;
-	margin: 0 auto;
-	border: none;
-	outline: none;
-	border-radius: 2px;
-	background: #e60012;
-}
 
-/*个人中心-生成打印表格*/
-
+/*生成的表格*/
+.center-bg {
+    background-color: #f5f5f5;
+    padding-top: 20px;
+}
 .table-wrap table,.table-wrap td{
 	border:2px solid #131313;
 	border-collapse:collapse;
@@ -1356,9 +1216,15 @@
 	height: 52px;
 }
 .table-wrap{
-	margin-top: 13px;
-	padding-top: 1px;
 	background: #fff;
+}
+.statusBar{
+	padding-top: 30px;
+	margin-bottom: 20px;
+}
+.statusBar img{
+	display: block;
+	margin: 0 auto;
 }
 .table-title{
 	font-size: 24px;
@@ -1412,97 +1278,450 @@
 	margin-bottom: 16px;
 }
 .print-wrap{
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 35px;
+	padding: 16px 0;
 	background: #fff;
 }
 .print{
+	float: right;
 	color: #333;
-	display: inline-block;
+	text-align: center;
 	width: 76px;
 	height: 30px;
 	line-height: 30px;
+	margin-right: 132px;
 	cursor: pointer;
 	border: 1px solid #dbdbdb;
 	border-radius: 2px;
 	outline: none;
 	background: #f5f5f5;
 }
-/*.td1{
-	width: 13%;
-}
-.td2{
-	width: 24%;
-}
-.td3{
-	width: 14%;
-}
-.td4{
-	width: 15%;
-}
-.td5{
-	width: 13%;
-}
-.td6{
-	width: 20%;
-}*/
-
-/*个人中心-入驻申请审核中*/
-.status-area{
-	height: 1312px;
-	overflow: hidden;
-	background: #fff;
-	margin-top: 12px;
-}
-.status-img{
-	display: block;
-	margin: 64px auto 0;
-}
-.status-text{
-	font-size: 24px;
-	color: #323232;
+.prev-next{
+	padding-top: 30px;
+	padding-bottom: 70px;
 	text-align: center;
-	margin-top: 30px;
 }
-.release{
+.prev-next-btn{
 	font-size: 20px;
-	color: #fff;
+	color: #e60012;
 	text-align: center;
-	display: block;
-	width: 200px;
-	height: 56px;
-	line-height: 56px;
-	margin: 26px auto 0;
+	display: inline-block;
+	width: 108px;
+	height: 40px;
+	line-height: 38px;
+	border: 1px solid #e60012;
 	border-radius: 4px;
-	background: #f95555;
-}
-
-/*提交表格*/
-.commit-wrap{
-	margin-top: 60px;
-	text-align: center;
-}
-.commit-text{
-	font-size: 14px;
-	margin-top: 14px;
-}
-.commit-now{
-	font-size: 12px;
-	color: #333333;
-	width: 76px;
-	height: 30px;
-	margin-top: 14px;
-	border: 1px solid #dbdbdb;
-	border-radius: 2px;
-	outline: none;
-	background: #f5f5f5;
 	cursor: pointer;
 }
-.img-insert{
+.prev-next-btn:hover{
+	color: #fff;
+	background: #e60012;
+}
+.prev-step{
+	margin-right: 64px;
+}
+.next-step{
+	background: none;
+	outline: none;
+	cursor: pointer;
+}
+/*入驻申请资料填写*/
+.sellerAppication{
+	width: 1070px;
+	margin: 0 auto;
+}
+.statusBar{
+	height: 100px;
+	overflow: hidden;
+}
+.statusNow{
+	display: block;
+	margin: 30px auto;
+}
+.pageTitle{
+	font-size: 16px;
+	font-weight: normal;
+	color: #000000;
+	height: 50px;
+	line-height: 50px;
+	background: #fff;
+}
+.submit-contents{
+	margin-top: 12px;
+	padding-top: 2px;
+	/*padding-left: 36px;
+	padding-right: 36px;*/
+	padding-left: 60px;
+	padding-right: 60px;
+	background: #fff;
+}
+.submit-inner{
+	
+}
+.submit-top{
+	overflow: hidden;
+	padding-bottom: 36px;
+	border-bottom: 1px dashed #dbdbdb;
+}
+.submit-items{
+	margin-top: 20px;
+}
+.qysx-item{
+	position: relative;
+}
+.submit-label{
+	display: inline-block;
+	font-size: 14px;
+	text-align: right;
+	color: #333;
+	width: 124px;
+}
+.submit-label span{
+	color: #ff0000;
+}
+.submit-input{
+	/*width: 311px;*/
+	width: 480px;
+	height: 34px;
+	text-indent: 14px;
+}
+.sellertype-item{
+	display: inline-block;
+	margin-left: 80px;
+}
+.first-item{
+	margin-left: 16px;
+}
+.yewu-label,.zizhi-label{
+	vertical-align: top;
+}
+.yewu{
+	/*width: 756px;*/
+	width: 480px;
+	height: 100px;
+	resize: none;
+}
+.certificate-item{
+	margin-left: 18px;
+}
+.certificate-photos{
+	margin-top: 35px;
+}
+.photos-wrap{
+	margin-left: 150px;
+	width: 760px;
+}
+.certificate-photo{
+	display: inline-block; 
 	width: 100px;
 	height: 100px;
 }
+/*.fancybox{
+	margin-right: 8px;
+}
+.fancybox:last-of-type{
+	margin-right: 30px;
+}*/
+.inputFile{
+	display: none;
+}
+.add-photo{
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	/*margin-left: 30px;*/
+	border: none;
+	outline: none;
+	background: #fff url(../img/enter/add-picture.png) no-repeat left top;
+}
+.submit-bottom{
+	padding-bottom: 134px;
+	width: 762px;
+	/*margin-left: 128px;*/
+	margin-left: 100px;
+}
+.submit-subtitle{
+	height: 40px;
+	line-height: 40px;
+}
+.submit-text{
+	line-height: 24px;
+}
+.add-server{
+	display: block;
+	margin-top:4px;
+}
+.submit-text1{
+	margin-top: 20px;
+}
+.submitBtn-part{
+	height: 140px;
+	padding-top: 30px;
+	background: #f5f5f5;
+}
+.submit-btn{
+	display: block;
+	font-size: 20px;
+	color: #fff;
+	height: 40px;
+	cursor: pointer;
+	margin: 0 auto;
+	padding-left: 32px;
+	padding-right: 32px;
+	border: none;
+	outline: none;
+	border-radius: 2px;
+	background: #e60012;
+}
+.container-bg-color{
+	background-color:#fff ;
+}
+.optional-item{
+	display: none;
+}
+.seller-information label.error{
+	display: inline-block;
+	color: #E60012;
+	padding-left: 24px;
+	height: 36px;
+	line-height: 36px;
+	width: 200px;
+	margin-left: 20px;
+	background: url(../img/enter/icon_cuowu.png) no-repeat left center;
+}
+.area-part{
+	display: inline-block;
+}
+.area-saved{
+	display: inline-block;
+}
+.area-edit{
+	font-size: 14px;
+	color: #000;
+	display: inline-block;
+	border: 1px solid #999;
+	background-color: #ddd;
+	cursor: pointer;
+}
+.area-hide{
+	display: none;
+}
+.seller-information label.error{
+	vertical-align:top;
+}
+.qysx-item label.error{
+	color: #E60012;
+	padding-left: 24px;
+	height: auto;
+	line-height: 16px;
+	width: 200px;
+	background: url(../img/enter/icon_cuowu.png) no-repeat left center;
+	position: absolute;
+	top:0px;
+	left: 608px;
+}
+.submit-items-chandi label.error{
+	display: inline-block;
+	color: #E60012;
+	padding-left: 24px;
+	height: auto;
+	line-height: 16px;
+	width: 150px;
+	margin-left: 20px;
+	background: url(../img/enter/icon_cuowu.png) no-repeat left center;
+	vertical-align: middle;
+}
+
+/*上传附件照片*/
+.addPictureTitle{
+	border-bottom: 1px solid #E6E6E6;
+}
+.addPictureTitleText{
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 64px;
+	background: #35d198;
+	
+}
+.picture-part{
+	
+}
+.picture-wrap{
+	padding: 0 64px;
+}
+.picture-notice{
+	font-size: 14px;
+	color: #333;
+	height: 36px;
+	line-height: 44px;
+}
+.picture-items{
+	padding: 0 20px;
+}
+.picture-item{
+	float: left;
+	width: 344px;
+	height: 258px;
+	padding-top: 26px;
+	position: relative;
+}
+.picture-img{
+	display: block;
+	width: 240px;
+	height: 150px;
+	margin: 0 auto;
+}
+.add-picture{
+	cursor: pointer;
+}
+.picture-text{
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+	margin-top: 30px;
+}
+.picture-close{
+	display: none;
+	width: 14px;
+	height: 14px;
+	background: url(../img/enter/delete.png) no-repeat left top;
+	position: absolute;
+	right: 60px;
+	top: 30px;
+	cursor: pointer;
+}
+
+.overlay-cont-addpicture{
+    position: fixed;
+    top: 260px;
+    left: 50%;
+    margin-left: -230px;
+    padding: 20px 20px 40px;
+    width: 460px;
+    background-color: #fff;
+}
+.file-input{
+	visibility: hidden;
+}
+.file-choose{
+	margin-bottom: 20px;
+}
+.file-label{
+	display: block;
+	font-size: 16px;
+	color: #333333;
+	height: 32px;
+	line-height: 32px;
+	margin-bottom: 10px;
+}
+.need{
+	color: #ff0000;
+}
+.file-select{
+	margin-left: 20px;
+	width: 400px;
+	height: 36px;
+}
+.file-input{
+	
+}
+.file-submit{
+	margin-top: 40px;
+	text-align: center;
+}
+.file-submit-btn{
+	
+}
+.file-submit-cancle{
+	margin-left: 16px;
+}
+.file-text{
+	display: none;
+}
+
+.sheet-item{
+	margin: 0 344px;
+}
+
+.sheet-upload{
+	position: relative;
+	width: 240px;
+	height: 150px;
+	margin: 0 auto;
+	background: url("../img/enter/img_mask.png");
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+.sheet-upload input{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.overlay-big {
+	line-height: 30px;
+	margin-top: 60px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.overlay-small{
+	margin-bottom: 40px;
+	line-height: 20px;
+	font-size: 12px;
+	text-align: center;
+}
+
+/*入驻申请审核中*/
+.review-info {
+	padding: 180px 0;
+	margin-bottom: 80px;
+	font-size: 24px;
+	color: #4c4c4c;
+	text-align: center;
+	background: url("../img/enter/under-review.png") center 60px no-repeat;
+}
+.review-fail{
+	width: 1200px;
+	margin: 100px auto;
+	padding: 100px 0;
+	text-align: center;
+	background: url("../img/regist/fail.png") center top no-repeat;
+}
+
+.review-prosit {
+	line-height: 60px;
+	font-size: 24px;
+	color: #4c4c4c;
+}
+
+.review-reason {
+	margin-bottom: 30px;
+	line-height: 20px;
+	font-size: 24px;
+	color: #4c4c4c;
+}
+
+.review-back {
+	display: block;
+	width: 200px;
+	height: 45px;
+	line-height: 45px;
+	margin: 0 auto;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	background-color: #e60012;
+}
+
+
 /*个人中心-打印出来的表格*/
 .apply-talbe2,.apply-talbe2 td{
 	border:2px solid #131313;
