@@ -220,6 +220,18 @@
                 } else {
                 	
                 }
+                
+                if (window.FileReader) {    
+            var reader = new FileReader();    
+            reader.readAsDataURL(this.files[0]);    
+            //监听文件读取结束后事件    
+          reader.onloadend = function (e) {
+          	
+          	$(".add-img").removeClass("disnone").attr("style","background-image: url("+e.target.result+");");
+            //$(".img").attr("src",e.target.result);    //e.target.result就是最后的路径地址
+            };    
+       } 
+                
                 var file_size = 0;
                 if ($.browser.msie) {
                     var img = new Image();
@@ -248,8 +260,10 @@
                     }
                 }
                 if(objUrl){
+                	
                 	$(".choose-picture").hide();
 //              	$(".add-img").removeClass("disnone").attr("src",objUrl);
+					//alert(objUrl);
 					$(".add-img").removeClass("disnone").attr("style","background-image: url("+objUrl+");");
                 }
                 return true;
