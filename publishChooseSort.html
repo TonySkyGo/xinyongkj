@@ -1,85 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-	<title>入驻申请</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/pack.css">
-	<link rel="stylesheet" type="text/css" href="css/huangwei.css" />
-</head>
-<body>
 
-<div class="cs-top">
-	<div class="cs-img"></div>
-</div>
-<div class="cs-wrap">
-	<div class="cs-search">
-		<div class="cs-seach-text">查找类目：</div>
-		<input type="text" name="" id="" value="" class="cs-search-input" placeholder="输入商品名称，系统自动为您推荐分类" />
-		<input type="button" name="" id="" value="搜索" class="cs-search-btn" />
-	</div>
-	<div class="sort-choose">
-		<h6 class="sort-title">选择分类</h6>
-		<div class="sort-items">
-			<div class="sort-item-wrap clear">
-				<div class="sort-item">
-					<div class="sort-input-wrap">
-						<input type="" name="" id="" value="" placeholder="请输入分类名称" class="sort-input" />
-					</div>
-					<div class="sort-list-wrap">
-						<div class="sort-list">
-						
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>入驻申请</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/pack.css">
+		<link rel="stylesheet" type="text/css" href="css/huangwei.css" />
+	</head>
+
+	<body>
+		<div class="cs-top">
+			<div class="cs-img"></div>
+		</div>
+		<div class="cs-wrap">
+			<div class="cs-search">
+				<div class="cs-seach-text">查找类目：</div>
+				<input type="text" name="" id="" value="" class="cs-search-input" placeholder="输入商品名称，系统自动为您推荐分类" />
+				<input type="button" name="" id="" value="搜索" class="cs-search-btn" />
+			</div>
+			<div class="sort-choose">
+				<h6 class="sort-title">选择分类</h6>
+				<div class="sort-items">
+					<div class="sort-item-wrap clear">
+						<div class="sort-item">
+							<div class="sort-input-wrap">
+								<input type="" name="" id="" value="" placeholder="请输入分类名称" class="sort-input choosesort-input" />
+							</div>
+							<div class="sort-list-wrap">
+								<div class="sort-list choosesort-content">
+
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="sort-item">
-					<div class="sort-input-wrap">
-						<input type="" name="" id="" value="" placeholder="请输入分类名称" class="sort-input" />
-					</div>
-					<div class="sort-list-wrap">
-						<div class="sort-list">
-						
+						<div class="sort-item">
+							<div class="sort-input-wrap">
+								<input type="" name="" id="" value="" placeholder="请输入分类名称" class="sort-input choosesort-input" />
+							</div>
+							<div class="sort-list-wrap">
+								<div class="sort-list choosesort-content">
+
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="sort-item">
-					<div class="sort-input-wrap">
-						<input type="" name="" id="" value="" placeholder="请输入分类名称" class="sort-input" />
-					</div>
-					<div class="sort-list-wrap">
-						<div class="sort-list">
-						
+						<div class="sort-item">
+							<div class="sort-input-wrap">
+								<input type="" name="" id="" value="" placeholder="请输入分类名称" class="sort-input choosesort-input" />
+							</div>
+							<div class="sort-list-wrap">
+								<div class="sort-list choosesort-content">
+
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="sort-item">
-					<div class="sort-input-wrap">
-						<input type="" name="" id="" value="" placeholder="请输入分类名称" class="sort-input" />
-					</div>
-					<div class="sort-list-wrap">
-						<div class="sort-list">
-						
+						<div class="sort-item">
+							<div class="sort-input-wrap">
+								<input type="" name="" id="" value="" placeholder="请输入分类名称" class="sort-input choosesort-input" />
+							</div>
+							<div class="sort-list-wrap">
+								<div class="sort-list choosesort-content sort-last">
+
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="haschoose-bar">
+				<span class="haschoose-title">您当前选择的是：</span>
+				<span class="haschoose-items choosesort-sort-box"></span>
+			</div>
+			<div class="next-wrap">
+				<a class="next-step-btn" href="">下一步，填写商品信息</a>
+				<a class="need-know" href="javascript:void(0)">商品发布须知</a>
+			</div>
 		</div>
-	</div>
-	<div class="haschoose-bar">
-		<span class="haschoose-title">您当前选择的是：</span>
-		<span class="haschoose-items">母婴</span>
-		<span class="haschoose-items">&nbsp;>&nbsp;</span>
-		<span class="haschoose-items">母婴</span>
-		<span class="haschoose-items">&nbsp;>&nbsp;</span>
-		<span class="haschoose-items">母婴</span>
-		<span class="haschoose-items">&nbsp;>&nbsp;</span>
-		<span class="haschoose-items">母婴</span>
-	</div>
-	<div>
-		<span></span>
-	</div>
-</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			var classify = [{ "name": "\u8336\u9970", "id": "40", "pid": "20" },
+			{ "name": "\u914d\u7c7b", "id": "40", "pid": "20" },
+			{ "name": "\u5b83\u5b83", "id": "40", "pid": "22" },
+			{ "name": "\u5176\u5176", "id": "40", "pid": "22" },
+			{ "name": "\u914d\u9970", "id": "28", "pid": "1" }, {
+				"name": "\u679c\u852c",
+				"id": "27",
+				"pid": "2"
+			}, { "name": "\u8336\u53f6", "id": "26", "pid": "2" }, {
+				"name": "\u4e2d\u836f\u6750",
+				"id": "25",
+				"pid": "2"
+			}, { "name": "\u767e\u8d27", "id": "24", "pid": "4" }, {
+				"name": "\u9152\u7c7b",
+				"id": "23",
+				"pid": "2"
+			}, { "name": "\u886c\u886b", "id": "22", "pid": "5" }, {
+				"name": "\u5176\u5b83",
+				"id": "20",
+				"pid": "5"
+			}, { "name": "\u6c7d\u8f66", "id": "19", "pid": "4" }, {
+				"name": "\u7535\u8111\u529e\u516c",
+				"id": "18",
+				"pid": "4"
+			}, { "name": "3C\u6570\u7801", "id": "17", "pid": "4" }, {
+				"name": "\u624b\u673a",
+				"id": "16",
+				"pid": "4"
+			}, { "name": "\u9152\u5e97", "id": "15", "pid": "3" }, {
+				"name": "\u53a8\u5177",
+				"id": "14",
+				"pid": "3"
+			}, { "name": "\u5bb6\u5c45", "id": "13", "pid": "3" }, {
+				"name": "\u7535\u5668",
+				"id": "12",
+				"pid": "3"
+			}, { "name": "\u83cc\u7c7b\u5e72\u8d27", "id": "11", "pid": "2" }, {
+				"name": "\u6d77\u9c9c\u6c34\u4ea7",
+				"id": "10",
+				"pid": "2"
+			}, { "name": "\u4e94\u8c37\u6742\u7cae", "id": "9", "pid": "2" }, {
+				"name": "\u6bcd\u5a74",
+				"id": "8",
+				"pid": "1"
+			}, { "name": "\u7ae5\u88c5", "id": "7", "pid": "1" }, 
+			{ "name": "\u7ae5\u88c5", "id": "7", "pid": "1" }, 
+			{ "name": "\u7ae5\u88c5", "id": "7", "pid": "1" }, 
+			{ "name": "\u7ae5\u88c5", "id": "7", "pid": "1" }, 
+			{ "name": "\u7ae5\u88c5", "id": "7", "pid": "1" }, 
+			{ "name": "\u7ae5\u88c5", "id": "7", "pid": "1" }, 
+			{ "name": "\u7ae5\u88c5", "id": "7", "pid": "1" }, 
+			{ "name": "\u7ae5\u88c5", "id": "7", "pid": "1" }, 
+			{ "name": "\u7ae5\u88c5", "id": "7", "pid": "1" }, 
+			{
+				"name": "\u5973\u88c5",
+				"id": "6",
+				"pid": "1"
+			}, { "name": "\u7537\u88c5", "id": "5", "pid": "1" }, { "name": "\u884c", "id": "4", "pid": "0" }, {
+				"name": "\u4f4f",
+				"id": "3",
+				"pid": "0"
+			}, { "name": "\u98df", "id": "2", "pid": "0" }, { "name": "\u8863", "id": "1", "pid": "0" }];
 
-</body>
+			function gotop(){
+				$(".need-know").click(function(){
+					//alert($(".choosesort-content").eq(1).find(".choosesort-detail").last().position().top);
+					//$(".choosesort-content").eq(1).find(".choosesort-detail").last().css()
+				});
+			}
+
+			$(function(){
+			
+				
+			
+			    $('.choosesort-input').each(function (i) {
+			        var lg = $('.choosesort-input').length;
+			        this.onkeyup = function () {
+			            //获取当前文本框的值
+			            var seachText = $(this).val().trim();
+			            var obj = $(this).parents(".sort-input-wrap").next().find('.choosesort-content').find('.choosesort-detail');
+			            if (seachText != "") {
+			                //将子级分类清空
+			                for (var j = lg - 1; j > i; j--) {
+			                    $('.choosesort-content').eq(j).html('');
+			                }
+			                obj.hide();
+			                //遍历解析
+			                obj.each(function () {
+			                    if ($(this).text().indexOf(seachText) != -1) {
+			                        $(this).show();
+			                    }
+			                })
+			
+			            } else {
+			                obj.show();
+			            }
+			        };
+			    })
+				
+			
+				/*初始化*/
+				$('.choosesort-content').each(function(i) {
+					//显示一级分类
+					if(i == 0) {
+						var tab = '';
+						$.each(classify, function(id, item) {
+							//如果包含则为table赋值
+	
+							if(item.pid == '0') {
+								tab += '<p class="choosesort-detail" data-pid="' +item.pid+ '" data-id="'+ item.id +'">' + item.name + '</p>';
+							}
+						});
+						$('.choosesort-content').eq(0).html(tab);
+					}
+					//添加属性
+					$(this).attr('data-index', i);
+				})
+	
+				$('body').on('click', '.choosesort-content .choosesort-detail', function() {
+					var lg = $('.choosesort-input').length;
+					var ids = $(this).attr('data-id'); //获取子元素的父级id
+					var ind = parseInt($(this).parents('.choosesort-content').attr('data-index')); //获取当前是第几级分类
+					//清空：您当前选择的分类 未选择部分，并且添加选择的部分
+					for(var j = lg - 1; j >= ind; j--) {
+						$('.choosesort-sort-box').find('.choosesort-sort').eq(j).remove();
+					}
+					if(ind < lg - 1) { //非最后一个子级，执行函数，获取下一级内容并且显示
+						$('.choosesort-sort-box').append('<span class="choosesort-sort">' + $(this).text() + '<span class="choosesort-more">&gt;</span></span>');
+						$(this).addClass('check').siblings().removeClass('check');
+						//点击父级，将子级显示
+						var tab = '';
+						$.each(classify, function(id, item) {
+							if(item.pid == ids) {
+								tab += '<p class="choosesort-detail" data-pid="' +item.pid+ '" data-id="'+ item.id +'">' + item.name + '</p>';
+							}
+						});
+						$('.choosesort-content').eq(ind + 1).html(tab);
+					} else { //最后一个子级，执行函数
+						$('.choosesort-sort-box').append('<span class="choosesort-sort">' + $(this).text() + '</span>');
+						$(this).addClass('check').siblings().removeClass('check');
+					}
+				});
+				gotop();
+			})
+
+			
+		</script>
+	</body>
+
 </html>
