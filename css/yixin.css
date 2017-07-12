@@ -3498,5 +3498,125 @@
     text-align: center;
     border: 1px solid #e6e6e6;
     background: center center no-repeat;
-    background-size: contain;
+}
+
+/*商品管理*/
+/*发布商品成功*/
+.publish-success {
+    width: 1200px;
+    height: 240px;
+    margin: 70px auto 170px;
+    padding-top: 90px;
+    text-align: center;
+    background: url("../img/regist/success.png") center top no-repeat;
+}
+
+.publish-prosit {
+    line-height: 75px;
+    font-size: 24px;
+    color: #343434;
+}
+
+.publish-link{
+    margin: 0 20px;
+    font-size: 20px;
+    color: #0083e6;
+}
+
+.publish-back {
+    display: block;
+    width: 240px;
+    height: 45px;
+    line-height: 45px;
+    margin: 30px auto;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #e60012;
+}
+
+/*商品列表*/
+.ware-search {
+    padding: 15px 0;
+    overflow: hidden;
+    border-top: 1px solid #eee;
+}
+
+.ware-column {
+    float: left;
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    margin: 5px 0;
+    text-align: center;
+    color: #333;
+}
+
+.ware-input {
+    float: left;
+    width: 200px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 15px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.ware-state{
+    width: 160px;
+    height: 32px;
+    margin: 5px 0;
+}
+
+.ware-search-btn {
+    width: 75px;
+    height: 32px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #f95555;
+    border:none;
+    cursor: pointer;
+}
+
+.ware-add{
+    float: right;
+    width: 100px;
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    background-color: #f95555;
+}
+
+/*开通店铺*/
+.open-hint{
+    height: 160px;
+    line-height: 160px;
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+}
+.open-img{
+    height: 120px;
+    background: url("../img/center/openstore.png") center center no-repeat;
+}
+
+.open-btn{
+    display: block;
+    width: 110px;
+    height: 42px;
+    line-height: 42px;
+    margin: 20px auto;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 2px;
+    background-color: #e60012;
+}
+
+.open-small{
+    font-size: 12px;
+    text-align: center;
 }
