@@ -1457,19 +1457,19 @@
 .business-info1 {
     float: left;
     width: 340px;
-    height: 40px;
+    height: 56px;
 }
 
 .business-info2 {
     float: left;
     width: 150px;
-    height: 40px;
+    height: 56px;
 }
 
 .business-info3 {
     float: left;
     width: 80px;
-    height: 40px;
+    height: 56px;
 }
 
 .business-container {
@@ -1830,13 +1830,13 @@
 .business-info4 {
     float: left;
     width: 220px;
-    height: 40px;
+    height: 56px;
 }
 
 .business-info5 {
     float: left;
     width: 240px;
-    height: 40px;
+    height: 56px;
 }
 
 .order-td5 {
@@ -2185,7 +2185,7 @@
 .business-info6 {
     float: left;
     width: 136px;
-    height: 40px;
+    height: 56px;
 }
 
 .order-td7 {
@@ -3590,6 +3590,134 @@
     background-color: #f95555;
 }
 
+.ware-info1 {
+    float: left;
+    width: 400px;
+    height: 56px;
+}
+
+.ware-info2 {
+    float: left;
+    width: 150px;
+    height: 56px;
+}
+
+.ware-info3 {
+    float: left;
+    width: 105px;
+    height: 56px;
+}
+
+.ware-info4 {
+    float: left;
+    width: 103px;
+    height: 56px;
+}
+
+.ware-td1 {
+    width: 40px;
+}
+
+.ware-td2 {
+    width: 80px;
+}
+
+.ware-td3 {
+    position: relative;
+    width: 150px;
+}
+
+.ware-td4 {
+    width: 105px;
+}
+
+.ware-td5 {
+    width: 278px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.ware-td6 {
+    width: 103px;
+}
+
+.ware-td2 img {
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+
+.ware-title {
+    width: 268px;
+    font-size: 12px;
+    color: #333;
+    overflow: hidden;
+}
+
+.ware-review-ing{
+    color: #0083e6;
+}
+
+.ware-review-fail{
+    color: #f95555;
+}
+
+.ware-review-reason{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 18px;
+    height: 24px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #f95555;
+    background: url("../img/center/reviewicon.png");
+    background-size: 100% 100%;
+}
+
+.ware-td3:hover .ware-review-reason{
+    display: block;
+}
+
+.ware-check-box{
+    margin: 20px 0;
+    padding: 0 12px;
+}
+
+.ware-check-box input{
+    float: left;
+    margin: 10px 0;
+}
+
+.ware-checkall{
+    float: left;
+    width: 60px;
+    height: 32px;
+    line-height: 32px;
+    color: #4c4c4c;
+    font-size: 12px;
+    text-align: center;
+}
+
+.ware-all{
+    float: left;
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 25px;
+    text-align: center;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.ware-order{
+    width: 62px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid #666;
+}
+
 /*开通店铺*/
 .open-hint{
     height: 160px;
@@ -3620,3 +3748,4 @@
     font-size: 12px;
     text-align: center;
 }
+

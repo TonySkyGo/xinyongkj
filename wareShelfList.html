@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>采购订单</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/yixin.css">
+    <link rel="stylesheet" href="css/pack.css">
+</head>
+<body>
+
+<div class="center-head">
+    <div class="center-head-con container clear">
+        <a href=""><img src="img/center/logo.png" class="center-logo" alt=""></a>
+        <a href="" class="center-nav active">供应商中心</a>
+        <a href="" class="center-nav">会员服务</a>
+        <a href="" class="center-nav">应用中心</a>
+        <a href="" class="center-nav">账户管理</a>
+        <div class="center-car">
+            <div class="center-car-num">0</div>
+        </div>
+        <form action="" id="searchForm">
+            <input type="submit" class="center-search-btn" value="搜索"/>
+            <input type="text" class="center-search-input" name="title" placeholder="这里输入产品关键词"/>
+        </form>
+    </div>
+</div>
+<div class="center-bg">
+    <div class="container clear">
+        <div class="center-sider">
+            <div class="center-single">
+                <a href="" class="center-first center-index">供应商首页</a>
+                <a href="" class="center-second">我的店铺</a>
+                <a href="" class="center-second">店铺设置</a>
+                <a href="" class="center-second">运费模版</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">我的供应</p>
+                <a href="" class="center-second">已卖出的产品</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">我的采购</p>
+                <a href="" class="center-second">采购订单</a>
+                <a href="" class="center-second">推荐商品</a>
+                <a href="" class="center-second">发布供应商品</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">商品管理</p>
+                <a href="" class="center-second">我的消息</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">钱包管理</p>
+                <a href="" class="center-second">钱包首页</a>
+                <a href="" class="center-second">安全中心</a>
+                <a href="" class="center-second">支付密码</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">求购管理</p>
+                <a href="" class="center-second">管理求购信息</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">采购管理</p>
+                <a href="" class="center-second">发布采购信息</a>
+                <a href="" class="center-second">管理采购信息</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">账号设置</p>
+                <a href="" class="center-second">修改密码</a>
+                <a href="" class="center-second">安全设置</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">公司信息</p>
+                <a href="" class="center-second">公司介绍</a>
+                <a href="" class="center-second">联系信息</a>
+                <a href="" class="center-second">收发货地址管理</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">信用资质</p>
+                <a href="" class="center-second">信用认证</a>
+                <a href="" class="center-second">供应商入驻</a>
+                <a href="" class="center-second">特殊经营许可</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">客服中心</p>
+                <a href="" class="center-second">QQ客服</a>
+                <a href="" class="center-second">微信客服</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">我的优惠券</p>
+                <a href="" class="center-second">店铺优惠券</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">自助服务</p>
+                <a href="" class="center-second">意见建议</a>
+                <a href="" class="center-second">系统消息列表</a>
+            </div>
+        </div>
+        <div class="center-container">
+            <div class="center-state clear">
+                <a href="" class="center-state-btn">在售商品</a>
+                <a href="" class="center-state-btn active">未上架商品</a>
+            </div>
+            <form class="ware-search">
+                <span class="ware-column">商品名称：</span>
+                <input type="text" name="name" class="ware-input" placeholder="请输入商品名称">
+                <span class="ware-column">商品编号：</span>
+                <input type="text" name="number" class="ware-input" placeholder="请输入商品编号">
+                <span class="ware-column">商品状态：</span>
+                <select class="ware-state" name="state">
+                    <option value="1">111</option>
+                    <option value="2">222</option>
+                    <option value="3">333</option>
+                </select>
+                <input type="submit" class="ware-search-btn" value="查询"/>
+                <a href="" class="ware-add">新增商品</a>
+            </form>
+            <div class="business-info">
+                <div class="ware-info1">商品信息</div>
+                <div class="ware-info4">商品编码</div>
+                <div class="ware-info4">价格</div>
+                <div class="ware-info4">库存</div>
+                <div class="ware-info4">销量</div>
+                <div class="ware-info4">排序</div>
+                <div class="ware-info4">操作</div>
+            </div>
+            <div class="ware-check-box clear">
+                <input type="checkbox" name="checkall">
+                <div class="ware-checkall">全部</div>
+                <div class="ware-all">下架</div>
+                <div class="ware-all">推荐</div>
+                <div class="ware-all">取消推荐</div>
+            </div>
+            <div class="business-container">
+                <table class="order-table">
+                    <tr>
+                        <td class="ware-td1">
+                            <input type="checkbox" name="check">
+                        </td>
+                        <td class="ware-td2">
+                            <a href=""><img src="img/store/erweima.png" alt=""></a>
+                        </td>
+                        <td class="ware-td5">
+                            <a href="" class="ware-title">陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅</a>
+                        </td>
+                        <td class="ware-td6">
+                            112233333
+                        </td>
+                        <td class="ware-td6">
+                            ￥14.00
+                        </td>
+                        <td class="ware-td6">
+                            11223
+                        </td>
+                        <td class="ware-td6">
+                            11223
+                        </td>
+                        <td class="ware-td6">
+                            <input type="text" class="ware-order" data-id="1"/>
+                        </td>
+                        <td class="ware-td6">
+                            <a href="" class="order-store-operate">编辑商品</a>
+                            <a href="" class="order-store-operate ware-rec">推荐</a>
+                            <a href="" class="order-store-operate ware-down">下架</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ware-td1">
+                            <input type="checkbox" name="check">
+                        </td>
+                        <td class="ware-td2">
+                            <a href=""><img src="img/store/erweima.png" alt=""></a>
+                        </td>
+                        <td class="ware-td5">
+                            <a href="" class="ware-title">陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅</a>
+                        </td>
+                        <td class="ware-td6">
+                            112233333
+                        </td>
+                        <td class="ware-td6">
+                            ￥14.00
+                        </td>
+                        <td class="ware-td6">
+                            11223
+                        </td>
+                        <td class="ware-td6">
+                            11223
+                        </td>
+                        <td class="ware-td6">
+                            <input type="text" class="ware-order" data-id="2"/>
+                        </td>
+                        <td class="ware-td6">
+                            <a href="" class="order-store-operate">编辑商品</a>
+                            <a href="" class="order-store-operate ware-norec">取消推荐</a>
+                            <a href="" class="order-store-operate ware-down">下架</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="pagination">
+                <form class="pagination-con">
+                    <a href="" class="count">上一页</a>
+                    <span class="count-none">上一页</span>
+                    <a href="" class="count">1</a>
+                    <a href="" class="count check">2</a>
+                    <a href="" class="count">3</a>
+                    <a href="" class="count">4</a>
+                    <a href="" class="count">5</a>
+                    <a href="" class="count">下一页</a>
+                    <span class="count-none">下一页</span>
+                    <span class="count-total">共&nbsp;15&nbsp;页</span>
+                    <span class="count-topage">到第<input type="text" class="count-page" name="page">页</span>
+                    <input type="submit" class="count-submit" value="确定">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay overlay-rec disnone">
+    <div class="overlay-cont">
+        <div class="overlay-title">提示<span class="icon-exit"></span></div>
+        <div class="overlay-word">确定推荐此商品吗？</div>
+        <div class="overlay-operate">
+            <a href="" class="btn-agree">确认</a>
+            <a href="javascript:;" class="btn-cancel">取消</a>
+        </div>
+    </div>
+</div>
+<div class="overlay overlay-norec disnone">
+    <div class="overlay-cont">
+        <div class="overlay-title">提示<span class="icon-exit"></span></div>
+        <div class="overlay-word">确定取消推荐此商品吗？</div>
+        <div class="overlay-operate">
+            <a href="" class="btn-agree">确认</a>
+            <a href="javascript:;" class="btn-cancel">取消</a>
+        </div>
+    </div>
+</div>
+<div class="overlay overlay-down disnone">
+    <div class="overlay-cont">
+        <div class="overlay-title">提示<span class="icon-exit"></span></div>
+        <div class="overlay-word">确定下架此商品吗？</div>
+        <div class="overlay-operate">
+            <a href="" class="btn-agree">确认</a>
+            <a href="javascript:;" class="btn-cancel">取消</a>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    $(function () {
+        //全选
+        $("input[name='checkall']").on("click",function(){
+            var state = $(this).prop("checked");
+            $("input[name='check']").each(function () {
+                $(this).prop("checked",state);
+            });
+        });
+        //单选
+        $("input[name='check']").on("click",function(){
+            var allCount = 0; //全选：计算相邻元素已选个数，达到个数则全选，反之取消全选
+            if($(this).prop("checked")){
+                $("input[name='check']").each(function () {
+                    if($(this).prop("checked")){
+                        allCount++;
+                    }
+                });
+                if(allCount == $(this).parents(".order-table").find("tr").length){
+                    $("input[name='checkall']").prop("checked",true);//全选
+                }
+            }else{
+                $("input[name='checkall']").prop("checked",false);//取消全选
+            }
+
+        });
+        //input只能输入数字
+        $(".ware-order").on("keyup",function () {
+            $(this).val($(this).val().replace(/\D/g,''));
+        });
+        //排序操作
+        $(".ware-order").on("blur",function () {
+            var order = $(this).val(),
+                id = $(this).attr("data-id");
+            if(order){
+                //排序操作
+                $.ajax({
+
+                })
+            }
+        });
+        //推荐弹窗
+        $(".ware-rec").on("click",function (e) {
+            e.preventDefault();
+            $(".overlay-rec").show()
+        });
+        //取消推荐弹窗
+        $(".ware-norec").on("click",function (e) {
+            e.preventDefault();
+            $(".overlay-norec").show()
+        });
+        //下架弹窗
+        $(".ware-down").on("click",function (e) {
+            e.preventDefault();
+            $(".overlay-down").show()
+        });
+    });
+</script>
+</body>
+</html>
