@@ -1717,6 +1717,13 @@
 	text-align: center;
 	background: url("../img/enter/under-review.png") center 60px no-repeat;
 }
+.review-success{
+	width: 1200px;
+	margin: 100px auto;
+	padding: 100px 0;
+	text-align: center;
+	background: url("../img/regist/success.png") center top no-repeat;
+}
 .review-fail{
 	width: 1200px;
 	margin: 100px auto;

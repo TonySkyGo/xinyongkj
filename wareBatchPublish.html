@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>开通店铺</title>
+    <title>批量发布商品</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/yixin.css">
     <link rel="stylesheet" href="css/pack.css">
 </head>
@@ -96,22 +97,94 @@
                 <a href="" class="center-second">系统消息列表</a>
             </div>
         </div>
-        <div class="center-container">
+        <div class="batch-container">
             <div class="center-state clear">
-                <span class="center-state-btn active">开通店铺</span>
+                <a href="" class="center-state-btn active">批量发布商品</a>
             </div>
-            <div class="store-open">
-                <p class="open-must">必须先开通店铺后，才可以发布供应商品哦！</p>
-                <div class="open-step"></div>
-                <a href="" class="open-link">开通店铺</a>
-                <p class="open-hint">您还没有开通店铺，请立即开通！</p>
+            <div class="batch-box clear">
+                <div class="batch-con fl">
+                    <div class="batch-title">批量发布商品</div>
+                    <p class="batch-hint">1.下载批量发布商品模板；</p>
+                    <p class="batch-hint">2.上传批量发布商品信息；</p>
+                    <div class="batch-btn-box">
+                        <a href="" class="batch-btn">下载EXCEL</a>
+                        <input type="file" name="file" class="batch-file disnone">
+                        <a href="" class="batch-btn batch-upload">上传EXCEL</a>
+                    </div>
+                </div>
+                <div class="batch-con fr">
+                    <div class="batch-title">批量修改商品</div>
+                    <p class="batch-hint">1.下载批量修改商品模板；</p>
+                    <p class="batch-hint">2.上传批量修改商品信息；</p>
+                    <div class="batch-btn-box">
+                        <a href="" class="batch-btn">下载EXCEL</a>
+                        <input type="file" name="file" class="batch-file disnone">
+                        <a href="" class="batch-btn batch-upload">上传EXCEL</a>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="batch-container">
+            <div class="batch-time">查看发布日期</div>
+            <form class="ware-search">
+                <span class="ware-column">时间：</span>
+                <input type="text" name="datestart" id="datestart" class="ware-input batch-input">
+                <span class="wareline">-</span>
+                <input type="text" name="dateend" id="dateend" class="ware-input batch-input">
+                <span class="ware-column">表名：</span>
+                <input type="text" name="number" class="ware-input batch-input" placeholder="请输入表名">
+                <span class="ware-column">类别：</span>
+                <select class="ware-state" name="sort">
+                    <option value="1">批量发布</option>
+                    <option value="2">批量修改</option>
+                </select>
+                <span class="ware-column">状态：</span>
+                <select class="ware-state" name="state">
+                    <option value="1">成功</option>
+                    <option value="2">失败</option>
+                    <option value="3">上传中</option>
+                </select>
+                <input type="submit" class="ware-search-btn" value="查询"/>
+            </form>
+            <table class="batch-table" cellspacing="0">
+                <tr>
+                    <th>上传日期</th>
+                    <th>上传表名</th>
+                    <th>类别</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td>2017-07-13 10:25:53</td>
+                    <td>batch.xlsx</td>
+                    <td>批量发布</td>
+                    <td>发布中</td>
+                    <td>操作</td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
 
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/script.js"></script>
+<script>
+    $(function () {
+        $("#datestart").datepicker({
+            changeYear:true,
+            changeMonth:true
+        });
+        $("#dateend").datepicker({
+            changeYear:true,
+            changeMonth:true
+        });
+       $(".batch-upload").on("click",function (e) {
+           e.preventDefault();
+           $(this).siblings(".batch-file").click();
+       });
+    });
+</script>
 </body>
 </html>
