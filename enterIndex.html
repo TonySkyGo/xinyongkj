@@ -55,10 +55,10 @@
             </div>
         </div>
         <div class="enter-step-con">
-            <a href="" class="enter-step-btn enter-step1">入驻流程</a>
-            <a href="" class="enter-step-btn enter-step2">入驻标准</a>
-            <a href="" class="enter-step-btn enter-step3">合作细则</a>
-            <a href="" class="enter-step-btn enter-step4">合作品牌</a>
+            <a href="" class="enter-step-btn enter-step1 ruzhu-btn">入驻流程</a>
+            <a href="" class="enter-step-btn enter-step2 biaozhun-btn">入驻标准</a>
+            <a href="" class="enter-step-btn enter-step3 hezuo-btn">合作细则</a>
+            <a href="" class="enter-step-btn enter-step4 pinpai-btn">合作品牌</a>
         </div>
     </div>
 </div>
@@ -261,6 +261,32 @@
 <script src="js/script.js"></script>
 <script>
     $(function () {
+        //设置跳转锚点
+        var topmore = 110;
+        var ruzhu = $(".enter-top-ruzhu").offset().top - topmore;
+        var shouxin = $(".enter-top-shouxin").offset().top - topmore;
+        var hezuo = $(".enter-top-hezuo").offset().top - topmore;
+        var pinpai = $(".enter-top-pinpai").offset().top - topmore;
+        $(".ruzhu-btn").click(function () {
+            $(this).addClass("check").siblings().removeClass("check");
+            $('body,html').animate({scrollTop: ruzhu}, 300);
+            return false;
+        });
+        $(".biaozhun-btn").click(function () {
+            $(this).addClass("check").siblings().removeClass("check");
+            $('body,html').animate({scrollTop: shouxin}, 300);
+            return false;
+        });
+        $(".hezuo-btn").click(function () {
+            $(this).addClass("check").siblings().removeClass("check");
+            $('body,html').animate({scrollTop: hezuo}, 300);
+            return false;
+        });
+        $(".pinpai-btn").click(function () {
+            $(this).addClass("check").siblings().removeClass("check");
+            $('body,html').animate({scrollTop: pinpai}, 300);
+            return false;
+        });
         $(window).scroll(function () {
             if ($(window).scrollTop() > $(".enter-head").height()) {
                 $(".enter-head").hide();
@@ -271,28 +297,19 @@
                 $(".enter-fixed-line").hide();
                 $(".enter-fixed").hide();
             }
-        });
-        //设置跳转锚点
-        var topmore = 110;
-        var ruzhu = $(".enter-top-ruzhu").offset().top - topmore;
-        var shouxin = $(".enter-top-shouxin").offset().top - topmore;
-        var hezuo = $(".enter-top-hezuo").offset().top - topmore;
-        var pinpai = $(".enter-top-pinpai").offset().top - topmore;
-        $(".ruzhu-btn").click(function () {
-            $('body,html').animate({scrollTop: ruzhu}, 300);
-            return false;
-        });
-        $(".biaozhun-btn").click(function () {
-            $('body,html').animate({scrollTop: shouxin}, 300);
-            return false;
-        });
-        $(".hezuo-btn").click(function () {
-            $('body,html').animate({scrollTop: hezuo}, 300);
-            return false;
-        });
-        $(".pinpai-btn").click(function () {
-            $('body,html').animate({scrollTop: pinpai}, 300);
-            return false;
+            //滚动定位锚点
+            if ($(window).scrollTop() > ruzhu){
+                $(".ruzhu-btn").addClass("check").siblings().removeClass("check");
+            }
+            if ($(window).scrollTop() > shouxin){
+                $(".biaozhun-btn").addClass("check").siblings().removeClass("check");
+            }
+            if ($(window).scrollTop() > hezuo){
+                $(".hezuo-btn").addClass("check").siblings().removeClass("check");
+            }
+            if ($(window).scrollTop() > (pinpai-500)){
+                $(".pinpai-btn").addClass("check").siblings().removeClass("check");
+            }
         });
     })
 </script>

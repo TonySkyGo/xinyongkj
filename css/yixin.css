@@ -3483,6 +3483,7 @@
     text-align: center;
     border: 1px solid #e6e6e6;
     background: center center no-repeat;
+    background-size: contain;
 }
 
 /*商品管理*/
