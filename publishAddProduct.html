@@ -3,27 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>发布成功</title>
+    <title>发布商品</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="css/huangwei.css">
     <link rel="stylesheet" href="css/yixin.css">
     <link rel="stylesheet" href="css/pack.css">
 </head>
 <body>
+<div class="cs-top">
+    <div class="cs-img"></div>
+</div>
 <div class="center-bg">
-    <div class="regist-body">
-        <div class="publish-success">
-            <p class="publish-prosit">恭喜！您的商品信息已经发布成功！</p>
-            <div class="publish-operate">
-                <a href="" class="publish-link">查看商品信息</a>
-                <a href="" class="publish-link">管理商品信息</a>
-                <a href="" class="publish-link">意见反馈</a>
+    <div class="container">
+        <div class="publish-top">
+            <p class="publish-choose-title">您当前选择的是：</p>
+            <p class="publich-choose-word">母婴&gt;食品&gt;奶粉</p>
+            <a href="" class="publish-choose-modify">修改</a>
+        </div>
+        <div class="publish-container">
+            <div class="publish-title">商品基本信息</div>
+            <div class="publish-box clear">
+                <div class="publish-shop">
+                    <div class="publish-express-item">
+                        <div class="publish-express-key">商品参数:</div>
+                        <div class="publish-express-val">
+                            <p class="publish-case">填错商品属性将可能导致商品下架或搜索不到，请确认填写商品属性！</p>
+                        </div>
+                    </div>
+                    <div class="publish-express-item">
+                        <div class="publish-express-key"><span class="required">*</span>品牌:</div>
+                        <div class="publish-express-val">
+                            <input type="text" name="brand" class="publish-base-input"/>
+                        </div>
+                    </div>
+                    <div class="publish-express-item">
+                        <div class="publish-express-key pl8">型号:</div>
+                        <div class="publish-express-val">
+                            <input type="text" name="version" class="publish-base-input"/>
+                        </div>
+                    </div>
+                    <div class="publish-express-item">
+                        <div class="publish-express-key pl8">上市时间:</div>
+                        <div class="publish-express-val">
+                            <input type="text" name="version" id="datepicker" class="publish-base-input"/>
+                        </div>
+                    </div>
+                    <div class="publish-express-item">
+                        <div class="publish-express-key pl8">产品特点:</div>
+                        <div class="publish-express-val">
+                            <input type="text" name="version" class="publish-base-input"/>
+                        </div>
+                    </div>
+                    <div class="publish-express-item">
+                        <div class="publish-express-key pl8">售后服务:</div>
+                        <div class="publish-express-val">
+                            <input type="text" name="version" class="publish-base-input"/>
+                        </div>
+                    </div>
+                    <div class="publish-express-item">
+                        <div class="publish-express-key pl8">包装清单:</div>
+                        <div class="publish-express-val">
+                            <input type="text" name="version" class="publish-base-input"/>
+                        </div>
+                    </div>
+                    <div class="publish-express-item">
+                        <div class="publish-express-key">
+                            <input type="text" class="param-key">:
+                        </div>
+                        <div class="publish-express-val">
+                            <input type="text" name="version" class="publish-base-input"/>
+                            <span class="param-delete">删除</span>
+                        </div>
+                    </div>
+                    <div class="param-add-box"><span class="param-add">+添加自定义参数</span>（如不能满足您的需求，可添加自定义参数）</div>
+                </div>
             </div>
-            <a href="" class="publish-back">继续发布商品信息</a>
+        </div>
+        <div class="publish-container">
+            <div class="publish-title">商品交易信息</div>
+            <div class="publish-box clear">
+                <div class="publish-express-item">
+                    <div class="publish-express-key"><span class="required">*</span>计量单位:</div>
+                    <div class="publish-express-val">
+                        <select name="" id="unit" class="publish-select-sm">
+                            <option value="1">111</option>
+                            <option value="2">222</option>
+                            <option value="3">333</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="publish-express-item">
+                    <div class="publish-express-key pl8">出厂价:</div>
+                    <div class="publish-express-val">
+                        <input type="number" class="publish-trade-input">
+                        <span class="publish-case">元/个</span>
+                    </div>
+                </div>
+                <div class="publish-express-item">
+                    <div class="publish-express-key pl8">官方价:</div>
+                    <div class="publish-express-val">
+                        <input type="number" class="publish-trade-input">
+                        <span class="publish-case">元/个</span>
+                    </div>
+                </div>
+                <div class="publish-express-item">
+                    <div class="publish-express-key pl8">出厂价:</div>
+                    <div class="publish-express-val">
+                        <input type="number" class="publish-trade-input publish-trade-input2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="publish-container">
+            <div class="publish-title">图片和详细说明</div>
+            <div class="publish-box clear">
+                <div class="publish-express-item">
+                    <div class="publish-express-key"><span class="required">*</span>商品图片:</div>
+                    <div class="publish-express-val">
+                        <p class="publish-case">您可以上传8张图片，大小不可超过5M，第一张将为商品主图。</p>
+                        <p class="publish-case">建议上传至少3张以上，不小于500*500像素的真实图片，支持jpg，jpeg，gif、bmp。</p>
+                    </div>
+                </div>
+                <div class="publish-express-item">
+                    <div class="publish-express-key pl8">商品PDF:</div>
+                    <div class="publish-express-val">
+                        <div class="publish-addpdf">点击添加PDF</div>
+                    </div>
+                </div>
+                <div class="publish-express-item">
+                    <div class="publish-express-key"><span class="required">*</span>商品描述:</div>
+                    <div class="publish-express-val">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="publish-container">
+            <div class="publish-title">物流运费信息</div>
+            <div class="publish-box clear">
+                <p class="publish-express-hint">为了提升消费者购物体验，信用空间要求全网商品设置运费模板。</p>
+                <div class="publish-express-item">
+                    <div class="publish-express-key"><span class="required">*</span>运费模版:</div>
+                    <div class="publish-express-val">
+                        <select name="" id="express" class="publish-select-sm">
+                            <option value="1">111</option>
+                            <option value="2">222</option>
+                            <option value="3">333</option>
+                        </select>
+                        <a href="" class="new-freight-btn">新建运费模版</a>
+                    </div>
+                </div>
+                <div class="publish-express-item">
+                    <div class="publish-express-key pl8">发货日期:</div>
+                    <div class="publish-express-val">
+                        <select name="" id="date" class="publish-select-sm">
+                            <option value="1">111</option>
+                            <option value="2">222</option>
+                            <option value="3">333</option>
+                        </select>
+                        <span class="publish-case">自买家付款之日起</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="publish-container">
+            <div class="publish-title">售后保障信息</div>
+            <div class="publish-box clear">
+                <div class="publish-key">售后服务:</div>
+                <div class="publish-val">
+                    <div>
+                        <input type="checkbox" class="stock-num" name="servenum">
+                        <span class="publish-stock">提供发票</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="stock-num" name="servenum">
+                        <span class="publish-stock">保修服务</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="stock-num" name="servenum">
+                        <span class="publish-stock">退换货承诺：凡通过信用空间平台发布商品，若存在质量问题或与描述不符，本店将主动提供退换货服务并承担来回邮费</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="stock-num" name="servenum">
+                        <span class="publish-stock">服务承诺：该类商品，必须支持【七天退货】服务</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="publish-container">
+            <div class="publish-title">宝贝其他信息</div>
+            <div class="publish-box">
+                <div class="publish-other">
+                    <div class="publish-key">库存计数:</div>
+                    <div class="publish-val">
+                        <input type="radio" class="stock-num" name="stocknum">
+                        <span class="publish-stock">买家拍下减库存</span>
+                        <input type="radio" class="stock-num" name="stocknum">
+                        <span class="publish-stock">买家付款减库存</span>
+                    </div>
+                </div>
+                <div class="publish-other">
+                    <div class="publish-key">上架时间:</div>
+                    <div class="publish-val">
+                        <input type="radio" class="stock-num" name="stocktime">
+                        <span class="publish-stock">立刻上架</span>
+                        <input type="radio" class="stock-num" name="stocktime">
+                        <span class="publish-stock">放入仓库</span>
+                    </div>
+                </div>
+                <div class="publish-other">
+                    <div class="publish-key">橱窗推荐:</div>
+                    <div class="publish-val">
+                        <input type="checkbox" class="stock-num" name="stocknum">
+                        <span class="publish-stock">是</span>
+                        <span class="publish-case">您的橱窗使用情况：共【35个】个，已用【0】个</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/script.js"></script>
+<script>
+    $(function () {
+        $("#datepicker").datepicker({
+            changeYear:true,
+            changeMonth:true
+        });
+    });
+</script>
 </body>
 </html>

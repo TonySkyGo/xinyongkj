@@ -3398,17 +3398,19 @@
     background: url("../img/enter/stepnext.png") center center no-repeat;
 }
 
-.enter-standard-box{
+.enter-standard-box {
     width: 1130px;
     margin: 0 auto;
     padding: 15px 0;
 }
-.enter-standard{
+
+.enter-standard {
     height: 30px;
     margin: 15px 0;
     overflow: hidden;
 }
-.enter-standard-circle{
+
+.enter-standard-circle {
     float: left;
     width: 30px;
     height: 30px;
@@ -3419,7 +3421,8 @@
     background-color: #35d198;
     border-radius: 100%;
 }
-.enter-standard-explain{
+
+.enter-standard-explain {
     float: left;
     height: 30px;
     line-height: 30px;
@@ -3431,7 +3434,7 @@
     border-top: 1px solid #e6e6e6;
 }
 
-.enter-content2{
+.enter-content2 {
     width: 1080px;
     margin: 0 auto;
 }
@@ -3451,7 +3454,7 @@
     color: #3a3b3a;
 }
 
-.enter-table{
+.enter-table {
     margin-bottom: 30px;
 }
 
@@ -3503,7 +3506,7 @@
     color: #343434;
 }
 
-.publish-link{
+.publish-link {
     margin: 0 20px;
     font-size: 20px;
     color: #0083e6;
@@ -3547,7 +3550,7 @@
     border-radius: 5px;
 }
 
-.ware-state{
+.ware-state {
     float: left;
     width: 160px;
     height: 32px;
@@ -3562,11 +3565,11 @@
     color: #fff;
     font-size: 16px;
     background-color: #f95555;
-    border:none;
+    border: none;
     cursor: pointer;
 }
 
-.ware-add{
+.ware-add {
     float: right;
     width: 100px;
     height: 42px;
@@ -3641,15 +3644,15 @@
     overflow: hidden;
 }
 
-.ware-review-ing{
+.ware-review-ing {
     color: #0083e6;
 }
 
-.ware-review-fail{
+.ware-review-fail {
     color: #f95555;
 }
 
-.ware-review-reason{
+.ware-review-reason {
     display: none;
     position: absolute;
     left: 0;
@@ -3663,21 +3666,21 @@
     background-size: 100% 100%;
 }
 
-.ware-td3:hover .ware-review-reason{
+.ware-td3:hover .ware-review-reason {
     display: block;
 }
 
-.ware-check-box{
+.ware-check-box {
     margin: 20px 0;
     padding: 0 12px;
 }
 
-.ware-check-box input{
+.ware-check-box input {
     float: left;
     margin: 10px 0;
 }
 
-.ware-checkall{
+.ware-checkall {
     float: left;
     width: 60px;
     height: 32px;
@@ -3687,7 +3690,7 @@
     text-align: center;
 }
 
-.ware-all{
+.ware-all {
     float: left;
     width: 100px;
     height: 32px;
@@ -3698,7 +3701,7 @@
     cursor: pointer;
 }
 
-.ware-order{
+.ware-order {
     width: 62px;
     height: 32px;
     text-align: center;
@@ -3706,19 +3709,20 @@
 }
 
 /*开通店铺*/
-.open-hint{
+.open-hint {
     height: 160px;
     line-height: 160px;
     font-size: 20px;
     color: #666;
     text-align: center;
 }
-.open-img{
+
+.open-img {
     height: 120px;
     background: url("../img/center/openstore.png") center center no-repeat;
 }
 
-.open-btn{
+.open-btn {
     display: block;
     width: 110px;
     height: 42px;
@@ -3731,7 +3735,7 @@
     background-color: #e60012;
 }
 
-.open-small{
+.open-small {
     font-size: 12px;
     text-align: center;
 }
@@ -3745,14 +3749,14 @@
     background-color: #fff;
 }
 
-.batch-con{
+.batch-con {
     width: 500px;
     height: 240px;
     margin: 30px 0;
     border: 1px solid #e6e6e6;
 }
 
-.batch-title{
+.batch-title {
     height: 42px;
     line-height: 42px;
     margin-bottom: 25px;
@@ -3762,18 +3766,18 @@
     border-bottom: 1px solid #e6e6e6;
 }
 
-.batch-hint{
+.batch-hint {
     line-height: 25px;
     color: #999;
     text-align: center;
 }
 
-.batch-btn-box{
+.batch-btn-box {
     margin: 35px 0;
     text-align: center;
 }
 
-.batch-btn{
+.batch-btn {
     width: 110px;
     height: 42px;
     line-height: 42px;
@@ -3788,37 +3792,216 @@
 .batch-time {
     padding: 0 35px;
     height: 60px;
-    line-height:60px;
+    line-height: 60px;
     margin-top: 10px;
     font-size: 16px;
     color: #f95555;
     border-bottom: 2px solid #f95555;
 }
 
-.batch-input{
+.batch-input {
     width: 120px;
 }
-.wareline{
+
+.wareline {
     float: left;
     width: 15px;
     height: 32px;
     line-height: 32px;
     margin: 5px 0;
 }
-.batch-table{
+
+.batch-table {
     width: 100%;
     margin: 10px 0 30px;
     text-align: center;
 }
-.batch-table tr{
+
+.batch-table tr {
     height: 42px;
 }
-.batch-table tr th{
+
+.batch-table tr th {
     width: 20%;
     background-color: #f6f6f6;
     border: 1px solid #e6e6e6;
 }
-.batch-table tr td{
+
+.batch-table tr td {
     width: 20%;
     border: 1px solid #e6e6e6;
+}
+
+/*发布商品*/
+.publish-top{
+    height: 60px;
+    line-height: 56px;
+    padding: 0 20px;
+    border-top: 4px solid #f95555;
+    overflow: hidden;
+    background-color: #fff;
+}
+.publish-choose-title{
+    float: left;
+    font-weight: bold;
+}
+.publich-choose-word{
+    float: left;
+    font-size: 12px;
+}
+.publish-choose-modify{
+    float: left;
+    margin: 0 45px;
+    font-size: 12px;
+    color: #0083e6;
+}
+.publish-container{
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.publish-title{
+    height: 62px;
+    line-height: 62px;
+    padding: 0 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.publish-box{
+    padding: 20px 35px;
+}
+
+.publish-other{
+    height: 32px;
+    overflow: hidden;
+}
+
+.publish-key{
+    float: left;
+    width: 85px;
+    height: 32px;
+    line-height: 32px;
+    color: #353535;
+}
+
+.publish-val{
+    float: left;
+    min-height: 32px;
+    line-height: 32px;
+}
+
+.stock-num{
+    margin-right: 15px;
+}
+
+.publish-stock{
+    margin-right: 15px;
+    color: #4c4c4c;
+}
+
+.publish-case{
+    font-size: 12px;
+    color: #999;
+}
+
+.publish-express-hint{
+    font-size: 12px;
+    color: #999;
+}
+
+.publish-express-item{
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.required{
+    color: #f95555;
+}
+
+.publish-express-key{
+    float: left;
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    color: #353535;
+}
+
+.publish-express-val{
+    float: left;
+    min-height: 32px;
+    line-height: 32px;
+}
+
+.publish-select-sm{
+    float: left;
+    width: 175px;
+    height: 32px;
+    margin-right: 20px;
+}
+
+.new-freight-btn{
+    float: left;
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    background-color: #e6e6e6;
+}
+
+.publish-addpdf{
+    width: 100px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #e6e6e6;
+    cursor: pointer;
+}
+
+.publish-trade-input{
+    float: left;
+    width: 120px;
+    height: 32px;
+    padding: 0 5px;
+    margin-right: 7px;
+    border: 1px solid #e6e6e6;
+}
+
+.publish-trade-input2{
+    width: 175px;
+}
+
+.publish-base-input{
+    width: 400px;
+    height: 32px;
+    padding: 0 5px;
+    border: 1px solid #d9d9d9;
+}
+
+.publish-shop{
+    border-bottom: 1px dashed #e6e6e6;
+}
+
+.param-add-box{
+    margin: 30px 0;
+    font-size: 12px;
+    color: #999;
+}
+.param-add{
+    color: #0083e6;
+    cursor: pointer;
+}
+.param-key{
+    width: 65px;
+    height: 32px;
+    padding: 0 5px;
+    margin-right: 5px;
+}
+.param-delete{
+    margin: 0 15px;
+    color: #0083e6;
+    cursor: pointer;
 }

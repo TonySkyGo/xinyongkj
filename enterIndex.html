@@ -262,11 +262,36 @@
 <script>
     $(function () {
         //设置跳转锚点
-        var topmore = 110;
+        var topmore = 80;
         var ruzhu = $(".enter-top-ruzhu").offset().top - topmore;
         var shouxin = $(".enter-top-shouxin").offset().top - topmore;
         var hezuo = $(".enter-top-hezuo").offset().top - topmore;
         var pinpai = $(".enter-top-pinpai").offset().top - topmore;
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > $(".enter-head").height()) {
+                $(".enter-head").hide();
+                $(".enter-fixed-line").show();
+                $(".enter-fixed").show();
+            } else {
+                $(".enter-head").show();
+                $(".enter-fixed-line").hide();
+                $(".enter-fixed").hide();
+            }
+            //滚动定位锚点
+            if ($(window).scrollTop() >= ruzhu){
+                $(".ruzhu-btn").addClass("check").siblings().removeClass("check");
+            }
+            if ($(window).scrollTop() >= shouxin){
+                $(".biaozhun-btn").addClass("check").siblings().removeClass("check");
+            }
+            if ($(window).scrollTop() >= hezuo){
+                $(".hezuo-btn").addClass("check").siblings().removeClass("check");
+            }
+            if ($(window).scrollTop() >= (pinpai-530)){
+                $(".pinpai-btn").addClass("check").siblings().removeClass("check");
+            }
+        });
         $(".ruzhu-btn").click(function () {
             $(this).addClass("check").siblings().removeClass("check");
             $('body,html').animate({scrollTop: ruzhu}, 300);
@@ -286,30 +311,6 @@
             $(this).addClass("check").siblings().removeClass("check");
             $('body,html').animate({scrollTop: pinpai}, 300);
             return false;
-        });
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > $(".enter-head").height()) {
-                $(".enter-head").hide();
-                $(".enter-fixed-line").show();
-                $(".enter-fixed").show();
-            } else {
-                $(".enter-head").show();
-                $(".enter-fixed-line").hide();
-                $(".enter-fixed").hide();
-            }
-            //滚动定位锚点
-            if ($(window).scrollTop() > ruzhu){
-                $(".ruzhu-btn").addClass("check").siblings().removeClass("check");
-            }
-            if ($(window).scrollTop() > shouxin){
-                $(".biaozhun-btn").addClass("check").siblings().removeClass("check");
-            }
-            if ($(window).scrollTop() > hezuo){
-                $(".hezuo-btn").addClass("check").siblings().removeClass("check");
-            }
-            if ($(window).scrollTop() > (pinpai-500)){
-                $(".pinpai-btn").addClass("check").siblings().removeClass("check");
-            }
         });
     })
 </script>
