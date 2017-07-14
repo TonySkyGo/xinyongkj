@@ -3940,17 +3940,6 @@
     margin-right: 20px;
 }
 
-.new-freight-btn{
-    float: left;
-    width: 100px;
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    font-size: 12px;
-    color: #333;
-    background-color: #e6e6e6;
-}
-
 .publish-addpdf{
     width: 100px;
     height: 32px;
@@ -3959,19 +3948,6 @@
     font-size: 12px;
     border: 1px solid #e6e6e6;
     cursor: pointer;
-}
-
-.publish-trade-input{
-    float: left;
-    width: 120px;
-    height: 32px;
-    padding: 0 5px;
-    margin-right: 7px;
-    border: 1px solid #e6e6e6;
-}
-
-.publish-trade-input2{
-    width: 175px;
 }
 
 .publish-base-input{
@@ -4004,4 +3980,66 @@
     margin: 0 15px;
     color: #0083e6;
     cursor: pointer;
+}
+.color-check{
+    margin-left: 50px;
+}
+.publish-cover-box{
+    width: 860px;
+    min-height:200px;
+    margin-top: 15px;
+    padding: 20px;
+    border: 1px solid #e6e6e6;
+}
+.publish-add-cover{
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background: url("../img/enter/add-picture.png") center center no-repeat;
+    overflow: hidden;
+}
+
+.publish-add-cover input{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index:10;
+    opacity: 0;
+}
+.publish-preview{
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background: center center no-repeat;
+    background-size: contain;
+    border: 1px solid #e6e6e6;
+}
+
+.publish-cover-delete{
+    display: none;
+    width: 14px;
+    height: 14px;
+    background: url(../img/enter/delete.png) no-repeat center center;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.publish-preview:hover .publish-cover-delete{
+    display: block;
+}
+
+.publish-submit{
+    width: 240px;
+    height: 45px;
+
 }

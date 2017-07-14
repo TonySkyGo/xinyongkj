@@ -67,50 +67,25 @@
                             <input type="text" name="version" class="publish-base-input"/>
                         </div>
                     </div>
-                    <div class="publish-express-item">
-                        <div class="publish-express-key">
-                            <input type="text" class="param-key">:
-                        </div>
-                        <div class="publish-express-val">
-                            <input type="text" name="version" class="publish-base-input"/>
-                            <span class="param-delete">删除</span>
-                        </div>
-                    </div>
+
                     <div class="param-add-box"><span class="param-add">+添加自定义参数</span>（如不能满足您的需求，可添加自定义参数）</div>
                 </div>
-            </div>
-        </div>
-        <div class="publish-container">
-            <div class="publish-title">商品交易信息</div>
-            <div class="publish-box clear">
-                <div class="publish-express-item">
-                    <div class="publish-express-key"><span class="required">*</span>计量单位:</div>
-                    <div class="publish-express-val">
-                        <select name="" id="unit" class="publish-select-sm">
-                            <option value="1">111</option>
-                            <option value="2">222</option>
-                            <option value="3">333</option>
-                        </select>
+                <div class="publish-shop">
+                    <div class="publish-express-item">
+                        <div class="publish-express-key">商品规格:</div>
+                        <div class="publish-express-val">
+                            <p class="publish-case">您需要选择所有的规格属性，才能组合成完整的规格信息</p>
+                        </div>
                     </div>
                 </div>
-                <div class="publish-express-item">
-                    <div class="publish-express-key pl8">出厂价:</div>
-                    <div class="publish-express-val">
-                        <input type="number" class="publish-trade-input">
-                        <span class="publish-case">元/个</span>
-                    </div>
-                </div>
-                <div class="publish-express-item">
-                    <div class="publish-express-key pl8">官方价:</div>
-                    <div class="publish-express-val">
-                        <input type="number" class="publish-trade-input">
-                        <span class="publish-case">元/个</span>
-                    </div>
-                </div>
-                <div class="publish-express-item">
-                    <div class="publish-express-key pl8">出厂价:</div>
-                    <div class="publish-express-val">
-                        <input type="number" class="publish-trade-input publish-trade-input2">
+
+                <div class="publish-shop">
+                    <div class="publish-express-item">
+                        <div class="publish-express-key"><span class="required">*</span>商品名称:</div>
+                        <div class="publish-express-val">
+                            <input type="text" name="version" class="publish-base-input"/>
+                            <p class="publish-case">勿使用联系人、联系方式、疑问词句，特殊字符及堆砌关键词。关键包含：品牌+型号+商品关键词</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,19 +97,25 @@
                     <div class="publish-express-key"><span class="required">*</span>商品图片:</div>
                     <div class="publish-express-val">
                         <p class="publish-case">您可以上传8张图片，大小不可超过5M，第一张将为商品主图。</p>
-                        <p class="publish-case">建议上传至少3张以上，不小于500*500像素的真实图片，支持jpg，jpeg，gif、bmp。</p>
+                        <p class="publish-case">建议上传至少3张以上，不小于500*500像素的真实图片，支持jpg，jpeg，png，gif、bmp。</p>
+                        <div class="publish-cover-box clear">
+                            <a href="" class="publish-add-cover">
+                                <input type="file" name="cover[]" class="cover-upload">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="publish-express-item">
                     <div class="publish-express-key pl8">商品PDF:</div>
                     <div class="publish-express-val">
+                        <input type="file" name="pdf" class="publishPdf disnone">
                         <div class="publish-addpdf">点击添加PDF</div>
                     </div>
                 </div>
                 <div class="publish-express-item">
                     <div class="publish-express-key"><span class="required">*</span>商品描述:</div>
                     <div class="publish-express-val">
-
+                        <script id="editor" name="editor" type="text/plain" style="width:900px;height:320px;"></script>
                     </div>
                 </div>
             </div>
@@ -151,7 +132,6 @@
                             <option value="2">222</option>
                             <option value="3">333</option>
                         </select>
-                        <a href="" class="new-freight-btn">新建运费模版</a>
                     </div>
                 </div>
                 <div class="publish-express-item">
@@ -222,17 +202,113 @@
                 </div>
             </div>
         </div>
+        <div class="publish-submit">发布</div>
     </div>
 </div>
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<!--低版本jq兼容fancybox-->
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
+<script src="js/ueditor/ueditor.config.js"></script>
+<script src="js/ueditor/ueditor.all.min.js"></script>
 <script src="js/script.js"></script>
 <script>
+    //加载编辑器
+    var ue = UE.getEditor('editor');
+    //获取选择图片路径
+    function getObjectURL(file) { //获取上传图片地址
+        var url = null;
+        if(window.createObjectURL != undefined) { // basic
+            url = window.createObjectURL(file);
+        } else if(window.URL != undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file);
+        } else if(window.webkitURL != undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file);
+        }
+        return url;
+    }
+    //插入图片预览
+    function insertPhoto(url) {
+        var imgNew = '<a href="javascript:;" class="publish-preview" style="background-image: url('+url+');"> <div class="publish-cover-delete"></div> </a>';
+        var imgFile = '<a href="" class="publish-add-cover"><input type="file" name="cover[]" class="cover-upload"></a>';
+        $(".publish-cover-box").prepend(imgNew);
+        $(".publish-cover-box").append(imgFile);
+    }
+
+    //新增商品参数
+    function addParams(index) {
+        var str = '<div class="publish-express-item"><div class="publish-express-key"><input type="text" class="param-key" name="key'+index+'">:</div><div class="publish-express-val"><input type="text" name="value'+index+'" class="publish-base-input"/><span class="param-delete">删除</span></div></div>'
+        $(".param-add-box").before(str);
+    }
+
     $(function () {
+        var index = 0;
+        //日期选择
         $("#datepicker").datepicker({
             changeYear:true,
             changeMonth:true
+        });
+        //点击添加pdf
+        $(".publish-addpdf").on("click",function () {
+           $(".publishPdf").click();
+        });
+        //点击添加商品自定义参数
+        $(".param-add").on("click",function () {
+            addParams(index);
+            index++;
+        });
+        //删除商品参数
+        $("body").on("click",".param-delete",function () {
+            $(this).parents(".publish-express-item").remove();
+        });
+        //选择图片
+        $("body").on("change",".cover-upload",function () {
+            console.log($("#editor").val());
+            if($(".publish-preview").length>7){
+                alert("最多上传8张图！");
+                return false;
+            }
+            var objUrl = getObjectURL(this.files[0]);
+            var filepath = $(this).val();
+            var extStart = filepath.lastIndexOf(".");
+            var ext = filepath.substring(extStart, filepath.length).toUpperCase();
+            if(ext != ".BMP" && ext != ".PNG" && ext != ".JPEG" && ext != ".GIF" && ext != ".JPG") {
+                alert("图片限于bmp,png,gif,jpg,jpeg格式");
+                return false;
+            }
+            var file_size = 0;
+            if($.browser.msie) {
+                var img = new Image();
+                img.src = filepath;
+                while(true) {
+                    if(img.fileSize > 0) {
+                        if(img.fileSize > 5 * 1024 * 1024) {
+                            alert("图片不大于10MB。");
+                        }
+                        break;
+                    }
+                }
+            } else {
+                file_size = this.files[0].size;
+                var size = file_size / 1024;
+                if(size > 5120) {
+                    alert("上传的图片大小不能超过5M！");
+                }
+            }
+            if(objUrl) {
+                //插入缩略图以及新增一个file input
+                insertPhoto(objUrl);
+                //隐藏当前添加框，并且移除class
+                $(this).removeClass("cover-upload").parent().hide();
+                $(this).parent().prependTo(".publish-cover-box");
+            }
+            return true;
+        });
+        //删除图片
+        $("body").on("click",".publish-cover-delete",function () {
+            $(this).parent().remove();
+            $(this).parent().prev().remove();
         });
     });
 </script>
