@@ -120,8 +120,8 @@
 							<p class="submit-text">2.授信企业会员年费 6300元/类 （入驻后6-12个月内累计平台营业额达1000万以上方可申请）</p>
 							<p class="submit-text">&nbsp;&nbsp;（注：品牌商/制造商按品牌分类收费；服务商按企业收费）</p>
 							<p class="submit-subtitle">增值服务</p>
-							<label for="add-server1" class="" class="add-server"><input type="checkbox" name="add-server1" id="add-server1" class=""/>&nbsp;技术服务 6000元/年 （含20个品类以内的细分产品，一年三次的升级服务）</label>
-							<label for="add-server2" class="add-server"><input type="checkbox" name="add-server2" id="add-server2" class=""/>&nbsp;品牌卖场专卖店 18000元/年  （含50个品类以内的细分产品，一年五次的升级服务）</label>
+							<label for="add-server1" class="add-server"><input type="checkbox" name="add-server" id="add-server1" class=""/>&nbsp;技术服务 6000元/年 （含20个品类以内的细分产品，一年三次的升级服务）</label>
+							<label for="add-server2" class="add-server"><input type="checkbox" name="add-server" id="add-server2" class=""/>&nbsp;品牌卖场专卖店 18000元/年  （含50个品类以内的细分产品，一年五次的升级服务）</label>
 							<p  class="submit-text">&nbsp;&nbsp;（注：以上服务内容以服务协议内容为准）</p>
 							<p class="submit-subtitle">账户信息：</p>
 							<p class="submit-text">公司名：信用空间（厦门）信息科技股份有限公司</p>
@@ -151,7 +151,14 @@
 
     $(function(){
 
-		    $("#datepicker").datepicker();
+		$("input[name='add-server']").click(function(){
+			$(this).parents(".add-server").siblings().find("input[name='add-server']").prop("checked",false);
+		})
+
+		$("#datepicker").datepicker({
+			changeYear:true,
+			changeMonth:true
+		});
 
         _init_area();
 
@@ -178,7 +185,7 @@
                 registerLocation: {required: true},
                 contacts: {required: true},
                 contactsTel: {required: true},
-                turnover: {required: true},
+                turnover: {required: true,isNum:true},
                 industryType: {required: true},
                 goodsPrice: {required: true},
                 servicePrice: {required: true},
@@ -195,7 +202,7 @@
                 registerLocation: {required: "请填写注册地址"},
                 contacts: {required: "请填写联系人"},
                 contactsTel: {required: "请填写联系方式"},
-                turnover: {required: "请填写年产量/年营业额"},
+                turnover: {required: "请填写年产量/年营业额",isNum:"请输入正确的数字"},
                 industryType: {required: "请填写所属产业"},
                 goodsPrice: {required: "请填写商品价格"},
                 servicePrice: {required: "请填写服务价格"},

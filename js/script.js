@@ -97,6 +97,12 @@ jQuery.validator.addMethod("isArea", function(value, element) {
     return this.optional(element) || (isArea == true);
 }, "请选择县级市或区");
 
+// 正小数和正整数验证
+jQuery.validator.addMethod("isNum", function(value, element) {
+    var decimal  = /^(\d|[1-9]\d+)(\.\d+)?$/;
+    return this.optional(element) ||  decimal.test(value);
+}, "请正确填写您的手机号码");
+
 $(function () {
 	topExpend();
 	watchClassification();
