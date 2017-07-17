@@ -5,7 +5,7 @@
 .time-choice-frame-2{ width:954px;  min-height:30px; margin:23px 0 0 52px; clear: both;}
 .ware-radio{  float: left; width: 16px;  height:17px;}
 .ware-radio-column{  float: left; margin:0 39px 0 18px;}
-.ware-time-s{  float: left; width: 200px; height:30px; border:1px solid #e6e6e6;}
+.ware-time-s{  float: left; width: 200px; height:30px; padding: 0 5px; border:1px solid #e6e6e6;}
 .ware-line{ float: left; display: block; width: 30px; height: 1px; margin:15px 30px 0; border-bottom:1px solid #e6e6e6;}
 .time-date{ float: left; display: block; line-height: 30px;  margin:0 30px;}
 .time-date a{ color: #999999;}
@@ -14,4 +14,16 @@
 .time-choice-btn{ float: left; width: 72px; height:30px; background: #0083e6; border:none; font-size: 16px; color:#ffffff
 ;}
 .center-state a.center-state-btn-Fsize{ font-size:14px; height: 60px; line-height:78px;}
-.balance-table{ width: 1020px;  }
+.balance-table{ width: 1020px; min-height: 40px; margin-top:30px;  background: #ffffff;  }
+.balance-table table.balance-table-frame{ width: 1020px; border: 1px solid #e6e6e6; border-bottom: none;}
+.balance-table table.balance-table-frame tr td,.balance-table table.balance-table-frame thead tr th{ height: 40px; text-align: center; border-bottom: 1px solid #e6e6e6;}
+.balance-table table.balance-table-frame tr th{ font-size: 14px; background: #f6f6f6;}
+.balance-table table.balance-table-frame tr td{ font-size: 12px;}
+.cashW-status{ width: 280px;}
+.export-notes{ float: right; display: block; width:90px; height:25px; line-height: 25px; margin-top:39px; text-align: right; background:url("../img/walletadmin/daochu-icon.png") no-repeat; font-size: 14px; color: #0083e6;}
+.balance-table-frame-jiaoyi{}
+.balance-table-frame-tixian{ display: none;}
+.balance-table-frame-shouzhi{ display: none;}
+
+
+
