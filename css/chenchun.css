@@ -1,0 +1,17 @@
+/*个人中心-钱包管理-交易记录*/
+.balance-box{ width:1020px; height:70px; margin-top: 10px; font-size: 18px; background: #eff7ff; overflow: hidden;}
+.balance-box span.balance-content{  float: left; display: block; margin: 26px 26px; }
+.time-choice-frame-1{ width:954px;  min-height:30px; margin:67px 0 0 52px; clear: both;}
+.time-choice-frame-2{ width:954px;  min-height:30px; margin:23px 0 0 52px; clear: both;}
+.ware-radio{  float: left; width: 16px;  height:17px;}
+.ware-radio-column{  float: left; margin:0 39px 0 18px;}
+.ware-time-s{  float: left; width: 200px; height:30px; border:1px solid #e6e6e6;}
+.ware-line{ float: left; display: block; width: 30px; height: 1px; margin:15px 30px 0; border-bottom:1px solid #e6e6e6;}
+.time-date{ float: left; display: block; line-height: 30px;  margin:0 30px;}
+.time-date a{ color: #999999;}
+.time-date a:hover{color:#0083e6;}
+.time-date em{  padding:0 15px; color: #999999;}
+.time-choice-btn{ float: left; width: 72px; height:30px; background: #0083e6; border:none; font-size: 16px; color:#ffffff
+;}
+.center-state a.center-state-btn-Fsize{ font-size:14px; height: 60px; line-height:78px;}
+.balance-table{ width: 1020px;  }
