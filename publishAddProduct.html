@@ -15,7 +15,7 @@
     <div class="cs-img"></div>
 </div>
 <div class="center-bg">
-    <div class="container">
+    <form id="addForm" class="container clear" action="">
         <div class="publish-top">
             <p class="publish-choose-title">您当前选择的是：</p>
             <p class="publich-choose-word">母婴&gt;食品&gt;奶粉</p>
@@ -83,7 +83,7 @@
                     <div class="publish-express-item">
                         <div class="publish-express-key"><span class="required">*</span>商品名称:</div>
                         <div class="publish-express-val">
-                            <input type="text" name="version" class="publish-base-input"/>
+                            <input type="text" name="name" class="publish-base-input"/>
                             <p class="publish-case">勿使用联系人、联系方式、疑问词句，特殊字符及堆砌关键词。关键包含：品牌+型号+商品关键词</p>
                         </div>
                     </div>
@@ -202,8 +202,8 @@
                 </div>
             </div>
         </div>
-        <div class="publish-submit">发布</div>
-    </div>
+        <input type="submit" class="publish-submit" value="发布">
+    </form>
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-1.2.1.min.js"></script>
@@ -216,6 +216,23 @@
 <script>
     //加载编辑器
     var ue = UE.getEditor('editor');
+    //表单验证
+    $("#addForm").validate({
+        rules: {
+            brand: {required: true},
+            name: {required: true}
+        },
+        messages: {
+            brand: {required: "请填写品牌"},
+            name: {required: "请填写商品名称"}
+        }
+    });
+    //商品验证为空提示
+    $("#addForm").on("submit",function () {
+       if(ue.getContentTxt()==""){
+           alert("请填写商品描述");
+       }
+    });
     //获取选择图片路径
     function getObjectURL(file) { //获取上传图片地址
         var url = null;
