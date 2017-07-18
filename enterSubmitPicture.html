@@ -72,6 +72,7 @@
 						<label for="" class="file-label"><span class="need">*</span>请选择要上传的图片:</label>
 						<img src="img/enter/add-picture.png" alt="" class="choose-picture" />
 						<div class="add-img disnone" style="">
+							<p class="img-submit-close"></p>
 							<!--<img class="add-img disnone" src="" alt="" />-->
 						</div>
 					</div>
@@ -227,14 +228,21 @@
 
 				$(".file-submit-cancle").click(function() {
 					$(".overlay").addClass("disnone");
-				})
+				});
 
 				$(".file-select").change(function() {
 					if($(".file-select").val() == 5) //5--表示其他
 						$(".file-text").show();
 					else
 						$(".file-text").hide();
-				})
+				});
+
+				$(".img-submit-close").click(function(){
+					$(this).parents(".add-img").addClass("disnone");
+					$(this).parents(".add-img").attr("style", "")
+					$(".file-input").val("");
+					$(".choose-picture").show();
+				});
 
 				$(".file-input").change(function() {
 					var objUrl = getObjectURL(this.files[0]);

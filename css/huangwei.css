@@ -1707,8 +1707,22 @@
 	margin-left: 10px;
 	background: center center no-repeat;
 	background-size: contain; 
+	position: relative;
 }
-
+.add-img:hover .img-submit-close{
+	display: block;
+}
+.img-submit-close{
+	position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: url(../img/enter/delete.png) no-repeat center center;
+    cursor: pointer;
+    z-index: 99;
+    display: none;
+}
 /*入驻申请审核中*/
 .review-info {
 	padding: 180px 0;
@@ -2462,11 +2476,52 @@
 }
 .pd-mainImg-wrap{
 	width: 400px;
+	height: 400px;
 }
 .pd-mainImg{
 	display: block;
 	width: 400px;
 	height: 400px;
+}
+/*图片放大镜*/
+.jqzoom {
+    /*float: left;*/
+    border: none;
+    position: relative;
+    padding: 0px;
+    cursor: pointer;
+    margin: 0px;
+    display: block;
+}
+
+.zoomdiv {
+    z-index: 100;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 478px;
+    height: 478px;
+    background: #ffffff;
+    border: 1px solid #CCCCCC;
+    display: none;
+    text-align: center;
+    overflow: hidden;
+}
+
+.jqZoomPup {
+    z-index: 10;
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #aaa;
+    background: #ffffff /*url(../images/zoom.png) 50% center no-repeat*/;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    filter: alpha(Opacity=50);
 }
 .pd-sImg-wrap{
 	width: 400px;
@@ -2482,6 +2537,9 @@
 	display: block;
 	width: 60px;
 	height: 60px;
+}
+.pd-spicture.active{
+	border: 2px solid #e60012;
 }
 .swiper-container3{
 	width: 340px;
@@ -2596,7 +2654,11 @@
 	color: #333;
 }
 .skus{
-	
+	position: relative;
+}
+.no-choose-sku{
+	margin-top: 10px;
+	border: 1px solid #E60012;
 }
 .sku-items{
 	padding: 14px 10px 6px;
@@ -2675,14 +2737,86 @@
 	background: #dbdbdb url(../img/productdetail/add.png) no-repeat center center;
 }
 .expand{
-	
+	display: none;
 }
 .expand-icon{
-	margin: 0 auto;
 	display: block;
+	margin: 0 auto;
 	width: 20px;
 	height: 12px;
 	background: url(../img/productdetail/expand.png) no-repeat center center;
+}
+.sku-choose-close{
+	position: absolute;
+    right: 12px;
+    top: 10px;
+    font-size: 20px;
+    color: #fe3e3e;
+    cursor: pointer;
+    /*display: none;*/
+}
+.please-choose{
+	font-size: 14px;
+	color: #E60012;
+	text-indent: 90px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	display: none;
+}
+.choose-sure{
+	width: 96px;
+    height: 30px;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    background: #f30;
+    cursor: pointer;
+    margin: 20px 0 10px 90px;
+    display: none;
+}
+.has-choosed{
+	margin-top: 10px;
+}
+.has-choosed-top{
+	height: 50px;
+	background-color: #f5f5f5;
+}
+.has-choosed-top1{
+	font-size: 16px;
+	color: #989898;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 10px;
+	padding-right: 24px;
+	background: url(../img/productdetail/border-right.png) no-repeat right center;
+}
+.has-choosed-top2{
+	font-size: 20px;
+	color: #e60012;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 26px;
+	padding-right: 10px;
+}
+.see-has-choosed{
+	margin-right: 16px;
+	cursor: pointer;
+}
+.see-has-choosed:hover .has-choosed-top3{
+	color: #E60012;
+}
+.has-choosed-top3{
+	font-size: 14px;
+	color: #4d4d4d;
+	height: 50px;
+	line-height: 50px;
+}
+.up-down{
+	width: 12px;
+	height: 50px;
+	margin-left: 8px;
+	background: url(../img/productdetail/up-down.png) no-repeat center center;
 }
 .buy-bar{
 	margin-top: 14px;
@@ -2732,15 +2866,6 @@
 	color: #fff;
 	background: #e60012;
 }
-.saled-count{
-	
-}
-.product-comment{
-	
-}
-.product-introdue{
-	
-}
 table.specification{
 	width: 988px;
 	margin-top: 20px;
@@ -2752,6 +2877,7 @@ table.specification{
 }
 .specification td{
 	height: 40px;
+	border:1px solid #dcdcdc;
 }
 .spec-left{
 	font-size: 14px;
@@ -2771,8 +2897,11 @@ table.specification{
 	width: 100%;
 	margin-top: 10px;
 }
+.goods-img-wrap{
+	margin-bottom: 20px;
+}
 .has-saled{
-	
+	display: none;
 }
 .has-saled-title{
 	font-size: 14px;
@@ -2820,22 +2949,127 @@ table.specification{
 	height: 40px;
 	line-height: 40px;
 }
-.comment-head-title{
+.comment-head-titles{
 	font-weight: normal;
 }
-.comment-head-title1{
+.comment-part{
+	display: none;
+}
+.comment-head-title{
+	color: #666666;
 	text-align: center;
+	cursor: pointer;
+}
+.comment-head-title:hover{
+	color: #e60012;
+}
+.comment-head-title.active{
+	color: #e60012;
+}
+.comment-head-title1{	
 	width: 180px;
 }
 .comment-head-title2{
-	text-align: center;
 	width: 244px;
 }
 .comment-head-title3{
-	text-align: center;
 	width: 222px;
 }
 .comment-head-title4{
-	text-align: center;
 	width: 248px;
+}
+table.coment-list{
+	width: 988px;
+	table-layout:fixed;
+	word-break:break-all;
+	border: none;
+	border-collapse:collapse;
+}
+.coment-tr{
+	height: 110px;
+	border-bottom: 1px dashed #dbdbdb;
+}
+.comment-account{
+	font-size: 12px;
+	color: #343434;
+	text-align: center;
+	width: 180px;
+	padding-top: 32px;
+	border: none;
+	vertical-align: top;
+}
+.comment-content{
+	padding-left: 68px;
+	border: none;
+	vertical-align: top;
+}
+.comment-time{
+	font-size: 12px;
+	color: #343434;
+	width: 710px;
+	height: 38px;
+	line-height: 38px;
+	margin-top: 20px;
+	background: #ffebeb;
+}
+.has-buy-count{
+	width: 308px;
+	display: inline-block;
+	margin-left: 90px;
+}
+.has-buy-time{
+	display: inline-block;
+}
+.comment-text-wrap{
+	width:710px;
+	margin-top: 16px;
+}
+.comment-text{
+	
+}
+.comment-img-wrap{
+	width: 710px;
+	margin-top: 10px;
+}
+.comment-picture{
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	background: no-repeat center center;
+	background-size:contain;
+}
+.has-choosed-wrap{
+	display: none;
+}
+table.has-choosed-item{
+	width: 780px;
+	table-layout:fixed;
+	word-break:break-all;
+	border:1px solid #dcdcdc;
+	border-collapse:collapse;
+}
+td.has-choosed-tr1{
+	border: none;
+	height: 50px;
+}
+.has-choosed-tr{
+	border-bottom: 1px solid #dbdbdb;
+}
+.has-choosed-tr1{
+	width: 200px;
+	text-align: center;
+	background: url(../img/productdetail/border-right.png) no-repeat right center;
+	background-size:1px 70%;
+}
+.has-choosed-tr2{
+	width: 200px;
+	text-align: center;
+	background: url(../img/productdetail/border-right.png) no-repeat right center;
+	background-size:1px 70% ;
+}
+.has-choosed-tr3{
+	text-align: center;
+	
 }

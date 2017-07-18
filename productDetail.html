@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/pack.css">
 		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css"/>
 		<link rel="stylesheet" type="text/css" href="css/huangwei.css" />
 		<link rel="stylesheet" type="text/css" href="css/yixin.css"/>
 	</head>
@@ -16,50 +17,50 @@
 		<div class="container">
 			<div class="pd-top clear">
 				<div class="pd-top-left">
-					<div class="pd-mainImg-wrap">
-						<img src="img/productdetail/goods2.png" alt="" class="pd-mainImg" />
+					<div class="pd-mainImg-wrap jqzoom">
+						<img jqimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b1.jpg" src="img/home/goods2.png" alt="" class="pd-mainImg" />
 					</div>
 					<div class="pd-sImg-wrap">
 						<div class="swiper-container swiper-container3">
 					        <div class="swiper-wrapper">
 					            <div class="swiper-slide">
-					            	<a href="" class="ps-swiper-item" >
-					            		<img src="img/home/goods2.png" alt="" class="pd-spicture" />
+					            	<a href="javascript:;" class="ps-swiper-item" >
+					            		<img jqimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b1.jpg" src="img/home/goods2.png" alt="" class="pd-spicture active" />
 					            	</a>
 					            </div>
 					            <div class="swiper-slide">
-					            	<a href="" class="ps-swiper-item">
-					            		<img src="img/home/goods2.png" alt="" class="pd-spicture" />
+					            	<a href="javascript:;" class="ps-swiper-item">
+					            		<img jqimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b1.jpg" src="img/home/goods3.png" alt="" class="pd-spicture" />
 					            	</a>
 					            </div>
 					            <div class="swiper-slide">
-				            		<a href="" class="ps-swiper-item">
-					            		<img src="img/home/goods2.png" alt="" class="pd-spicture" />
+				            		<a href="javascript:;" class="ps-swiper-item">
+					            		<img jqimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b1.jpg" src="img/home/goods2.png" alt="" class="pd-spicture" />
 					            	</a>
 					            </div>
 					            <div class="swiper-slide">
-				            		<a href="" class="ps-swiper-item">
-					            		<img src="img/home/goods2.png" alt="" class="pd-spicture" />
+				            		<a href="javascript:;" class="ps-swiper-item">
+					            		<img jqimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b1.jpg" src="img/home/goods3.png" alt="" class="pd-spicture" />
 					            	</a>
 					            </div>
 					            <div class="swiper-slide">
-				            		<a href="" class="ps-swiper-item">
-					            		<img src="img/home/goods2.png" alt="" class="pd-spicture" />
+				            		<a href="javascript:;" class="ps-swiper-item">
+					            		<img jqimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b1.jpg" src="img/home/goods2.png" alt="" class="pd-spicture" />
 					            	</a>
 					            </div>
 					            <div class="swiper-slide">
-				            		<a href="" class="ps-swiper-item">
-					            		<img src="img/home/goods2.png" alt="" class="pd-spicture" />
+				            		<a href="javascript:;" class="ps-swiper-item">
+					            		<img jqimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b1.jpg" src="img/home/goods3.png" alt="" class="pd-spicture" />
 					            	</a>
 					            </div>
 					            <div class="swiper-slide">
-				            		<a href="" class="ps-swiper-item">
-					            		<img src="img/home/goods2.png" alt="" class="pd-spicture" />
+				            		<a href="javascript:;" class="ps-swiper-item">
+					            		<img jqimg="http://demo.lanrenzhijia.com/2014/jd0912/images/b1.jpg" src="img/home/goods2.png" alt="" class="pd-spicture" />
 					            	</a>
 					            </div>
 					        </div>					        
-					   </div>	
-					   <a href="javascript:void(0)" class="swiper-button-prev3"></a>
+						</div>	
+						<a href="javascript:void(0)" class="swiper-button-prev3"></a>
 						<a href="javascript:void(0)" class="swiper-button-next3"></a>
 					</div>	
 					<div class="collect-share">
@@ -90,7 +91,7 @@
 							<span class="base-right">7天包退换</span>
 						</div>							
 					</div>
-					<div class="skus">
+					<div class="skus no-choose-sku">
 						<div class="sku-items clear">
 							<div class="sku-left">颜色</div>
 							<div class="sku-right">
@@ -108,7 +109,7 @@
 								<span class="sku-plate">咖啡色</span>
 							</div>
 						</div>
-						<div class="sku-items clear">
+						<div class="sku-items sku-count-choose clear">
 							<div class="sku-left sku-bar-left">尺寸</div>
 							<div class="sku-right">
 								<div class="sku-bar clear">
@@ -117,34 +118,82 @@
 									<div class="sku-bar-item3 fl">9200条可售</div>
 									<div class="sku-bar-count fr">
 										<span class="sku-bar-sub sku-count-btn fl"></span>
-										<input type="" name="" id="" value="1000"  class="sku-count-input fl" />
+										<input type="" name="" id="" value="0"  class="sku-count-input fl" />
 										<span class="sku-bar-add sku-count-btn fl"></span>
 									</div>
 								</div>
 								<div class="sku-bar clear">
-									<div class="sku-bar-item1 fl">XS</div>
+									<div class="sku-bar-item1 fl">s</div>
 									<div class="sku-bar-item2 fl">18.15元</div>
 									<div class="sku-bar-item3 fl">9200条可售</div>
 									<div class="sku-bar-count fr">
 										<span class="sku-bar-sub sku-count-btn fl"></span>
-										<input type="" name="" id="" value="1000"  class="sku-count-input fl" />
+										<input type="" name="" id="" value="0"  class="sku-count-input fl" />
 										<span class="sku-bar-add sku-count-btn fl"></span>
 									</div>
 								</div>
 								<div class="sku-bar clear">
-									<div class="sku-bar-item1 fl">XS</div>
+									<div class="sku-bar-item1 fl">m</div>
 									<div class="sku-bar-item2 fl">18.15元</div>
 									<div class="sku-bar-item3 fl">9200条可售</div>
 									<div class="sku-bar-count fr">
 										<span class="sku-bar-sub sku-count-btn fl"></span>
-										<input type="" name="" id="" value="1000"  class="sku-count-input fl" />
+										<input type="" name="" id="" value="0"  class="sku-count-input fl" />
 										<span class="sku-bar-add sku-count-btn fl"></span>
 									</div>
+								</div>
+								<div class="sku-bar clear">
+									<div class="sku-bar-item1 fl">l</div>
+									<div class="sku-bar-item2 fl">18.15元</div>
+									<div class="sku-bar-item3 fl">9200条可售</div>
+									<div class="sku-bar-count fr">
+										<span class="sku-bar-sub sku-count-btn fl"></span>
+										<input type="" name="" id="" value="0"  class="sku-count-input fl" />
+										<span class="sku-bar-add sku-count-btn fl"></span>
+									</div>
+								</div>
+								<div class="sku-bar clear">
+									<div class="sku-bar-item1 fl">xl</div>
+									<div class="sku-bar-item2 fl">18.15元</div>
+									<div class="sku-bar-item3 fl">9200条可售</div>
+									<div class="sku-bar-count fr">
+										<span class="sku-bar-sub sku-count-btn fl"></span>
+										<input type="" name="" id="" value="0"  class="sku-count-input fl" />
+										<span class="sku-bar-add sku-count-btn fl"></span>
+									</div>
+								</div>
+								<div class="expand">
+									<a href="javascript:;" class="expand-icon"></a>
 								</div>
 							</div>
 						</div>
-						<div class="expand">
-							<a href="javascript:;" class="expand-icon"></a>
+						<p class="sku-choose-close">X</p>
+						<p class="please-choose">请勾选您要的商品信息！</p>
+						<a href="javascript:;" class="choose-sure">确定</a>
+					</div>
+					<div class="has-choosed">
+						<div class="has-choosed-top">
+							<span class="has-choosed-top1 fl">1件</span>
+							<span class="has-choosed-top2 fl">58元</span>
+							<div class="see-has-choosed fr">
+								<span class="up-down fr"></span>
+								<span class="has-choosed-top3 fr">已选清单</span>
+							</div>
+							
+						</div>
+						<div class="has-choosed-wrap">
+							<table class="has-choosed-item">
+								<tr class="has-choosed-tr">
+									<td class="has-choosed-tr1">白色</td>
+									<td class="has-choosed-tr2">1件</td>
+									<td class="has-choosed-tr3">M1</td>
+								</tr>
+								<tr class="has-choosed-tr">
+									<td class="has-choosed-tr1">白色</td>
+									<td class="has-choosed-tr2">1件</td>
+									<td class="has-choosed-tr3">M1</td>
+								</tr>
+							</table>
 						</div>
 					</div>
 					<div class="buy-bar">
@@ -158,16 +207,16 @@
 
 			    <div class="store-left">
 			        <div class="store-top">
-			            <p class="store-name nowrap">深圳市宝安区沙井千深圳市宝安区沙井千妃</p>
-			            <div class="store-content">
-			                <p class="store-way">联系卖家：陆文俊<a href=""></a></p>
-			                <p class="store-way">经营模式：生产厂家</p>
-			                <p class="store-way">所在产地：福建 厦门</p>
-			                <p class="store-button-con">
-			                    <a href="" class="store-button">进入旺铺</a>
-			                    <a href="" class="store-button">收藏旺铺</a>
-			                </p>
-			            </div>
+			        	<p class="store-name nowrap">深圳市宝安区沙井千深圳市宝安区沙井千妃</p>
+			        	<div class="store-content">
+			            	<p class="store-way">联系卖家：陆文俊<a href=""></a></p>
+			            	<p class="store-way">经营模式：生产厂家</p>
+			            	<p class="store-way">所在产地：福建 厦门</p>
+			            	<p class="store-button-con">
+			                	<a href="" class="store-button">进入旺铺</a>
+			                	<a href="" class="store-button">收藏旺铺</a>
+			            	</p>
+			        	</div>
 			        </div>
 			        <div class="store-top">
 			            <p class="store-name">店内搜索</p>
@@ -214,11 +263,11 @@
 			    </div>
 				<div class="pd-bottom-right">
 					<div class="detail-items">
-						<a href="" class="detail-item active">商品详情</a>
-						<a href="" class="detail-item">交易（<span class="saled-count">12</span>）</a>
-						<a href="" class="detail-item">评价（<span class="product-comment">2</span>）</a>
+						<a href="javascript:;" class="detail-item active">商品详情</a>
+						<a href="javascript:;" class="detail-item">交易（<span class="saled-count">12</span>）</a>
+						<a href="javascript:;" class="detail-item">评价（<span class="product-comment">2</span>）</a>
 					</div>
-					<div class="product-introdue disnone">
+					<div class="product-introdue pd-item">
 						<table border="" cellspacing="" cellpadding="" class="specification">
 							<tr>
 								<td class="spec-left">品牌</td>
@@ -253,16 +302,18 @@
 								<td class="spec-right">防火 , 橡胶垫片 , 盘根 , 垫片 , 水处理</td>
 							</tr>
 						</table>
-						<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img"/>
-						<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img" />
-						<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img" />
-						<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img"/>
-						<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img" />
-						<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img" />
-						<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img"/>
-						<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img" />
+						<div class="goods-img-wrap">
+							<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img"/>
+							<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img" />
+							<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img" />
+							<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img"/>
+							<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img" />
+							<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img" />
+							<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img"/>
+							<img src="img/productdetail/productImg.png" alt="" class="produce-introduce-img" />
+						</div>
 					</div>
-					<div class="has-saled">
+					<div class="has-saled pd-item">
 						<div class="has-saled-title">
 							<span class="has-saled-title1">采购商</span>
 							<span class="has-saled-title2">数量</span>
@@ -304,29 +355,204 @@
 									<span class="saled-span1">2017-07-07</span><span>12:12:12</span>
 								</span>
 							</div>
+							<div class="has-saled-item">
+								<span class="has-saled-title1">昵称/账号</span>
+								<span class="has-saled-title2">122</span>
+								<span class="has-saled-title3">
+									<span class="saled-span1">2017-07-07</span><span>12:12:12</span>
+								</span>
+							</div>
+							<div class="has-saled-item">
+								<span class="has-saled-title1">昵称/账号</span>
+								<span class="has-saled-title2">122</span>
+								<span class="has-saled-title3">
+									<span class="saled-span1">2017-07-07</span><span>12:12:12</span>
+								</span>
+							</div>
+							<div class="has-saled-item">
+								<span class="has-saled-title1">昵称/账号</span>
+								<span class="has-saled-title2">122</span>
+								<span class="has-saled-title3">
+									<span class="saled-span1">2017-07-07</span><span>12:12:12</span>
+								</span>
+							</div>
+							<div class="has-saled-item">
+								<span class="has-saled-title1">昵称/账号</span>
+								<span class="has-saled-title2">122</span>
+								<span class="has-saled-title3">
+									<span class="saled-span1">2017-07-07</span><span>12:12:12</span>
+								</span>
+							</div>
+							<div class="has-saled-item">
+								<span class="has-saled-title1">昵称/账号</span>
+								<span class="has-saled-title2">122</span>
+								<span class="has-saled-title3">
+									<span class="saled-span1">2017-07-07</span><span>12:12:12</span>
+								</span>
+							</div>
+							<div class="has-saled-item">
+								<span class="has-saled-title1">昵称/账号</span>
+								<span class="has-saled-title2">122</span>
+								<span class="has-saled-title3">
+									<span class="saled-span1">2017-07-07</span><span>12:12:12</span>
+								</span>
+							</div>
+							<div class="has-saled-item">
+								<span class="has-saled-title1">昵称/账号</span>
+								<span class="has-saled-title2">122</span>
+								<span class="has-saled-title3">
+									<span class="saled-span1">2017-07-07</span><span>12:12:12</span>
+								</span>
+							</div>
+							<div class="has-saled-item">
+								<span class="has-saled-title1">昵称/账号</span>
+								<span class="has-saled-title2">122</span>
+								<span class="has-saled-title3">
+									<span class="saled-span1">2017-07-07</span><span>12:12:12</span>
+								</span>
+							</div>
+							<div class="has-saled-item">
+								<span class="has-saled-title1">昵称/账号</span>
+								<span class="has-saled-title2">122</span>
+								<span class="has-saled-title3">
+									<span class="saled-span1">2017-07-07</span><span>12:12:12</span>
+								</span>
+							</div>
+							<div class="has-saled-item">
+								<span class="has-saled-title1">昵称/账号</span>
+								<span class="has-saled-title2">122</span>
+								<span class="has-saled-title3">
+									<span class="saled-span1">2017-07-07</span><span>12:12:12</span>
+								</span>
+							</div>
+							<div class="pagination">
+				                <form class="pagination-con">
+				                    <a href="" class="count">上一页</a>
+				                    <span class="count-none">上一页</span>
+				                    <a href="" class="count">1</a>
+				                    <a href="" class="count check">2</a>
+				                    <a href="" class="count">3</a>
+				                    <a href="" class="count">4</a>
+				                    <a href="" class="count">5</a>
+				                    <a href="" class="count">下一页</a>
+				                    <span class="count-none">下一页</span>
+				                    <span class="count-total">共&nbsp;15&nbsp;页</span>
+				                    <span class="count-topage">到第<input type="text" class="count-page" name="page">页</span>
+				                    <input type="submit" class="count-submit" value="确定">
+				                </form>
+				            </div>
 						</div>
 					</div>
-					<div>
-						<div class="has-saled-title comment-head-title">
-							<span class="comment-head-title1 fl">全部（<span>80</span>）</span>
-							<span class="comment-head-title2 fl">好评（<span>80</span>）</span>
-							<span class="comment-head-title3 fl">中评（<span>80</span>）</span>
-							<span class="comment-head-title4 fl">差评（<span>80</span>）</span>
+					<div class="comment-part pd-item">
+						<div class="has-saled-title comment-head-titles">
+							<span class="comment-head-title comment-head-title1 fl">全部（<span>80</span>）</span>
+							<span class="comment-head-title active comment-head-title2 fl">好评（<span>80</span>）</span>
+							<span class="comment-head-title comment-head-title3 fl">中评（<span>80</span>）</span>
+							<span class="comment-head-title comment-head-title4 fl">差评（<span>80</span>）</span>
 						</div>
 						<table border="" cellspacing="" cellpadding="" class="coment-list">
-							<tr>
+							<tr class="coment-tr">
 								<td class="comment-account">昵称/账号</td>
 								<td class="comment-content">
 									<div class="comment-time">
 										<span class="has-buy-count">数量:<span>122</span></span>
 										<span class="has-buy-time">成交时间：<span>2012-02-02</span><span>12:12:12</span></span>
 									</div>
-									<div class="comment-text">
-										<p>评价方未及时评价，系统默认好评啦！</p>
+									<div class="comment-text-wrap">
+										<p class="comment-text-wrap">评价方未及时评价，系统默认好评啦！</p>
+									</div>
+								</td>
+							</tr>
+							<tr class="coment-tr">
+								<td class="comment-account">昵称/账号</td>
+								<td class="comment-content">
+									<div class="comment-time">
+										<span class="has-buy-count">数量:<span>122</span></span>
+										<span class="has-buy-time">成交时间：<span>2012-02-02</span><span>12:12:12</span></span>
+									</div>
+									<div class="comment-text-wrap">
+										<p class="comment-text-wrap">评价方未及时评价，系统默认好评啦！</p>
+									</div>
+									<div class="comment-img-wrap clear">
+										<a class="fancybox comment-picture" rel="group" href="img/productdetail/goods3.png" style="background-image: url(img/productdetail/goods3.png);"></a>
+										<a class="fancybox comment-picture" rel="group" href="img/productdetail/goods3.png" style="background-image: url(img/productdetail/goods3.png);"></a>
+										<a class="fancybox comment-picture" rel="group" href="img/productdetail/goods3.png" style="background-image: url(img/productdetail/goods3.png);"></a>
+										<a class="fancybox comment-picture" rel="group" href="img/productdetail/goods3.png" style="background-image: url(img/productdetail/goods3.png);"></a>
+									</div>
+								</td>
+							</tr>
+							<tr class="coment-tr">
+								<td class="comment-account">昵称/账号</td>
+								<td class="comment-content">
+									<div class="comment-time">
+										<span class="has-buy-count">数量:<span>122</span></span>
+										<span class="has-buy-time">成交时间：<span>2012-02-02</span><span>12:12:12</span></span>
+									</div>
+									<div class="comment-text-wrap">
+										<p class="comment-text-wrap">评价方未及时评价，系统默认好评啦！</p>
+									</div>
+								</td>
+							</tr>
+							<tr class="coment-tr">
+								<td class="comment-account">昵称/账号</td>
+								<td class="comment-content">
+									<div class="comment-time">
+										<span class="has-buy-count">数量:<span>122</span></span>
+										<span class="has-buy-time">成交时间：<span>2012-02-02</span><span>12:12:12</span></span>
+									</div>
+									<div class="comment-text-wrap">
+										<p class="comment-text-wrap">评价方未及时评价，系统默认好评啦！</p>
+									</div>
+								</td>
+							</tr>
+							<tr class="coment-tr">
+								<td class="comment-account">昵称/账号</td>
+								<td class="comment-content">
+									<div class="comment-time">
+										<span class="has-buy-count">数量:<span>122</span></span>
+										<span class="has-buy-time">成交时间：<span>2012-02-02</span><span>12:12:12</span></span>
+									</div>
+									<div class="comment-text-wrap">
+										<p class="comment-text-wrap">评价方未及时评价，系统默认好评啦！</p>
+									</div>
+								</td>
+							</tr>
+							<tr class="coment-tr">
+								<td class="comment-account">昵称/账号</td>
+								<td class="comment-content">
+									<div class="comment-time">
+										<span class="has-buy-count">数量:<span>122</span></span>
+										<span class="has-buy-time">成交时间：<span>2012-02-02</span><span>12:12:12</span></span>
+									</div>
+									<div class="comment-text-wrap">
+										<p class="comment-text-wrap">评价方未及时评价，系统默认好评啦！</p>
+									</div>
+									<div class="comment-img-wrap clear">
+										<a class="fancybox comment-picture" rel="group" href="img/productdetail/goods3.png" style="background-image: url(img/productdetail/goods3.png);"></a>
+										<a class="fancybox comment-picture" rel="group" href="img/productdetail/goods3.png" style="background-image: url(img/productdetail/goods3.png);"></a>
+										<a class="fancybox comment-picture" rel="group" href="img/productdetail/goods3.png" style="background-image: url(img/productdetail/goods3.png);"></a>
+										<a class="fancybox comment-picture" rel="group" href="img/productdetail/goods3.png" style="background-image: url(img/productdetail/goods3.png);"></a>
 									</div>
 								</td>
 							</tr>
 						</table>
+						
+						<div class="pagination">
+			                <form class="pagination-con">
+			                    <a href="" class="count">上一页</a>
+			                    <span class="count-none">上一页</span>
+			                    <a href="" class="count">1</a>
+			                    <a href="" class="count check">2</a>
+			                    <a href="" class="count">3</a>
+			                    <a href="" class="count">4</a>
+			                    <a href="" class="count">5</a>
+			                    <a href="" class="count">下一页</a>
+			                    <span class="count-none">下一页</span>
+			                    <span class="count-total">共&nbsp;15&nbsp;页</span>
+			                    <span class="count-topage">到第<input type="text" class="count-page" name="page">页</span>
+			                    <input type="submit" class="count-submit" value="确定">
+			                </form>
+			            </div>
 					</div>
 				</div>
 			</div>
@@ -334,10 +560,97 @@
 		
 		
 		<script src="js/jquery.min.js"></script>
+
 		<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
 		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/jquery-migrate-1.2.1.min.js"></script><!--低版本jq兼容fancybox-->
+		<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
+		<!--放大镜的js运用-->
+		<script src="js/jquery.jqzoom.js"></script>
+		<script src="js/jqzoom.js"></script>		
 		<script type="text/javascript">
+			$(function(){
+				$(".fancybox").fancybox();
+				
+				
+				//当sku数量输入框数量超过3个时，隐藏。点击展开按钮时展开
+				if($(".sku-bar").length>3)
+				{
+					$(".expand").show();
+					for(var i=3;i<$(".sku-bar").length;i++)
+					{
+						$(".sku-bar").eq(i).hide();
+						$(".sku-count-choose").css("border-bottom","none");
+					}
+				}
+				
+				$(".expand-icon").on("click",function(){
+					$(".expand").hide();
+					$(".sku-bar").each(function(){
+						$(this).slideDown();
+						$(".sku-count-choose").css("border-bottom","1px dashed #dbdbdb");
+					});
+				});
+				
+				//查看已选择的商品及其规格
+				$(".see-has-choosed").on("click",function(){
+					if($(this).children(".up-down").hasClass("rotateIcon"))
+					{
+						$(".has-choosed-wrap").slideUp();
+						$(this).children(".up-down").removeClass("rotateIcon").addClass("rotateIconBack");
+					}
+					else
+					{			
+						
+						$(".has-choosed-wrap").slideDown();
+						$(this).children(".up-down").removeClass("rotateIconBack").addClass("rotateIcon");
+					}	
+				})
+				
+				//选择放大的图片
+				$(".pd-spicture").on("click",function(){
+					$(".pd-mainImg").attr("src",$(this).attr("src"));
+					$(".pd-mainImg").attr("jqimg",$(this).attr("jqimg"));
+					$(".pd-spicture").removeClass("active");
+					$(this).addClass("active");
+				});
+				
+				//sku选择加样式
+				$(".sku-plate").on("click",function(){
+					$(this).siblings().removeClass("active");
+					$(this).addClass("active");
+				});
+				
+				//购买数量选择
+				$(".sku-bar-sub").on("click",function(){
+					var _input = $(this).parents(".sku-bar-count").find(".sku-count-input");
+					
+					if(_input.val()>0){
+						var sub1= parseInt(_input.val())-1;
+						_input.val(sub1);
+					}
+				});
+				$(".sku-bar-add").on("click",function(){
+					var _input = $(this).parents(".sku-bar-count").find(".sku-count-input");
+					
+					var add1= parseInt(_input.val())+1;
+					_input.val(add1);
+				});
+				$(".sku-count-input").keyup(function(){
+					$(this).val($(this).val().replace(/\D/g,''));
+				});
+				
+				//详情、参数、评价切换
+				$(".detail-item").on("click",function(){
+					var itemIndex = $(this).index();
+					$(".pd-item").hide();
+					$(".detail-item").removeClass("active");
+					$(".pd-item").eq(itemIndex).show();
+					$(this).addClass("active");
+				});
+				
+			})
 			var mySwiper = new Swiper ('.swiper-container', {
 				    direction: 'horizontal',
 //				    loop: true,
