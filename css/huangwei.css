@@ -2564,6 +2564,7 @@
 	text-align: center;
 	width: 400px;
 	margin-top: 14px;
+	position: relative;
 }
 .cosh-item{
 	display: inline-block;
@@ -2588,6 +2589,7 @@
 	background: url(../img/productdetail/shoucang-02.png) no-repeat left center;
 }
 .cosh-item1.active{
+	color: #E60012;
 	background: url(../img/productdetail/shoucang-03.png) no-repeat left center;
 }
 .cosh-item2{
@@ -2603,6 +2605,14 @@
 .cosh-item3:hover{
 	color: #E60012;
 	background: url(../img/productdetail/erweima02.png) no-repeat left center;
+}
+.qr-img{
+	position: absolute;
+	left: 330px;
+	top: 16px;
+	width: 100px;
+	height: 100px;
+	display: none;
 }
 .pd-top-right{
 	width: 780px;
@@ -2658,7 +2668,9 @@
 }
 .no-choose-sku{
 	margin-top: 10px;
-	border: 1px solid #E60012;
+}
+.no-choose-border{
+	border: 1px solid #E60012 !important;
 }
 .sku-items{
 	padding: 14px 10px 6px;
@@ -2667,7 +2679,15 @@
 .sku-left{
 	color: #999999;
 	width: 86px;
+	margin-top: 2px;
 	float: left;
+}
+.sku-count-wrap{
+	padding-bottom: 8px;
+	position: relative;
+}
+.sku-count-item{
+	margin-top: 6px;
 }
 .sku-bar-left{
 	margin-top: 10px;	
@@ -2713,7 +2733,7 @@
 .sku-bar-count{
 	width: 110px;
 	height: 30px;
-	margin-top: 5px;
+	float: left;
 }
 .sku-count-btn{
 	width: 30px;
@@ -2736,6 +2756,31 @@
 .sku-bar-add{
 	background: #dbdbdb url(../img/productdetail/add.png) no-repeat center center;
 }
+.product-rest{
+	float: left;
+	font-size: 14px;
+	color: #666;
+	margin-top: 6px;
+	margin-left: 20px;
+}
+.add-list{
+	float: left;
+	font-size: 14px;
+	color: #e60012;
+	height: 28px;
+	line-height: 26px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 20px;
+	border-radius: 4px;
+	border:1px solid #e60012;
+	background-color: #ffebeb;
+	cursor: pointer;
+}
+.add-list:hover{
+	color: #fff;
+	background: #E60012;
+}
 .expand{
 	display: none;
 }
@@ -2753,7 +2798,7 @@
     font-size: 20px;
     color: #fe3e3e;
     cursor: pointer;
-    /*display: none;*/
+    display: none;
 }
 .please-choose{
 	font-size: 14px;
@@ -2819,7 +2864,7 @@
 	background: url(../img/productdetail/up-down.png) no-repeat center center;
 }
 .buy-bar{
-	margin-top: 14px;
+	margin-top: 24px;
 }
 .buy-now,.add-shoppingCar{
 	font-size: 18px;
@@ -2830,6 +2875,8 @@
 	height: 40px;
 	line-height: 38px;
 	border: 1px solid #e60012;
+	outline: none;
+	cursor: pointer;
 	background: #ffebeb;
 }
 .buy-now:hover,.add-shoppingCar:hover{
@@ -3050,26 +3097,70 @@ table.has-choosed-item{
 	border:1px solid #dcdcdc;
 	border-collapse:collapse;
 }
-td.has-choosed-tr1{
+td.has-choosed-trs,td.has-choosed-tr3{
 	border: none;
 	height: 50px;
 }
 .has-choosed-tr{
 	border-bottom: 1px solid #dbdbdb;
 }
-.has-choosed-tr1{
-	width: 200px;
+.has-choosed-trs{
+	width: 120px;
 	text-align: center;
 	background: url(../img/productdetail/border-right.png) no-repeat right center;
 	background-size:1px 70%;
 }
-.has-choosed-tr2{
-	width: 200px;
-	text-align: center;
-	background: url(../img/productdetail/border-right.png) no-repeat right center;
-	background-size:1px 70% ;
-}
 .has-choosed-tr3{
 	text-align: center;
 	
+}
+.overlay-word1{
+	font-size: 18px;
+	text-indent: 80px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	background: url(../img/center/04.png) no-repeat 40px center;
+}
+.overlay-word2{
+	font-size: 18px;
+	text-indent: 80px;
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+	margin-bottom: 10px;
+}
+/*总则页面1*/
+.rules-left{
+	width: 180px;
+	background: #fef9f8;
+}
+.rules-all{
+	font-size: 14px;
+	color: #333;
+	text-indent: 14px;
+	height: 38px;
+	line-height: 38px;
+	border-bottom: 1px solid #efbebe;
+	background: #f6e8e8;
+}
+.rules-detail{
+	
+}
+.rules-title{
+	font-size: 14px;
+	color: #333;
+	text-indent: 14px;
+	height: 38px;
+	line-height: 38px;
+	background: #f6e8e8;
+}
+.rules-item{
+	font-size: 12px;
+	color: #333;
+	text-indent: 20px;
+	height: 38px;
+	line-height: 38px;
+	background: #fef9f8;
 }
