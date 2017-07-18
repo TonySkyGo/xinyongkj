@@ -130,14 +130,14 @@
 }
 
 .login-code-con {
-    padding: 20px 34px;
+    padding: 20px 34px 20px 34px;
 }
 
 .login-input {
     width: 100%;
     height: 40px;
-    margin-top: 28px;
     padding-left: 15px;
+    margin-top: 16px;
     border: 1px solid #ccc;
 }
 
@@ -146,10 +146,10 @@
     text-align: center;
 }
 
-.login-error label {
-    display: inline-block;
-    height: 35px;
-    line-height: 35px;
+.login-code-con label.error {
+    display: block;
+    height: 30px;
+    line-height: 30px;
     margin: 0 auto;
     padding-left: 20px;
     color: #e60012;
@@ -165,7 +165,7 @@
     width: 100px;
     height: 32px;
     right: 8px;
-    top: 32px;
+    top: 20px;
     color: #fff;
     background-color: #3199e8;
     border: none;
@@ -177,6 +177,7 @@
     display: block;
     width: 100%;
     height: 42px;
+    margin-top: 15px;
     font-size: 18px;
     color: #fff;
     cursor: pointer;
@@ -1392,7 +1393,7 @@
     float: right;
     width: 260px;
     height: 42px;
-    margin-top: 9px;
+    margin-top: 19px;
     padding: 0 10px;
     border: 1px solid #e6e6e6;
 }
@@ -1401,7 +1402,7 @@
     float: right;
     width: 90px;
     height: 42px;
-    margin-top: 9px;
+    margin-top: 19px;
     background-color: #e6e6e6;
     border: none;
     cursor: pointer;
@@ -1411,7 +1412,7 @@
     float: left;
     height: 60px;
     line-height: 60px;
-    margin: 10px 0 0 15px;
+    margin: 10px 0 0 10px;
     padding: 0 20px;
     font-size: 16px;
     color: #4d4d4d;
@@ -1497,6 +1498,7 @@
     float: right;
     width: 150px;
     text-align: center;
+    color: #333;
 }
 
 .order-table {
@@ -4063,6 +4065,60 @@
     background: url("../img/regist/icon_cuowu.png") left center no-repeat;
 }
 
+.publish-trade-input{
+    float: left;
+    width: 120px;
+    height: 32px;
+    padding: 0 5px;
+    margin-right: 7px;
+    border: 1px solid #e6e6e6;
+}
+.publish-trade-input2{
+    float: left;
+    width: 175px;
+    height: 32px;
+    padding: 0 5px;
+    margin-right: 7px;
+    border: 1px solid #e6e6e6;
+}
+
+.publish-sku{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.sku-name{
+    float: left;
+    width: 200px;
+    height: 32px;
+    padding: 0 5px;
+    margin-right: 7px;
+    border: 1px solid #e6e6e6;
+}
+
+.sku-price{
+    float: left;
+    width: 100px;
+    height: 32px;
+    padding: 0 5px;
+    margin-right: 7px;
+    border: 1px solid #e6e6e6;
+}
+
+.sku-delete{
+    float: left;
+    width: 50px;
+    color: #0083e6;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sku-add{
+    display: inline-block;
+    color: #0083e6;
+    cursor: pointer;
+}
+
 /*会员资料*/
 .vipdata-box{
     margin: 30px auto;
@@ -4099,4 +4155,48 @@
     font-weight: bold;
     border-radius: 4px;
     background-color: #f95555;
+}
+
+/*我的供应*/
+.supply-column {
+    float: left;
+    width: 70px;
+    height: 32px;
+    line-height: 32px;
+    margin: 5px;
+    color: #333;
+}
+
+.supply-input {
+    float: left;
+    width: 200px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 15px;
+    margin: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.supply-state {
+    float: left;
+    width: 200px;
+    height: 32px;
+    margin: 5px 10px;
+}
+
+.send-modify{
+    display: inline-block;
+    background: url("../img/center/modify.png") left center no-repeat;
+    padding-left: 30px;
+    margin-left: 20px;
+    color: #0083e6;
+    cursor: pointer;
+}
+
+/*系统消息*/
+.message-none {
+    padding-top: 180px;
+    text-align: center;
+    background: url("../img/center/messagenone.png") center 40px no-repeat;
 }

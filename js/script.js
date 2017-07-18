@@ -63,6 +63,16 @@ function noticeScroll(){
 //	}
 }
 
+/*点击小标签替换出做出相应的内容替换*/
+function navcon(divnav, navcss, divcon) {
+    $(divnav).click(function (e) {
+        e.preventDefault();
+        var i = $(this).index();
+        $(this).addClass(navcss).siblings().removeClass(navcss);
+        $(divcon).eq(i).show().siblings(divcon).hide();
+    })
+}
+
 // 手机号码验证
 jQuery.validator.addMethod("isMobile", function(value, element) {
     var length = value.length;

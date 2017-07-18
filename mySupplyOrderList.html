@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>我的供应</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="css/yixin.css">
+    <link rel="stylesheet" href="css/pack.css">
+</head>
+<body>
+
+<div class="center-head">
+    <div class="center-head-con container clear">
+        <a href=""><img src="img/center/logo.png" class="center-logo" alt=""></a>
+        <a href="" class="center-nav active">供应商中心</a>
+        <a href="" class="center-nav">会员服务</a>
+        <a href="" class="center-nav">应用中心</a>
+        <a href="" class="center-nav">账户管理</a>
+        <div class="center-car">
+            <div class="center-car-num">0</div>
+        </div>
+        <form action="" id="searchForm">
+            <input type="submit" class="center-search-btn" value="搜索"/>
+            <input type="text" class="center-search-input" name="title" placeholder="这里输入产品关键词"/>
+        </form>
+    </div>
+</div>
+<div class="center-bg">
+    <div class="container clear">
+        <div class="center-sider">
+            <div class="center-single">
+                <a href="" class="center-first center-index">供应商首页</a>
+                <a href="" class="center-second">我的店铺</a>
+                <a href="" class="center-second">店铺设置</a>
+                <a href="" class="center-second">运费模版</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">我的供应</p>
+                <a href="" class="center-second">已卖出的产品</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">我的采购</p>
+                <a href="" class="center-second">采购订单</a>
+                <a href="" class="center-second">推荐商品</a>
+                <a href="" class="center-second">发布供应商品</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">商品管理</p>
+                <a href="" class="center-second">我的消息</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">钱包管理</p>
+                <a href="" class="center-second">钱包首页</a>
+                <a href="" class="center-second">安全中心</a>
+                <a href="" class="center-second">支付密码</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">求购管理</p>
+                <a href="" class="center-second">管理求购信息</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">采购管理</p>
+                <a href="" class="center-second">发布采购信息</a>
+                <a href="" class="center-second">管理采购信息</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">账号设置</p>
+                <a href="" class="center-second">修改密码</a>
+                <a href="" class="center-second">安全设置</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">公司信息</p>
+                <a href="" class="center-second">公司介绍</a>
+                <a href="" class="center-second">联系信息</a>
+                <a href="" class="center-second">收发货地址管理</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">信用资质</p>
+                <a href="" class="center-second">信用认证</a>
+                <a href="" class="center-second">供应商入驻</a>
+                <a href="" class="center-second">特殊经营许可</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">客服中心</p>
+                <a href="" class="center-second">QQ客服</a>
+                <a href="" class="center-second">微信客服</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">我的优惠券</p>
+                <a href="" class="center-second">店铺优惠券</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">自助服务</p>
+                <a href="" class="center-second">意见建议</a>
+                <a href="" class="center-second">系统消息列表</a>
+            </div>
+        </div>
+        <div class="center-container">
+            <div class="center-state clear">
+                <a href="" class="center-state-btn active">所有订单</a>
+                <a href="" class="center-state-btn">待付款(<span>1</span>)</a>
+                <a href="" class="center-state-btn">待发货(<span>1</span>)</a>
+                <a href="" class="center-state-btn">待收货(<span>1</span>)</a>
+                <a href="" class="center-state-btn">待评价(<span>1</span>)</a>
+                <a href="" class="center-state-btn">交易成功(<span>1</span>)</a>
+                <a href="" class="center-state-btn">交易失败(<span>1</span>)</a>
+                <a href="" class="center-state-btn">催货提醒(<span>1</span>)</a>
+            </div>
+            <form class="ware-search">
+                <div class="clear">
+                    <span class="supply-column">商品名称：</span>
+                    <input type="text" name="name" class="supply-input" placeholder="请输入商品名称">
+                    <span class="supply-column">订单编号：</span>
+                    <input type="text" name="number" class="supply-input" placeholder="请输入订单编号">
+                    <span class="supply-column">买家帐号：</span>
+                    <input type="text" name="account" class="supply-input" placeholder="请输入买家帐号">
+                </div>
+                <span class="supply-column">时间：</span>
+                <input type="text" name="number" id="dateStart" class="supply-input" placeholder="请选择时间范围起始">
+                <span class="supply-column" style="text-align: center;">-</span>
+                <input type="text" name="number" id="dateEnd" class="supply-input" placeholder="请选择时间范围结束">
+                <span class="supply-column">订单状态：</span>
+                <select class="supply-state" name="state">
+                    <option value="1">111</option>
+                    <option value="2">222</option>
+                    <option value="3">333</option>
+                </select>
+                <input type="submit" class="ware-search-btn" value="查询"/>
+            </form>
+            <div class="business-info">
+                <div class="business-info1">商品信息</div>
+                <div class="business-info2">单价（元）</div>
+                <div class="business-info3">数量</div>
+                <div class="business-info2">实收款（元）</div>
+                <div class="business-info2">买家账号</div>
+                <div class="business-info2">交易状态</div>
+            </div>
+            <div class="business-container">
+                <div class="business-store">
+                    <p class="business-store-time">2016-11-07 12:12:12</p>
+                    <p class="business-store-num">订单号：2016110720030004610060347</p>
+                    <a href="" class="business-store-name">店铺名称</a>
+                    <a href="" class="business-store-detail">订单详情</a>
+                </div>
+                <table class="order-table">
+                    <tr>
+                        <td class="order-td1">
+                            <a href=""><img src="img/store/erweima.png" alt=""></a>
+                            <a href="" class="order-store-title">陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅</a>
+                            <p class="order-store-info">颜色：红色&nbsp;&nbsp;&nbsp;尺寸：XXL</p>
+                        </td>
+                        <td class="order-td2">
+                            <p class="order-store-oldprice">¥123.00</p>
+                            <p>¥123.00</p>
+                        </td>
+                        <td class="order-td3">333</td>
+                        <td class="order-td2 order-td4">
+                            <p class="active">¥123.00</p>
+                            <p class="col999">（含运费¥10.00）</p>
+                        </td>
+                        <td class="order-td2 order-td4">
+                            <p>1321251515</p>
+                        </td>
+                        <td class="order-td2 order-td4">
+                            <a href="" class="order-store-operate">待付款</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="business-container">
+                <div class="business-store">
+                    <p class="business-store-time">2016-11-07 12:12:12</p>
+                    <p class="business-store-num">订单号：2016110720030004610060347</p>
+                    <a href="" class="business-store-name">店铺名称</a>
+                    <a href="" class="business-store-detail">订单详情</a>
+                </div>
+                <table class="order-table">
+                    <tr>
+                        <td class="order-td1">
+                            <a href=""><img src="img/store/erweima.png" alt=""></a>
+                            <a href="" class="order-store-title">陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅</a>
+                            <p class="order-store-info">颜色：红色&nbsp;&nbsp;&nbsp;尺寸：XXL</p>
+                        </td>
+                        <td class="order-td2">
+                            <p class="order-store-oldprice">¥123.00</p>
+                            <p>¥123.00</p>
+                        </td>
+                        <td class="order-td3">333</td>
+                        <td class="order-td2 order-td4" rowspan="2">
+                            <p class="active">¥123.00</p>
+                            <p class="col999">（含运费¥10.00）</p>
+                            <p>已支付</p>
+                        </td>
+                        <td class="order-td2 order-td4" rowspan="2">
+                            121231515
+                        </td>
+                        <td class="order-td2 order-td4" rowspan="2">
+                            <a href="" class="order-store-btn send-hint">发货</a>
+                            <a href="" class="order-store-operate">订单详情</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="order-td1">
+                            <a href=""><img src="img/store/erweima.png" alt=""></a>
+                            <a href="" class="order-store-title">陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅陈帅</a>
+                            <p class="order-store-info">颜色：红色</p>
+                        </td>
+                        <td class="order-td2">222</td>
+                        <td class="order-td3">333</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <form class="pagination-con">
+                    <a href="" class="count">上一页</a>
+                    <span class="count-none">上一页</span>
+                    <a href="" class="count">1</a>
+                    <a href="" class="count check">2</a>
+                    <a href="" class="count">3</a>
+                    <a href="" class="count">4</a>
+                    <a href="" class="count">5</a>
+                    <a href="" class="count">下一页</a>
+                    <span class="count-none">下一页</span>
+                    <span class="count-total">共&nbsp;15&nbsp;页</span>
+                    <span class="count-topage">到第<input type="text" class="count-page" name="page">页</span>
+                    <input type="submit" class="count-submit" value="确定">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay disnone">
+    <div class="overlay-cont">
+        <div class="overlay-title">提示<span class="icon-exit"></span></div>
+        <div class="overlay-word">发货提醒已发送成功！</div>
+        <div class="overlay-operate">
+            <a href="" class="btn-agree">确认</a>
+            <a href="javascript:;" class="btn-cancel">取消</a>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    $(function () {
+        //日期选择
+        $("#dateStart").datepicker({
+            changeYear: true,
+            changeMonth: true
+        });
+        $("#dateEnd").datepicker({
+            changeYear: true,
+            changeMonth: true
+        });
+//        提醒发货
+        $(".send-hint").on('click', function (e) {
+            e.preventDefault();
+            $(".overlay").show();
+        });
+    });
+</script>
+</body>
+</html>

@@ -63,7 +63,6 @@
                     <input type="text" class="login-input" name="code" placeholder="请输入验证码">
                     <img src="img/login/icon_jinggao.png" alt="" class="vali-btn">
                 </div>
-                <div class="login-error"></div>
                 <input type="submit" class="login-submit" value="登录"/>
                 <p class="login-free">还没有信用空间账号？ <a href="" class="active">免费注册</a> <a href="" class="login-forget-pwd">忘记密码？</a>
                 </p>
@@ -109,18 +108,18 @@
                 pwd: {required: "请输入密码"},
                 code: {required: "请输入验证码"}
             },
-            groups: {
-                username: "user pwd code"
-            },
-            errorPlacement: function (error, element) {
-                console.log(element);
-                if (element.attr("name") == "user" || element.attr("name") == "pwd" || element.attr("name") == "code") {
-                    error.appendTo(".login-error");//查找到符合groups封好的属性组，就添加到某个div下方
-                }
-                else {
-                    error.appendTo(element);//否则直接插入到当前元素后面
-                }
-            }
+//            groups: {
+//                username: "user pwd code"
+//            },
+//            errorPlacement: function (error, element) {
+//                console.log(element);
+//                if (element.attr("name") == "user" || element.attr("name") == "pwd" || element.attr("name") == "code") {
+//                    error.appendTo(".login-error");//查找到符合groups封好的属性组，就添加到某个div下方
+//                }
+//                else {
+//                    error.appendTo(element);//否则直接插入到当前元素后面
+//                }
+//            }
         });
         $("#valiForm").validate({
             rules: {

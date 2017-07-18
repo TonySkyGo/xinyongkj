@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>会员资料完善</title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+		<link rel="stylesheet" type="text/css" href="css/huangwei.css" />
+		<link rel="stylesheet" type="text/css" href="css/yixin.css" />
+		<link rel="stylesheet" href="css/pack.css">
+	</head>
+
+	<body>
+
+		<div class="center-bg">
+			<div class="container clear">
+				<div class="table-wrap">
+					<div class="picture-part">
+						<div class="picture-wrap">
+							<p class="picture-notice">温馨提示：请上传彩色有效图片，格式为JPEG、BMP、PNG、大小不超过10M。</p>
+							<div class="picture-items clear">
+								<div class="picture-item" deleteId="111">
+									<a class="fancybox" rel="group" href="img/enter/zhizhao.png">
+										<div class="picture-img" style="background-image: url(img/enter/zhizhao.png);"></div>
+									</a>
+									<p class="picture-text">dddsd</p>
+									<div class="picture-close">
+										
+									</div>
+								</div>
+								<div class="picture-item add-img-btn">
+									<img src="img/enter/img_mask.png" alt="" class="picture-img add-picture" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="prev-next clear">
+						<a href="" class="prev-next-btn prev-step">提交</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="overlay disnone">
+			<form action="" method="">
+				<div class="overlay-cont-addpicture">
+					<input type="file" name="fileInput" id="file-input" value="" class="file-input" />
+					<div class="file-choose">
+						<label for="" class="file-label"><span class="need">*</span>请选择上传的资质材料类型:</label>
+						<select name="" class="file-select">
+							<option value="1">营业执照（三证合一）</option>
+							<option value="2">企业银行开户许可证</option>
+							<option value="3">法人身份证</option>
+						</select>
+					</div>
+					<div class="file-choose">
+						<label for="" class="file-label"><span class="need">*</span>请选择要上传的图片:</label>
+						<img src="img/enter/add-picture.png" alt="" class="choose-picture" />
+						<div class="add-img disnone" style="">
+							<p class="img-submit-close"></p>
+							<!--<img class="add-img disnone" src="" alt="" />-->
+						</div>
+					</div>
+					<div class="file-submit">
+						<button type="button" class="prev-next-btn file-submit-btn">确定</button>
+						<span class="prev-next-btn file-submit-cancle">取消</span>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-migrate-1.2.1.min.js"></script>
+		<!--低版本jq兼容fancybox-->
+		<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+
+		<script type="text/javascript">
+			function insertPhoto(data) {
+
+				var imgNew = '<div class="picture-item"><a class="fancybox" rel="group" href="/'+data.imgSrc+'"><div class="picture-img" style="background-image: url(/'+data.imgSrc+')"></div></a><p class="picture-text">'+data.imgName+'</p><div class="picture-close"></div></div>';	
+				$(".add-img-btn").before(imgNew);
+				$(".picture-item").last().prev().attr("deleteId",data.photo_Id);
+				opAfterInsert();
+			}
+
+			function opAfterInsert() {
+				$(".picture-item").hover(function() {
+					$(this).find(".picture-close").show();
+				}, function() {
+					$(this).find(".picture-close").hide()
+				})
+
+				$(".picture-close").click(function(event){
+					var _this=$(this);
+					$.ajax({
+						type: "post",
+						url: "",
+						data: {
+							photo_Id: $(this).parents(".picture-item").attr("deleteId")
+						},
+						success: function(res) {
+							res = JSON.parse(res);
+							if(res.code == "200") {
+								event.stopPropagation();
+								_this.parents(".picture-item").remove();
+							} else {
+								alert("删除失败，请重试！");
+							}
+						}
+					});
+
+				});
+			}
+			//获取选择图片路径
+			function getObjectURL(file) { //获取上传图片地址
+				var url = null;
+				if(window.createObjectURL != undefined) { // basic
+					url = window.createObjectURL(file);
+				} else if(window.URL != undefined) { // mozilla(firefox)
+					url = window.URL.createObjectURL(file);
+				} else if(window.webkitURL != undefined) { // webkit or chrome
+					url = window.webkitURL.createObjectURL(file);
+				}
+				return url;
+			}
+
+			$(function() {
+
+				$(".fancybox").fancybox();
+				opAfterInsert();
+				$(".next-step").click(function() {
+					if($(".picture-item").length <= 1) {
+						alert("请上传资质材料");
+					} else {
+						window.location.href = "";
+					}
+				})
+
+				$(".add-picture").click(function() {
+					$(".overlay").removeClass("disnone");
+					//	insertPhoto();
+				});
+
+				$(".choose-picture").click(function() {
+					$(".file-input").click();
+				})
+
+				$(".file-submit-btn").click(function() {
+						if($(".file-input").val() == "") {
+							alert("请上传图片");
+						} else {						
+							var fd = new FormData();
+							fd.append("imgType", $(".file-select").val());
+							fd.append("imgUrl", $("#file-input").get(0).files[0]);
+							$.ajax({
+								url: "test.php",
+								type: "POST",
+								processData: false,
+								contentType: false,
+								data: fd,
+								success: function(res) {
+										res = JSON.parse(res);
+										if(res.code == "200") {
+											insertPhoto(res);
+											$(".choose-picture").show();
+											$(".add-img").addClass("disnone").attr("src", "");
+											$(".overlay").addClass("disnone");
+										} else {
+											alert("上传失败，请重试！");
+										}
+									}
+							});
+						}
+				});
+
+				$(".file-submit-cancle").click(function() {
+					$(".overlay").addClass("disnone");
+				});
+
+				$(".file-select").change(function() {
+					if($(".file-select").val() == 5) //5--表示其他
+						$(".file-text").show();
+					else
+						$(".file-text").hide();
+				});
+
+				$(".img-submit-close").click(function(){
+					$(this).parents(".add-img").addClass("disnone");
+					$(this).parents(".add-img").attr("style", "")
+					$(".file-input").val("");
+					$(".choose-picture").show();
+				});
+
+				$(".file-input").change(function() {
+					var objUrl = getObjectURL(this.files[0]);
+					var filepath = $("input[name='fileInput']").val();
+					var extStart = filepath.lastIndexOf(".");
+					var ext = filepath.substring(extStart, filepath.length).toUpperCase();
+					if(ext != ".BMP" && ext != ".PNG" && ext != ".JPEG" && ext != ".GIF" && ext != ".JPG") {
+						alert("图片限于bmp,png,gif,jpg,jpeg格式");
+						return false;
+					}
+					var file_size = 0;
+					if($.browser.msie) {
+						var img = new Image();
+						img.src = filepath;
+						while(true) {
+							if(img.fileSize > 0) {
+								if(img.fileSize > 3 * 1024 * 1024) {
+									alert("图片不大于100MB。");
+								}
+								break;
+							}
+						}
+					} else {
+						file_size = this.files[0].size;
+						var size = file_size / 1024;
+						if(size > 10240) {
+							alert("上传的图片大小不能超过10M！");
+						}
+					}
+					if(objUrl) {
+						$(".choose-picture").hide();
+						$(".add-img").removeClass("disnone").attr("style", "background-image: url(" + objUrl + ");");
+					}
+					return true;
+				});
+			});
+		</script>
+	</body>
+
+</html>
