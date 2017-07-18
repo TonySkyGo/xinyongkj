@@ -1,7 +1,10 @@
 /*个人中心-钱包管理-交易记录*/
+*:focus { outline: none; }
+.display-none{display: none;}
+.color-hover{ color:#0083e6;}
 .balance-box{ width:1020px; height:70px; margin-top: 10px; font-size: 18px; background: #eff7ff; overflow: hidden;}
 .balance-box span.balance-content{  float: left; display: block; margin: 26px 26px; }
-.time-choice-frame-1{ width:954px;  min-height:30px; margin:67px 0 0 52px; clear: both;}
+.time-choice-frame-1{ width:954px;  min-height:30px; margin:30px 0 0 52px; clear: both;}
 .time-choice-frame-2{ width:954px;  min-height:30px; margin:23px 0 0 52px; clear: both;}
 .ware-radio{  float: left; width: 16px;  height:17px;}
 .ware-radio-column{  float: left; margin:0 39px 0 18px;}
@@ -9,21 +12,71 @@
 .ware-line{ float: left; display: block; width: 30px; height: 1px; margin:15px 30px 0; border-bottom:1px solid #e6e6e6;}
 .time-date{ float: left; display: block; line-height: 30px;  margin:0 30px;}
 .time-date a{ color: #999999;}
+.time-date a.color-hover{ color:#0083e6;}
 .time-date a:hover{color:#0083e6;}
 .time-date em{  padding:0 15px; color: #999999;}
-.time-choice-btn{ float: left; width: 72px; height:30px; background: #0083e6; border:none; font-size: 16px; color:#ffffff
-;}
+.time-choice-btn{ float: left; width: 72px; height:30px; background: #0083e6; border:none; font-size: 16px; color:#ffffff;}
+.balance-congzhi-btn{width: 100px; height:30px; margin: 20px; background: #0083e6; border:none; font-size: 16px; color:#ffffff;}
 .center-state a.center-state-btn-Fsize{ font-size:14px; height: 60px; line-height:78px;}
 .balance-table{ width: 1020px; min-height: 40px; margin-top:30px;  background: #ffffff;  }
 .balance-table table.balance-table-frame{ width: 1020px; border: 1px solid #e6e6e6; border-bottom: none;}
-.balance-table table.balance-table-frame tr td,.balance-table table.balance-table-frame thead tr th{ height: 40px; text-align: center; border-bottom: 1px solid #e6e6e6;}
+.balance-table table.balance-table-frame tr td,.balance-table table.balance-table-frame thead tr th{ width: 139px; height: 40px; text-align: center; border-bottom: 1px solid #e6e6e6;}
 .balance-table table.balance-table-frame tr th{ font-size: 14px; background: #f6f6f6;}
 .balance-table table.balance-table-frame tr td{ font-size: 12px;}
-.cashW-status{ width: 280px;}
+.balance-table table.balance-table-frame tr td.cashW-status{ width: 280px;}
 .export-notes{ float: right; display: block; width:90px; height:25px; line-height: 25px; margin-top:39px; text-align: right; background:url("../img/walletadmin/daochu-icon.png") no-repeat; font-size: 14px; color: #0083e6;}
-.balance-table-frame-jiaoyi{}
-.balance-table-frame-tixian{ display: none;}
-.balance-table-frame-shouzhi{ display: none;}
+.center-state-btn-Fsize.color-hover {  color: #0083e6;  border-bottom: 2px solid #0083e6;  }
+.center-state-btn-Fsize:hover,.balance-showbig-topframe p a:hover{color: #0083e6;}
+.account-choice{width: 1020px; min-height: 40px; margin-top:10px;  background: #ffffff; }
+.center-state-btn-xiegang{float: left; padding-left:15px; margin-top: 38px; color:#cccccc;}
+.ware-state-title{  float: left;}
+.no-conent{ width: 100px; height: 106px; margin:20px  auto 50px; background: url("../img/center/none.png") no-repeat center;  text-align: center;}
+.no-conent p{ display: block; padding-top: 126px; font-size: 14px; color: #4c4c4c;}
+.balance-news-frame{ position: relative; width: 260px; height: 20px; margin:-38px 0 0 180px; padding-left: 30px; font-size: 12px; line-height: 20px; color: #666666; background: url("../img/walletadmin/horn-icon.png") no-repeat;}
+.balance-showbig-frame{ width: 1020px; height: 100px; margin: 30px 0; color: #333333;}
+.balance-showbig-left{float: left; min-width: 230px; height: 100px; border-right: 1px solid #d9d9d9;}
+.balance-showbig-right{float: left; min-width: 230px; height: 100px;}
+.balance-showbig-topframe,.balance-showbig-downframe{ min-width: 230px; height: 50px; background:url("../img/walletadmin/money-icon.png") no-repeat; }
+.balance-showbig-topframe span{ display: block; width: 130px; height: 35px;  margin-left: 100px; font-size: 18px; overflow: hidden;}
+.balance-showbig-topframe p{ display: block; min-width:130px; height: 20px; padding: 0 70px; }
+.balance-showbig-topframe p a{ color: #333333; font-size: 12px; padding: 0 10px;}
+.balance-showbig-topframe p em{ color: #cccccc; font-size: 12px; }
+.balance-showbig-topframe{ background-position: 38px 0; }
+.balance-showbig-downframe{background-position: 38px -53px; }
+/*支付密码*/
+.zhifumima-prompt{width: 1020px; height:20px; padding: 30px 0; font-size: 14px; color: #333333; text-align: center;}
+.zhifumima-reset-btn{ position: relative; margin: -29px 0 0 850px;}
+.zhifumima-reset-btn a{ padding:0 20px 0 25px; font-size: 14px; color: #0083e6;background:url("../img/walletadmin/icon.png") no-repeat;}
+.zhifumima-reset-btn a.icon-up{ background-position:58px 5px;}
+.zhifumima-reset-btn a.icon-down{ background-position:58px -9px;}
+.zhifumima-input-frame{ width: 630px; min-height:510px; margin:30px auto; text-align: center;}
+.zhifumima-input-title{ float: left; width: 130px; min-height:300px;}
+.zhifumima-input-text{ float: right; width: 500px; min-height:300px;}
+.zhifumima-input-title-c{ display: block; line-height:80px;font-size: 16px; color: #333333;}
+.zhifumima-input-style{ float: left; width: 350px; height: 50px; padding:16px 24px 16px 16px; margin:15px 20px; border: 1px solid #d9d9d9; background:url("../img/walletadmin/icon.png") no-repeat;}
+.icon-ture{ background-position: right -59px;}
+.icon-error{ background-position: right -125px;}
+.getcode{ display:inline-block; margin:105px 0 0 -300px; width: 97px; height: 30px; line-height: 30px; text-align: center; background:#0083e6;font-size: 14px; color:#ffffff; }
+.getsecond{ display:inline-block; margin:105px 0 0 -300px; width: 97px; height: 30px; line-height: 30px; text-align: center; background:#d9d9d9;font-size: 14px; color:#ffffff; }
+.zhifumima-input-btn{ width: 240px; height: 40px; margin: 30px; color:#ffffff; font-size:20px; background: #0083e6; border: none;}
+/*输入密码框*/
+/*.zhifumima-possword{float: left; width: 306px; height: 50px;  margin:15px 20px;border: 1px solid #d9d9d9; font-size:50px; letter-spacing:20px;}*/
+/*.zhifumima-possword-text{ float: left; width: 50px; height: 40px; margin-top: 5px; border:none; border-right: 1px solid #d9d9d9; resize: none; text-align: center; line-height: 50px;}*/
+.zhifumima-possword{float: left; width: 304px; height: 50px;  border: 1px solid #d9d9d9;margin:15px 20px;  line-height: 50px;}
+.zhifumima-possword-ts{ position: absolute; padding-left: 25px; min-width: 100px; margin: 175px 0 0 21px; height: 20px; line-height: 15px; font-size: 12px; color: #cccccc; background: url("../img/walletadmin/icon.png") no-repeat 0 -208px;}
+.zhifumima-possword-ts1{ position: absolute; padding-left: 25px; min-width: 100px; margin: 256px 0 0 21px; height: 20px; line-height: 15px; font-size: 12px; color: #cccccc; background: url("../img/walletadmin/icon.png") no-repeat 0 -208px;}
+.zhifumima-possword-ts-gai1{ position: absolute; padding-left: 25px; min-width: 100px; margin: 69px 0 0 21px; height: 20px; line-height: 15px; font-size: 12px; color: #cccccc; background: url("../img/walletadmin/icon.png") no-repeat 0 -208px;}
+.zhifumima-possword-ts-gai2{ position: absolute; padding-left: 25px; min-width: 100px; margin: 152px 0 0 21px; height: 20px; line-height: 15px; font-size: 12px; color: #cccccc; background: url("../img/walletadmin/icon.png") no-repeat 0 -208px;}
+.zhifumima-possword-ts-gai3{ position: absolute; padding-left: 25px; min-width: 100px; margin: 233px 0 0 21px; height: 20px; line-height: 15px; font-size: 12px; color: #cccccc; background: url("../img/walletadmin/icon.png") no-repeat 0 -208px;}
+.zhifumima-possword input.paw { width: 46px;  height: 37px;  margin-left: -9px;  margin-top: 7px;  border: none;  border-right: 1px solid #d9d9d9;  text-align: center;  font-size: 50px;  }
+.zhifumima-possword input.paw:nth-child(1) {  margin-left: 0;  }
+.zhifumima-possword .pawDiv:nth-child(6) input.paw {  border: none;  }
+.zhifumima-possword input.paw:focus {  outline: 0;  }
+.zhifumima-possword .pawDiv {  display: inline-block;  width: 50px;  height: 49px;  margin-top: -2px;  float: left;  }
+.gaimima-icon-ture{ position: absolute; margin: 16px 0 0 316px; width: 16px; height: 16px; background:url("../img/walletadmin/icon.png") no-repeat 0 -76px;}
+.gaimima-icon-error{ position: absolute; margin: 16px 0 0 316px; width: 16px; height: 16px; background:url("../img/walletadmin/icon.png") no-repeat 0 -142px;}
+
+
 
 
 
