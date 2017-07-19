@@ -1,65 +1,11 @@
 /**
- * Created by Administrator on 2017/7/17.
+ * Created by Administrator on 2017/7/19.
  */
-$(function() {
-    $("#wallet-tab a.center-state-btn").click(function() {
-       $("#wallet-tab a.center-state-btn").removeClass("color-hover");
-       $(this).addClass("color-hover");
-       var ind=$(this).index();
-       $("#balance-table table").hide();
-       $("#balance-table table").eq(ind/2).show();
-    });
-
-    //密码重置/修改
-    $("#zhifumima-reset").bind("click",function(){
-        if($(this).attr("class")=="icon-down"){
-            $(this).attr("class","icon-up");
-        }
-
-        if($(this).attr("class")=="icon-up"){
-            $(this).attr("class","icon-down");
-            $("#zhifumima-input-text").find("input").val("");
-
-        }
-
-    });
-    $("#zhifumima-change").bind("click",function(){
-        if($(this).attr("class")=="icon-down"){
-            $(this).attr("class","icon-up");
-        }
-    });
-});
-
-//获取手机验证码倒计时
-var countdown=60;
-function settime(obj) {
-    if (countdown == 0) {
-        obj.setAttribute("onclick","settime(this)");
-        obj.removeAttribute("disabled");
-        obj.innerHTML="重新获取验证码";
-        obj.className="getcode";
-        countdown = 60;
-        return;
-    } else {
-        obj.setAttribute("disabled", true);
-        obj.className="getsecond";
-        obj.removeAttribute("href");
-        obj.removeAttribute("onclick");
-        obj.innerHTML= countdown + "s";
-        countdown--;
-    }
-    setTimeout(function() {
-            settime(obj) }
-        ,1000)
-}
-
-//输入密码框效果代码;(原支付密码/新支付密码/确认支付密码)
-//原支付密码
-var box = document.getElementsByClassName("zhifumima-possword-box")[0];
-//新支付密码
-var box1 = document.getElementsByClassName("zhifumima-possword-box1")[0];
+//输入密码框效果代码;(支付密码/确认支付密码)
+//支付密码
+var box = document.getElementsByClassName("zhifumima-possword-zhifu")[0];
 //确认支付密码
-var box2 = document.getElementsByClassName("zhifumima-possword-box2")[0];
+var box1 = document.getElementsByClassName("zhifumima-possword-zhifu1")[0];
 function createDIV(num) {
     for (var i = 0; i < num; i++) {
         var pawDiv = document.createElement("div");
@@ -76,17 +22,6 @@ function createDIV(num) {
         var pawDiv = document.createElement("div");
         pawDiv.className = "pawDiv";
         box1.appendChild(pawDiv);
-        var paw = document.createElement("input");
-        paw.type = "password";
-        paw.className = "paw";
-        paw.maxLength = "1";
-        paw.readOnly = "readonly";
-        pawDiv.appendChild(paw);
-    }
-    for (var i = 0; i < num; i++) {
-        var pawDiv = document.createElement("div");
-        pawDiv.className = "pawDiv";
-        box2.appendChild(pawDiv);
         var paw = document.createElement("input");
         paw.type = "password";
         paw.className = "paw";
@@ -111,7 +46,7 @@ function func() {
         });
         paw[i].onkeyup = function (event) {
             console.log(event.keyCode);
-            if ((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105))  {    /*输入0-9*/
+            if (((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105))){    /*输入0-9*/
                 changeDiv();
                 errorPoint.style.display = "none";
             } else if (event.keyCode == "8") {    /*退格回删事件*/
@@ -180,5 +115,6 @@ getPasswordBtn.addEventListener("click", getPassword);
 document.onkeyup = function (event) {
     if (event.keyCode == "13") {  /*回车事件*/
         getPassword();
+
     }
 };
