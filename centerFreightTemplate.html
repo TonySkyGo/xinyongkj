@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>系统消息</title>
+    <title>运费模版</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/yixin.css">
     <link rel="stylesheet" href="css/pack.css">
@@ -98,26 +98,79 @@
         </div>
         <div class="center-container">
             <div class="center-state clear">
-                <a href="" class="center-state-btn active">通知详情</a>
+                <a href="" class="center-state-btn active">运费模版</a>
             </div>
-            <div class="message-title">系统通知系统通知标题</div>
-            <div class="message-time">2017-06-05  12:12:12</div>
-            <div class="message-content">
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-            </div>
-            <div class="message-page-box">
-                <a href="" class="message-back">&lt;&nbsp;返回列表</a>
-                <div class="message-page-con">
-                    共<span class="message-active">1</span>条信息，共<span class="message-active">1</span>页
-                    <a href="" class="message-btn">上一页</a>
-                    <a href="" class="message-btn">下一页</a>
-                    到第<input type="text" class="message-input">页
-                    <a href="" class="message-btn">确定</a>
+            <a href="" class="add-template">新增运费模版</a>
+            <div class="template-box">
+                <div class="template-top">
+                    <div class="template-title">XX运费</div>
+                    <div class="template-operate">
+                        <a href="" class="template-do">复制模版</a>
+                        <a href="" class="template-do">修改</a>
+                        <a href="" class="template-do">删除</a>
+                    </div>
+                    <div class="template-time">最后编辑时间：2017-06-06 22:00</div>
+                </div>
+                <div class="template-table-box">
+                    <table class="template-table" cellspacing="0">
+                        <tr>
+                            <td class="template-td">运送方式</td>
+                            <td class="template-td2">运送到</td>
+                            <td class="template-td">首件(个)</td>
+                            <td class="template-td">运费(元)</td>
+                            <td class="template-td">续件(个)</td>
+                            <td class="template-td">运费(元)</td>
+                        </tr>
+                        <tr>
+                            <td class="template-td">快递</td>
+                            <td class="template-td2">
+                                <p class="template-area">
+                                    北京、天津。重庆、北京、天津、重庆
+                                    北京、天津。重庆北京、天津、重庆
+                                </p>
+                            </td>
+                            <td class="template-td">1</td>
+                            <td class="template-td">35.00</td>
+                            <td class="template-td">1</td>
+                            <td class="template-td">35.00</td>
+                        </tr>
+                        <tr>
+                            <td class="template-td">快递</td>
+                            <td class="template-td2">
+                                <p class="template-area">
+                                    北京、天津。重庆、北京、天津、重庆
+                                </p>
+                            </td>
+                            <td class="template-td">1</td>
+                            <td class="template-td">35.00</td>
+                            <td class="template-td">1</td>
+                            <td class="template-td">35.00</td>
+                        </tr>
+                        <tr>
+                            <td class="template-td">快递</td>
+                            <td class="template-td2">
+                                <p class="template-area">
+                                    北京、天津。重庆、北京、天津、重庆
+                                </p>
+                            </td>
+                            <td class="template-td">1</td>
+                            <td class="template-td">35.00</td>
+                            <td class="template-td">1</td>
+                            <td class="template-td">35.00</td>
+                        </tr>
+                        <tr>
+                            <td class="template-td">快递</td>
+                            <td class="template-td2">
+                                <p class="template-area">
+                                    北京、天津。重庆、北京、天津、重庆
+                                </p>
+                            </td>
+                            <td class="template-td">1</td>
+                            <td class="template-td">35.00</td>
+                            <td class="template-td">1</td>
+                            <td class="template-td">35.00</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -127,13 +180,5 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/script.js"></script>
-<script>
-    $(function () {
-        //input只能输入数字
-        $(".message-input").on("keyup",function () {
-            $(this).val($(this).val().replace(/\D/g,''));
-        });
-    });
-</script>
 </body>
 </html>

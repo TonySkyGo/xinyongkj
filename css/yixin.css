@@ -4200,3 +4200,381 @@
     text-align: center;
     background: url("../img/center/messagenone.png") center 40px no-repeat;
 }
+.message-title{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+.message-time{
+    line-height: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #999;
+}
+.message-content{
+    text-indent: 30px;
+    line-height: 20px;
+}
+.message-page-box{
+    margin: 20px 0;
+    overflow: hidden;
+}
+.message-back{
+    float: left;
+    width: 100px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    color: #f95555;
+    border: 1px solid #f95555;
+}
+.message-back:hover{
+    color: #fff;
+    background-color: #f95555;
+}
+.message-page-con{
+    float: right;
+    overflow: hidden;
+}
+.message-active{
+    display: inline-block;
+    margin: 0 5px;
+    color: #f95555;
+}
+.message-btn{
+    display: inline-block;
+    margin: 0 8px;
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #f95555;
+}
+.message-input{
+    width: 35px;
+    margin: 0 8px;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+}
+.message-top{
+    height: 42px;
+    line-height: 42px;
+    margin: 10px 0;
+    color: #f95555;
+    background-color: #ffebeb;
+}
+.msgcheckall{
+    float: left;
+    margin: 15px 13px;
+}
+.message-set{
+    float: left;
+    margin: 0 30px;
+    cursor: pointer;
+}
+.message-box{
+    border: 1px solid #e6e6e6;
+}
+.message-cont{
+    height: 40px;
+    line-height: 38px;
+    padding-right: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.message-cont:last-child{
+    border: none;
+}
+.msgcheck{
+    float: left;
+    margin: 13px;
+}
+
+/*店铺管理*/
+.center-msg{
+    width: 960px;
+    height: 100px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+.center-img{
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 40px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+.center-img img{
+    width: 100%;
+    height: 100%;
+}
+.center-supply-name{
+    float: left;
+    width: 820px;
+    line-height: 50px;
+}
+.center-msg-box{
+    float: left;
+    width: 820px;
+    height: 50px;
+    overflow: hidden;
+}
+.center-credit{
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 12px;
+    margin-right: 20px;
+    padding: 3px 0;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background-color: #00b034;
+}
+.center-msg-word{
+    margin-right: 35px;
+}
+
+.center-remind{
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    background-color: #f5f5f5;
+    border-top: 2px solid #f95555;
+}
+.center-remind-box{
+    line-height: 50px;
+    overflow: hidden;
+}
+.center-remind-word{
+    float: left;
+    color: #f95555;
+}
+.center-remind-more{
+    float: right;
+    color: #0083e6;
+}
+.center-remind-title{
+    line-height: 30px;
+}
+
+/*基本信息*/
+.center-base{
+    margin-top: 50px;
+}
+.center-base-logo{
+    float: left;
+    width: 170px;
+}
+.center-base-img{
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 35px;
+}
+.center-base-img img{
+    width: 100%;
+    height: 100px;
+}
+.center-base-img:hover .picture-close{
+    display: block;
+}
+.center-base-img .picture-close{
+    display: none;
+    width: 14px;
+    height: 14px;
+    background: url(../img/enter/delete.png) no-repeat left top;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+.center-base-upload{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 35px;
+    background: url("../img/center/addpic.png") center center no-repeat;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.center-base-upload .centerlogo{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.center-base-box{
+    float: right;
+    width: 850px;
+}
+
+.center-base-con{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.center-base-key{
+    float: left;
+    width: 85px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.center-base-val{
+    float: left;
+    min-height: 32px;
+}
+
+.center-base-input{
+    display: block;
+    width: 360px;
+    height: 32px;
+    padding: 0 5px;
+    border: 1px solid #e6e6e6;
+}
+
+.center-base-part select{
+    height: 32px;
+}
+
+.center-base-banner{
+    float: left;
+    width: 100%;
+}
+
+.banner-add{
+    position: relative;
+    float: left;
+    width: 160px;
+    height: 100px;
+    margin: 10px 20px 10px 0;
+    background: url("../img/center/add02.png") center center no-repeat;
+    overflow: hidden;
+}
+
+.banner-add input{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index:10;
+    opacity: 0;
+}
+.banner-preview{
+    position: relative;
+    float: left;
+    width: 160px;
+    height: 100px;
+    margin: 10px 20px 10px 0;
+    background: center center no-repeat;
+    background-size: contain;
+    border: 1px solid #e6e6e6;
+}
+
+.banner-preview:hover .banner-delete{
+    display: block;
+}
+
+.banner-delete{
+    display: none;
+    width: 14px;
+    height: 14px;
+    background: url(../img/enter/delete.png) no-repeat center center;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/*运费模版*/
+.add-template{
+    display: block;
+    width: 120px;
+    height: 42px;
+    line-height: 40px;
+    margin: 20px 45px;
+    font-size: 16px;
+    color: #f95555;
+    text-align: center;
+    border: 1px solid #f95555;
+}
+.add-template:hover{
+    color: #fff;
+    background-color: #f95555;
+}
+.template-box{
+    width: 930px;
+    margin: 0 auto 20px;
+    border: 1px solid #dadada;
+}
+.template-top{
+    height: 48px;
+    background-color: #ffebeb;
+}
+.template-title{
+    float: left;
+    line-height: 48px;
+    padding: 0 15px;
+}
+.template-operate{
+    float: right;
+    overflow: hidden;
+}
+.template-do{
+    float: left;
+    height: 16px;
+    line-height: 16px;
+    margin-top: 16px;
+    padding: 0 10px;
+    color: #0083e6;
+    border-right: 1px solid #ccc;
+}
+.template-do:last-child{
+    border: none;
+}
+.template-time{
+    float: right;
+    line-height: 48px;
+    color: #999;
+    margin-right: 30px;
+}
+.template-table-box{
+    height: 210px;
+    overflow-y: scroll;
+}
+.template-table tr:nth-child(odd){
+    background-color: #f6f6f6;
+}
+.template-table td{
+    border: 1px solid #dadada;
+}
+.template-td{
+    width: 130px;
+    min-height: 40px;
+    padding: 0 15px;
+}
+.template-td2{
+    width: 278px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0 15px;
+}
+.template-area{
+    padding: 9px 0;
+    line-height: 20px;
+}

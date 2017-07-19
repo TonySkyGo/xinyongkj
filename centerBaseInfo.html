@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>基本信息</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/huangwei.css">
+    <link rel="stylesheet" href="css/yixin.css">
+    <link rel="stylesheet" href="css/pack.css">
+</head>
+<body>
+
+<div class="center-head">
+    <div class="center-head-con container clear">
+        <a href=""><img src="img/center/logo.png" class="center-logo" alt=""></a>
+        <a href="" class="center-nav active">供应商中心</a>
+        <a href="" class="center-nav">会员服务</a>
+        <a href="" class="center-nav">应用中心</a>
+        <a href="" class="center-nav">账户管理</a>
+        <div class="center-car">
+            <div class="center-car-num">0</div>
+        </div>
+        <form action="" id="searchForm">
+            <input type="submit" class="center-search-btn" value="搜索"/>
+            <input type="text" class="center-search-input" name="title" placeholder="这里输入产品关键词"/>
+        </form>
+    </div>
+</div>
+<div class="center-bg">
+    <div class="container clear">
+        <div class="center-sider">
+            <div class="center-single">
+                <a href="" class="center-first center-index">供应商首页</a>
+                <a href="" class="center-second">我的店铺</a>
+                <a href="" class="center-second">店铺设置</a>
+                <a href="" class="center-second">运费模版</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">我的供应</p>
+                <a href="" class="center-second">已卖出的产品</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">我的采购</p>
+                <a href="" class="center-second">采购订单</a>
+                <a href="" class="center-second">推荐商品</a>
+                <a href="" class="center-second">发布供应商品</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">商品管理</p>
+                <a href="" class="center-second">我的消息</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">钱包管理</p>
+                <a href="" class="center-second">钱包首页</a>
+                <a href="" class="center-second">安全中心</a>
+                <a href="" class="center-second">支付密码</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">求购管理</p>
+                <a href="" class="center-second">管理求购信息</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">采购管理</p>
+                <a href="" class="center-second">发布采购信息</a>
+                <a href="" class="center-second">管理采购信息</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">账号设置</p>
+                <a href="" class="center-second">修改密码</a>
+                <a href="" class="center-second">安全设置</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">公司信息</p>
+                <a href="" class="center-second">公司介绍</a>
+                <a href="" class="center-second">联系信息</a>
+                <a href="" class="center-second">收发货地址管理</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">信用资质</p>
+                <a href="" class="center-second">信用认证</a>
+                <a href="" class="center-second">供应商入驻</a>
+                <a href="" class="center-second">特殊经营许可</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">客服中心</p>
+                <a href="" class="center-second">QQ客服</a>
+                <a href="" class="center-second">微信客服</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">我的优惠券</p>
+                <a href="" class="center-second">店铺优惠券</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">自助服务</p>
+                <a href="" class="center-second">意见建议</a>
+                <a href="" class="center-second">系统消息列表</a>
+            </div>
+        </div>
+        <div class="center-container">
+            <div class="center-state clear">
+                <a href="" class="center-state-btn active">基本信息</a>
+            </div>
+            <div class="center-base clear">
+                <div class="center-base-logo">
+                    <div class="center-base-upload">
+                        <input type="file" name="file" class="centerlogo">
+                    </div>
+                    <a href="" class="center-base-img disnone">
+                        <img src="img/home/logo.png" alt="">
+                        <div class="picture-close"></div>
+                    </a>
+                </div>
+                <div class="center-base-box">
+                    <div class="center-base-con">
+                        <div class="center-base-key">店铺名称:</div>
+                        <div class="center-base-val">
+                            <input type="text" class="center-base-input" placeholder="请输入店铺名称">
+                        </div>
+                    </div>
+                    <div class="center-base-con">
+                        <div class="center-base-key">所在城市:</div>
+                        <div class="center-base-val">
+                            <div class="area-part center-base-part">
+                                <select id="s_province" name="sProvince"></select>
+                                <select id="s_city" name="sCity" ></select>
+                                <select id="s_county" name="sCounty"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center-base-con">
+                        <div class="center-base-key">联系地址:</div>
+                        <div class="center-base-val">
+                            <input type="text" class="center-base-input" placeholder="请输入联系地址">
+                        </div>
+                    </div>
+                    <div class="center-base-con">
+                        <div class="center-base-key">联系电话:</div>
+                        <div class="center-base-val">
+                            <input type="text" class="center-base-input" placeholder="请输入联系电话">
+                        </div>
+                    </div>
+                    <div class="center-base-con">
+                        <div class="center-base-key">轮播管理:</div>
+                        <div class="center-base-banner">
+                            <a href="" class="banner-add">
+                                <input type="file" name="banner[]" class="banner-upload">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/area.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+
+    //插入图片预览
+    function insertPhoto(url) {
+        var imgNew = '<a href="javascript:;" class="banner-preview" style="background-image: url(' + url + ');"> <div class="banner-delete"></div> </a>';
+        var imgFile = '<a href="" class="banner-add"><input type="file" name="banner[]" class="banner-upload"></a>';
+        $(".center-base-banner").prepend(imgNew);
+        $(".center-base-banner").append(imgFile);
+    }
+    //获取选择图片路径
+    function getObjectURL(file) { //获取上传图片地址
+        var url = null;
+        if (window.createObjectURL != undefined) { // basic
+            url = window.createObjectURL(file);
+        } else if (window.URL != undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file);
+        } else if (window.webkitURL != undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file);
+        }
+        return url;
+    }
+    $(function () {
+        _init_area();
+        //选择图片
+        $("body").on("change", ".banner-upload", function () {
+            var objUrl = getObjectURL(this.files[0]);
+            var filepath = $(this).val();
+            var extStart = filepath.lastIndexOf(".");
+            var ext = filepath.substring(extStart, filepath.length).toUpperCase();
+            if (ext != ".BMP" && ext != ".PNG" && ext != ".JPEG" && ext != ".GIF" && ext != ".JPG") {
+                alert("图片限于bmp,png,gif,jpg,jpeg格式");
+                return false;
+            }
+            var file_size = 0;
+            if ($.browser.msie) {
+                var img = new Image();
+                img.src = filepath;
+                while (true) {
+                    if (img.fileSize > 0) {
+                        if (img.fileSize > 5 * 1024 * 1024) {
+                            alert("图片不大于10MB。");
+                        }
+                        break;
+                    }
+                }
+            } else {
+                file_size = this.files[0].size;
+                var size = file_size / 1024;
+                if (size > 5120) {
+                    alert("上传的图片大小不能超过5M！");
+                }
+            }
+            if (objUrl) {
+                //插入缩略图以及新增一个file input
+                insertPhoto(objUrl);
+                //隐藏当前添加框，并且移除class
+                $(this).removeClass("banner-upload").parent().hide();
+                $(this).parent().prependTo(".center-base-banner");
+            }
+            return true;
+        });
+        //删除图片
+        $("body").on("click", ".banner-delete", function () {
+            $(this).parent().remove();
+            $(this).parent().prev().remove();
+        });
+    })
+</script>
+</body>
+</html>

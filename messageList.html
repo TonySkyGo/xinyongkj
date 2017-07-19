@@ -98,26 +98,28 @@
         </div>
         <div class="center-container">
             <div class="center-state clear">
-                <a href="" class="center-state-btn active">通知详情</a>
+                <a href="" class="center-state-btn active">系统消息</a>
             </div>
-            <div class="message-title">系统通知系统通知标题</div>
-            <div class="message-time">2017-06-05  12:12:12</div>
-            <div class="message-content">
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
+            <div class="message-top">
+                <input type="checkbox" class="msgcheckall" name="msgcheckall">
+                <span class="fl">全选</span>
+                <span class="message-set fl">设为已读</span>
             </div>
-            <div class="message-page-box">
-                <a href="" class="message-back">&lt;&nbsp;返回列表</a>
-                <div class="message-page-con">
-                    共<span class="message-active">1</span>条信息，共<span class="message-active">1</span>页
-                    <a href="" class="message-btn">上一页</a>
-                    <a href="" class="message-btn">下一页</a>
-                    到第<input type="text" class="message-input">页
-                    <a href="" class="message-btn">确定</a>
+            <div class="message-box">
+                <div class="message-cont">
+                    <input type="checkbox" class="msgcheck" name="msgcheck">
+                    <p class="fl">【通知】您已开通店铺，快来上传商品图片!</p>
+                    <p class="fr">2017-06-08  15:14:13</p>
+                </div>
+                <div class="message-cont">
+                    <input type="checkbox" class="msgcheck" name="msgcheck">
+                    <p class="fl">【通知】您已开通店铺，快来上传商品图片!</p>
+                    <p class="fr">2017-06-08  15:14:13</p>
+                </div>
+                <div class="message-cont">
+                    <input type="checkbox" class="msgcheck" name="msgcheck">
+                    <p class="fl">【通知】您已开通店铺，快来上传商品图片!</p>
+                    <p class="fr">2017-06-08  15:14:13</p>
                 </div>
             </div>
         </div>
@@ -132,6 +134,29 @@
         //input只能输入数字
         $(".message-input").on("keyup",function () {
             $(this).val($(this).val().replace(/\D/g,''));
+        });
+        //全选
+        $(".msgcheckall").on("click",function () {
+            var state = $(this).prop("checked");
+           $(".msgcheck").each(function () {
+               $(this).prop("checked",state);
+           });
+        });
+        //单选
+        $(".msgcheck").on("click",function () {
+            var count = 0;
+            if($(this).prop("checked")){
+                $(this).parents(".message-box").find(".msgcheck").each(function () {
+                    if($(this).prop("checked")){
+                        count++;
+                    }
+                });
+                if(count == $(this).parents(".message-box").find(".message-cont").length){
+                    $(".msgcheckall").prop("checked",true);//全选
+                }
+            }else{
+                $(".msgcheckall").prop("checked",false);//取消全选
+            }
         });
     });
 </script>

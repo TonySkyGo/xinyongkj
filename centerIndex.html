@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>系统消息</title>
+    <title>供应商首页</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/yixin.css">
     <link rel="stylesheet" href="css/pack.css">
@@ -98,27 +98,27 @@
         </div>
         <div class="center-container">
             <div class="center-state clear">
-                <a href="" class="center-state-btn active">通知详情</a>
+                <a href="" class="center-state-btn active">供应商首页</a>
             </div>
-            <div class="message-title">系统通知系统通知标题</div>
-            <div class="message-time">2017-06-05  12:12:12</div>
-            <div class="message-content">
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-                系统通知系统通知系统通知系统通知系统通知系统通知系统通知系统通知
-            </div>
-            <div class="message-page-box">
-                <a href="" class="message-back">&lt;&nbsp;返回列表</a>
-                <div class="message-page-con">
-                    共<span class="message-active">1</span>条信息，共<span class="message-active">1</span>页
-                    <a href="" class="message-btn">上一页</a>
-                    <a href="" class="message-btn">下一页</a>
-                    到第<input type="text" class="message-input">页
-                    <a href="" class="message-btn">确定</a>
+            <div class="center-msg">
+                <div class="center-img">
+                    <img src="img/home/good1.png" alt="">
                 </div>
+                <div class="center-supply-name">企业名称</div>
+                <div class="center-msg-box">
+                    <div class="center-credit">授信企业</div>
+                    <span class="center-msg-word">第1年</span>
+                    <span class="center-msg-word">品牌商/制造业/f服务商</span>
+                </div>
+            </div>
+            <div class="center-remind">
+                <div class="center-remind-box">
+                    <div class="center-remind-word">待办提醒</div>
+                    <a href="" class="center-remind-more">查看更多&nbsp;&gt;</a>
+                </div>
+                <p class="center-remind-title">留言报价：您每天可以对3条采购信息进行报价，今天还剩<span class="center-remind-num">3</span>次机会</p>
+                <p class="center-remind-title">留言报价：您每天可以对3条采购信息进行报价，今天还剩<span class="center-remind-num">3</span>次机会</p>
+                <p class="center-remind-title">留言报价：您每天可以对3条采购信息进行报价，今天还剩<span class="center-remind-num">3</span>次机会</p>
             </div>
         </div>
     </div>
@@ -127,13 +127,5 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/script.js"></script>
-<script>
-    $(function () {
-        //input只能输入数字
-        $(".message-input").on("keyup",function () {
-            $(this).val($(this).val().replace(/\D/g,''));
-        });
-    });
-</script>
 </body>
 </html>
