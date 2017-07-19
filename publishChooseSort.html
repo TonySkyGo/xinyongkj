@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="css/huangwei.css" />
 	</head>
 
-	<body>
+	<body class="publish-choose-bg">
 		<div class="cs-top">
 			<div class="cs-img"></div>
 		</div>
@@ -23,7 +23,7 @@
 			<div class="sort-choose">
 				<h6 class="sort-title">选择分类</h6>
 				<div class="sort-items">
-					<div class="sort-item-wrap clear" >
+					<div class="sort-item-wrap clear disnone" >
 						<div class="sort-item">
 							<div class="sort-input-wrap">
 								<input type="" name="" id="" value="" placeholder="请输入分类名称" class="sort-input choosesort-input" />
@@ -67,9 +67,15 @@
 					</div>
 					<div class="search-res-wrap">
 						<p class="search-res-notice">以下是系统匹配到的分类路径， 如没有合适的分类，<a href="">请重新选择分类</a></p>
-						<label for="" class="search-item"><input type="radio" name="search-res-item" id="" value="" />日用百货>家具日用>表>手表</label>
-						<label for="" class="search-item"><input type="radio" name="search-res-item" id="" value="" />家居百货>钟表>机械表</label>
-						<label for="" class="search-item"><input type="radio" name="search-res-item" id="" value="" />家居百货>钟表>机械表</label>
+						<div class="search-res-item-wrap">
+							<label for="" class="search-item"><input type="radio" name="search-res-item" id="" value="" />日用百货>家具日用>表>手表</label>
+							<label for="" class="search-item"><input type="radio" name="search-res-item" id="" value="" />家居百货>钟表>机械表</label>
+							<label for="" class="search-item"><input type="radio" name="search-res-item" id="" value="" />家居百货>钟表>机械表</label>	
+						</div>
+						<div class="search-res-commit">
+							<a href="javascript:;" class="search-res-choose">确定</a>
+							<a href="javascript:;" class="search-res-cancle">取消</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -224,7 +230,10 @@
 					inputVal = $.trim(inputVal);
 					if(inputVal!="")
 					{
-//						for()
+						$.each(classify,function(id,item){
+							
+							
+						});
 					}
 				});
 			})

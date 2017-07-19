@@ -2273,10 +2273,14 @@
 }
 
 /*商品上传类目选择*/
+.publish-choose-bg{
+	background: #fff;
+}
 .cs-top{
 	height: 108px;
 	overflow: hidden;
 	border-bottom: 1px solid #e6e6e6;
+	background: #ffffff;
 }
 .cs-img{
 	margin: 32px auto 0;
@@ -2447,12 +2451,21 @@
 .sort-last .choosesort-detail.check{
 	background-color:#fcefca;
 }
+.search-res-wrap{
+	height: 500px;
+}
 .search-res-notice{
 	font-size: 14px;
 	color: #333;
 	height: 36px;
 	line-height: 36px;
 	margin-left: 10px;
+}
+.search-res-item-wrap{
+	height: 400px;
+	padding: 10px;
+	overflow: auto;
+	border: 1px solid #ccc;
 }
 .search-res-notice a{
 	color: #1B90E2;
@@ -2464,6 +2477,24 @@
 	height: 30px;
 	line-height: 36px;
 	margin-left: 10px;
+}
+.search-res-commit{
+	margin-top: 20px;
+}
+.search-res-choose,.search-res-cancle{
+	display: inline-block;
+	font-size: 14px;
+	color: #fff;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 6px;
+	background: #E60012;
+	margin-left: 20px;
+}
+.search-res-cancle{
+	
 }
 /*商品详情*/
 .pd-top{
@@ -3132,6 +3163,12 @@ td.has-choosed-trs,td.has-choosed-tr3{
 	margin-bottom: 10px;
 }
 /*总则页面1*/
+html,body{
+	background: #f5f5f5;
+}
+.container-bg{
+	background: #fff;
+}
 .rules-left{
 	width: 180px;
 	background: #fef9f8;
@@ -3148,7 +3185,7 @@ td.has-choosed-trs,td.has-choosed-tr3{
 .rules-detail{
 	
 }
-.rules-title{
+.rules-nav-title{
 	font-size: 14px;
 	color: #333;
 	text-indent: 14px;
@@ -3163,4 +3200,248 @@ td.has-choosed-trs,td.has-choosed-tr3{
 	height: 38px;
 	line-height: 38px;
 	background: #fef9f8;
+}
+
+/*客服中心*/
+.custom-service-title h4{
+	float: left;
+}
+.custom-service-title a{
+	float: right;
+	font-size: 14px;
+	color: #0083e6;
+	margin-top: 20px;
+}
+.custom-service-bottom{
+	min-height: auto !important;
+	padding-bottom: 40px;
+}
+.custom-server-illustration{
+	font-size: 14px;
+	color: #7b7b7b;
+}
+.custom-server-illustration1{
+	color: #333!important;
+	font-weight: bold;
+}
+.server-list{
+	padding-left: 30px;
+	padding-top: 28px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #d1d1d1;
+}
+.server-left{
+	font-size: 14px;
+	color: #4c4c4c;
+	font-weight: bold;
+	width: 148px;
+}
+.server-right{
+	width: 850px;
+}
+.server-title{
+	font-size: 14px;
+	color: #4c4c4c;
+	font-weight: bold;
+}
+.server-title1{
+	width: 142px;
+}
+.server-title2{
+	width: 142px;
+}
+.server-title3{
+	width: 320px;
+}
+.server-item{
+	margin-top: 18px;
+}
+.server-title1 input{
+	text-indent: 10px;
+	display: block;
+	width: 115px;
+	height: 40px;
+}
+.select-type{
+	text-indent: 10px;
+	display: block;
+	width: 115px;
+	height: 40px;	
+}
+.server-title3 input{
+	text-indent: 10px;
+	display: block;
+	width: 312px;
+	height: 40px;
+}
+.server-delete{
+	font-size: 14px;
+	color: #fff;
+	text-indent: 26px;
+	width: 64px;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 10px;
+	border-radius: 4px;
+	background: #cdd1d9 url(../img/customServer/delete.png) no-repeat 6px center;
+	cursor: pointer;
+}
+.add-custom-server{
+	display: inline-block;
+	font-size: 14px;
+	color: #fff;
+	height: 40px;
+	padding-left: 28px;
+	padding-right: 28px;
+	margin-top: 30px;
+	line-height: 40px;
+	border-radius: 4px;
+	background-color: #0083e6;
+	cursor: pointer;
+}
+.cs-submit-wrap{
+	padding-top: 40px;
+	background: #f5f5f5;
+}
+.custom-server-submit{
+	display: block;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	width: 108px;
+	margin: 0 auto;
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	background-color: #f95555;
+}
+.work-time{
+	margin-top: 32px;
+}
+.work-time-title{
+	font-size: 14px;
+	color: #4c4c4c;
+	text-indent: 30px;
+	height: 40px;
+	line-height: 40px;
+}
+.work-time-input{
+	display: block;
+	width: 796px;
+	height: 122px;
+	resize: none;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+/*聊天记录查询*/
+.custom-server-user{
+	margin-top: 16px;
+	border-bottom: 1px solid #e6e6e6;
+}
+.custom-server-user span{
+	display: inline-block;
+	font-size: 14px;
+	color: #E60012;
+	padding-left: 24px;
+	padding-right: 24px;
+	margin-left: 30px;
+	height: 54px;
+	line-height: 54px;
+	border-bottom: 2px solid #e60012;
+}
+.time-choose{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.recently-contacts{
+	font-size: 14px;
+	color: #333333;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+}
+.time-choose-input{
+	float: right;
+	height: 30px;
+}
+.history-keywork-word{
+	display: inline-block;
+	font-size: 14px;
+	color: #333;
+	height: 40px;
+	line-height: 40px;
+	margin-right:20px;
+	margin-left: 20px;
+}
+.history-keywork{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+}
+.history-time-start,.history-time-end{
+	display: inline-block;
+	width: 130px;
+	height: 40px;
+	border: 1px solid #d1d1d1;
+	background:#fff url(../img/customServer/date.png) no-repeat 104px center;
+}
+.history-time-start input,.history-time-end input{
+	color: #7b7b7b;
+	text-indent: 10px;
+	display: inline-block;
+	height: 38px;
+	width: 100px;
+	border: none;
+	outline: none;
+}
+.history-search{
+	font-size: 16px;
+	color: #fff;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	padding:0 24px;
+	border: none;
+	outline: none;
+	background: #f95555;
+	margin: 0 0 0 16px;
+	cursor: pointer;
+}
+.his-conversation-content{
+	height: 614px;
+	border: 1px solid #d1d1d1;
+}
+.conversation-content-left{
+	width: 200px;
+	height: 612px;
+	background-color: #d1d1d1;
+}
+.no-conversation{
+	width: 100px;
+	margin: 230px auto 0;
+}
+.no-conversation-img{
+	display: block;
+	width: 54px;
+	height: 54px;
+	margin: 0 auto;
+}
+.no-conversation-text{
+	font-size: 14px;
+	color: #F95555;
+	text-align: center;
+	margin-top: 16px;
+}
+.conversation-content-right{
+	width: 820px;
+	height: 612px;
+	background-color: #ffffff;
+}
+.conversation-notice{
+	font-size: 14px;
+	color: #F95555;
+	margin-left: 86px;
+	margin-top: 84px;
 }
