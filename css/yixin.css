@@ -4703,15 +4703,20 @@
     width: 260px;
     text-align: center;
 }
+.areacheck{
+    float: left;
+    width: 15px;
+    margin: 10px 10px 0 0;
+}
 .model-area{
     float: left;
-    width: 250px;
+    width: 225px;
     padding: 10px 0;
 }
 
 .model-edit{
     float: right;
-    width: 100px;
+    width: 90px;
     height: 38px;
     line-height: 38px;
     color: #0083e6;
