@@ -112,8 +112,8 @@ var getPassword = function () {
     zhifumima_1=n.substring(0,6);
     zhifumima_2=n.substring(6,12);
     if( zhifumima_1!=zhifumima_2){
-        $(".zhifumima-possword-zhifu").find("div.gaimima-icon-ture").attr("class","gaimima-icon-error");
-        $(".zhifumima-possword-zhifu1").find("div.gaimima-icon-ture").attr("class","gaimima-icon-error");
+        $(".zhifumima-possword-zhifu").find("div").eq(0).attr("class","gaimima-icon-error");
+        $(".zhifumima-possword-zhifu1").find("div").eq(0).attr("class","gaimima-icon-error");
         alert("支付密码错误！");
         for (var b = 0; b < pawDivCount; b++) {
             paw[b].value = "";
@@ -123,8 +123,8 @@ var getPassword = function () {
             pawDiv[b].setAttribute("style", "border:none");
         }
     }else if( zhifumima_1==zhifumima_2 && zhifumima_1!="" && zhifumima_2!=""){
-        $(".zhifumima-possword-zhifu").find("div.gaimima-icon-error").attr("class","gaimima-icon-ture");
-        $(".zhifumima-possword-zhifu1").find("div.gaimima-icon-error").attr("class","gaimima-icon-ture");
+        $(".zhifumima-possword-zhifu").find("div").eq(0).attr("class","gaimima-icon-ture");
+        $(".zhifumima-possword-zhifu1").find("div").eq(0).attr("class","gaimima-icon-ture");
     }
 };
 var getPasswordBtn = document.getElementsByClassName("getPasswordBtn")[0];

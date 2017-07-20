@@ -56,6 +56,7 @@
 .zhifumima-input-style{ float: left; width: 350px; height: 50px; padding:16px 24px 16px 16px; margin:15px 20px; border: 1px solid #d9d9d9; background:url("../img/walletadmin/icon.png") no-repeat;}
 .icon-ture{ background-position: right -59px;}
 .icon-error{ background-position: right -125px;}
+.icon-null{background-position:right 99px;}
 .getcode{ display:inline-block; margin:105px 0 0 -300px; width: 97px; height: 30px; line-height: 30px; text-align: center; background:#0083e6;font-size: 14px; color:#ffffff; }
 .getsecond{ display:inline-block; margin:105px 0 0 -300px; width: 97px; height: 30px; line-height: 30px; text-align: center; background:#d9d9d9;font-size: 14px; color:#ffffff; }
 .zhifumima-input-btn{ width: 240px; height: 40px; margin: 30px; color:#ffffff; font-size:20px; background: #0083e6; border: none;}
