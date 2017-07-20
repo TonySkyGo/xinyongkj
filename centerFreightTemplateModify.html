@@ -140,7 +140,7 @@
                             <input type="text">
                             <span>元，</span>
                         </div>
-                        <table class="model-table" cellspacing="0">
+                        <table class="model-table" cellspacing="0" id="modelnull">
                             <tr>
                                 <th class="model-td1">运送到</th>
                                 <th class="model-td2">首重量(kg)</th>
@@ -149,34 +149,34 @@
                                 <th class="model-td2">续费(kg)</th>
                                 <th class="model-td3">操作</th>
                             </tr>
-                            <tr>
-                                <td class="model-td1">
-                                    <input type="checkbox" class="areacheck" name="area">
-                                    <div class="model-area">
-                                        未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、
-                                    </div>
-                                    <div class="model-edit">编辑</div>
-                                </td>
-                                <td class="model-td2">
-                                    <input type="text" class="model-input">
-                                </td>
-                                <td class="model-td2">
-                                    <input type="text" class="model-input">
-                                </td>
-                                <td class="model-td2">
-                                    <input type="text" class="model-input">
-                                </td>
-                                <td class="model-td2">
-                                    <input type="text" class="model-input">
-                                </td>
-                                <td class="model-td3">
-                                    <span class="model-delete">删除</span>
-                                </td>
-                            </tr>
+                            <!--<tr>-->
+                                <!--<td class="model-td1">-->
+                                    <!--<input type="checkbox" checked="checked" class="areacheck" name="area">-->
+                                    <!--<div class="model-area">-->
+                                        <!--未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、-->
+                                    <!--</div>-->
+                                    <!--<div class="model-edit">编辑</div>-->
+                                <!--</td>-->
+                                <!--<td class="model-td2">-->
+                                    <!--<input type="text" class="model-input">-->
+                                <!--</td>-->
+                                <!--<td class="model-td2">-->
+                                    <!--<input type="text" class="model-input">-->
+                                <!--</td>-->
+                                <!--<td class="model-td2">-->
+                                    <!--<input type="text" class="model-input">-->
+                                <!--</td>-->
+                                <!--<td class="model-td2">-->
+                                    <!--<input type="text" class="model-input">-->
+                                <!--</td>-->
+                                <!--<td class="model-td3">-->
+                                    <!--<span class="model-delete" id="model-delete">删除</span>-->
+                                <!--</td>-->
+                            <!--</tr>-->
                             <tr>
                                 <td colspan="6">
-                                    <span class="model-do model-add">为指定地区城市设置运费</span>
-                                    <span class="model-do model-alldel">批量删除</span>
+                                    <span class="model-do model-add" id="model-add">为指定地区城市设置运费</span>
+                                    <span class="model-do model-alldel" id="model-alldel">批量删除</span>
                                 </td>
                             </tr>
                         </table>
@@ -261,7 +261,8 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/area.js"></script>
 <script src="js/script.js"></script>
-<script>
+<script src="js/walletadmin.js"></script>
+<script type="text/javascript">
     $(function () {
         _init_area();
     });
