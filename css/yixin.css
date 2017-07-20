@@ -4640,7 +4640,7 @@
     padding-left: 12px;
 }
 .template-way{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .template-way-top{
     height: 35px;
@@ -4763,4 +4763,21 @@
 }
 .model-input-unit{
     margin: 0 10px;
+}
+.model-btn{
+    display: inline-block;
+    width: 120px;
+    height: 42px;
+    line-height: 40px;
+    margin: 20px 20px 0 0;
+    font-size: 16px;
+    color: #f95555;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #f95555;
+    cursor: pointer;
+}
+.model-btn:hover{
+    color: #fff;
+    background-color: #f95555;
 }

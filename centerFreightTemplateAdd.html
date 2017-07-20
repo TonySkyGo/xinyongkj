@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>新增运费模版</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/huangwei.css">
+    <link rel="stylesheet" href="css/yixin.css">
+    <link rel="stylesheet" href="css/pack.css">
+</head>
+<body>
+
+<div class="center-head">
+    <div class="center-head-con container clear">
+        <a href=""><img src="img/center/logo.png" class="center-logo" alt=""></a>
+        <a href="" class="center-nav active">供应商中心</a>
+        <a href="" class="center-nav">会员服务</a>
+        <a href="" class="center-nav">应用中心</a>
+        <a href="" class="center-nav">账户管理</a>
+        <div class="center-car">
+            <div class="center-car-num">0</div>
+        </div>
+        <form action="" id="searchForm">
+            <input type="submit" class="center-search-btn" value="搜索"/>
+            <input type="text" class="center-search-input" name="title" placeholder="这里输入产品关键词"/>
+        </form>
+    </div>
+</div>
+<div class="center-bg">
+    <div class="container clear">
+        <div class="center-sider">
+            <div class="center-single">
+                <a href="" class="center-first center-index">店铺设置</a>
+                <a href="" class="center-second">基本信息</a>
+                <a href="" class="center-second">运费模版</a>
+                <a href="" class="center-second">安全设置</a>
+                <a href="" class="center-second">收发货地址</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">订单管理</p>
+                <a href="" class="center-second">我的供应</a>
+                <a href="" class="center-second">供应售后</a>
+                <a href="" class="center-second">我的采购</a>
+                <a href="" class="center-second">采购售后</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">商品管理</p>
+                <a href="" class="center-second">所有商品</a>
+                <a href="" class="center-second">发布商品</a>
+                <a href="" class="center-second">批量发布商品</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">钱包管理</p>
+                <a href="" class="center-second">我的钱包</a>
+                <a href="" class="center-second">支付设置</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">入驻管理</p>
+                <a href="" class="center-second">入驻信息</a>
+                <a href="" class="center-second">审核进度</a>
+            </div>
+            <div class="center-single">
+                <p class="center-first">客服中心</p>
+                <a href="" class="center-second">我的客服</a>
+                <a href="" class="center-second">消息管理</a>
+            </div>
+        </div>
+        <div class="center-container">
+            <div class="center-state clear">
+                <a href="" class="center-state-btn active">运费模版</a>
+            </div>
+            <div class="template-container">
+                <div class="template-add">新增运费模版</div>
+                <div class="template-con">
+                    <div class="template-key pl8">运费名称:</div>
+                    <div class="template-val">
+                        <input type="text" class="template-name">
+                    </div>
+                </div>
+                <div class="template-con">
+                    <div class="template-key"><span class="required">*</span>宝贝地址:</div>
+                    <div class="template-val">
+                        <div class="area-part center-base-part">
+                            <select id="s_province" name="sProvince"></select>
+                            <select id="s_city" name="sCity" ></select>
+                            <select id="s_county" name="sCounty"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-con">
+                    <div class="template-key pl8">发货时间:</div>
+                    <div class="template-val">
+                        <select class="send-time" name="time">
+                            <option value="1">1天内</option>
+                            <option value="2">2天内</option>
+                            <option value="3">3天内</option>
+                        </select>
+                        <span class="send-hint">如果设定宝贝的发货时间，不仅可避免发货咨询和纠纷，还能促进成交！</span>
+                        <a href="" class="send-rule">详情</a>
+                    </div>
+                </div>
+                <div class="template-con">
+                    <div class="template-key"><span class="required">*</span>是否包邮:</div>
+                    <div class="template-val">
+                        <input type="radio" class="template-radio" name="post">
+                        <span class="template-text">自定义运费</span>
+                        <input type="radio" class="template-radio" name="post">
+                        <span class="template-text">卖家承担运费</span>
+                    </div>
+                </div>
+                <div class="template-con">
+                    <div class="template-key"><span class="required">*</span>计价方式:</div>
+                    <div class="template-val">
+                        <input type="radio" class="template-radio" name="way">
+                        <span class="template-text">按件数</span>
+                        <input type="radio" class="template-radio" name="way">
+                        <span class="template-text">按重量</span>
+                    </div>
+                </div>
+                <div class="template-con">
+                    <div class="template-key pl8">运送方式:</div>
+                    <div class="template-val">
+                        <span class="send-hint">除指定地区外，其余地区的运费采用“默认运费”</span>
+                    </div>
+                </div>
+                <div class="template-way">
+                    <div class="template-way-top">
+                        <input type="checkbox" class="waycheck" name="mode">
+                        <span class="template-way-name">快递</span>
+                    </div>
+                    <div class="template-way-box">
+                        <div class="template-way-default">
+                            <span>默认运费</span>
+                            <input type="text">
+                            <span>kg内</span>
+                            <input type="text">
+                            <span>元，每增加</span>
+                            <input type="text">
+                            <span>kg，增加运费</span>
+                            <input type="text">
+                            <span>元，</span>
+                        </div>
+                        <table class="model-table" cellspacing="0">
+                            <tr>
+                                <th class="model-td1">运送到</th>
+                                <th class="model-td2">首重量(kg)</th>
+                                <th class="model-td2">首费(元)</th>
+                                <th class="model-td2">续重量(kg)</th>
+                                <th class="model-td2">续费(kg)</th>
+                                <th class="model-td3">操作</th>
+                            </tr>
+                            <tr>
+                                <td class="model-td1">
+                                    <input type="checkbox" class="areacheck" name="area">
+                                    <div class="model-area">
+                                        未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、
+                                    </div>
+                                    <div class="model-edit">编辑</div>
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td3">
+                                    <span class="model-delete">删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    <span class="model-do model-add">为指定地区城市设置运费</span>
+                                    <span class="model-do model-alldel">批量删除</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="template-way">
+                    <div class="template-way-top">
+                        <input type="checkbox" class="waycheck" name="mode">
+                        <span class="template-way-name">EMS</span>
+                    </div>
+                    <div class="template-way-box">
+                        <div class="template-way-default">
+                            <span>默认运费</span>
+                            <input type="text">
+                            <span>kg内</span>
+                            <input type="text">
+                            <span>元，每增加</span>
+                            <input type="text">
+                            <span>kg，增加运费</span>
+                            <input type="text">
+                            <span>元，</span>
+                        </div>
+                        <table class="model-table" cellspacing="0">
+                            <tr>
+                                <th class="model-td1">运送到</th>
+                                <th class="model-td2">首重量(kg)</th>
+                                <th class="model-td2">首费(元)</th>
+                                <th class="model-td2">续重量(kg)</th>
+                                <th class="model-td2">续费(kg)</th>
+                                <th class="model-td3">操作</th>
+                            </tr>
+                            <tr>
+                                <td class="model-td1">
+                                    <input type="checkbox" class="areacheck" name="area">
+                                    <div class="model-area">
+                                        未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、
+                                    </div>
+                                    <div class="model-edit">编辑</div>
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td3">
+                                    <span class="model-delete">删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    <span class="model-do model-add">为指定地区城市设置运费</span>
+                                    <span class="model-do model-alldel">批量删除</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="template-way">
+                    <div class="template-way-top">
+                        <input type="checkbox" class="waycheck" name="mode">
+                        <span class="template-way-name">平邮</span>
+                    </div>
+                    <div class="template-way-box">
+                        <div class="template-way-default">
+                            <span>默认运费</span>
+                            <input type="text">
+                            <span>kg内</span>
+                            <input type="text">
+                            <span>元，每增加</span>
+                            <input type="text">
+                            <span>kg，增加运费</span>
+                            <input type="text">
+                            <span>元，</span>
+                        </div>
+                        <table class="model-table" cellspacing="0">
+                            <tr>
+                                <th class="model-td1">运送到</th>
+                                <th class="model-td2">首重量(kg)</th>
+                                <th class="model-td2">首费(元)</th>
+                                <th class="model-td2">续重量(kg)</th>
+                                <th class="model-td2">续费(kg)</th>
+                                <th class="model-td3">操作</th>
+                            </tr>
+                            <tr>
+                                <td class="model-td1">
+                                    <input type="checkbox" class="areacheck" name="area">
+                                    <div class="model-area">
+                                        未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、
+                                    </div>
+                                    <div class="model-edit">编辑</div>
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td2">
+                                    <input type="text" class="model-input">
+                                </td>
+                                <td class="model-td3">
+                                    <span class="model-delete">删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    <span class="model-do model-add">为指定地区城市设置运费</span>
+                                    <span class="model-do model-alldel">批量删除</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="template-way">
+                    <div class="template-way-top">
+                        <input type="checkbox" class="waycheck" name="mode">
+                        <span class="template-way-name">指定条件包邮</span>
+                    </div>
+                    <div class="template-way-box">
+                        <div class="template-way-default">
+                            <span>默认运费</span>
+                            <input type="text">
+                            <span>kg内</span>
+                            <input type="text">
+                            <span>元，每增加</span>
+                            <input type="text">
+                            <span>kg，增加运费</span>
+                            <input type="text">
+                            <span>元，</span>
+                        </div>
+                        <table class="model-table" cellspacing="0">
+                            <tr>
+                                <th class="model-td1">运送到</th>
+                                <th class="model-td2">选择运送方式</th>
+                                <th class="model-td2">选择快递</th>
+                                <th class="model-td4" colspan="2">设置包邮条件</th>
+                                <th class="model-td3">操作</th>
+                            </tr>
+                            <tr>
+                                <td class="model-td1">
+                                    <div class="model-area">
+                                        未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、
+                                    </div>
+                                    <div class="model-edit">编辑</div>
+                                </td>
+                                <td class="model-td2 model-vet">
+                                    <select class="model-select">
+                                        <option value="1">申通</option>
+                                        <option value="2">韵达</option>
+                                        <option value="3">中通</option>
+                                    </select>
+                                </td>
+                                <td class="model-td2">
+                                    <p class="model-express">申通快递</p>
+                                    <p class="model-express">韵达快递</p>
+                                    <p class="model-express">中通快递</p>
+                                </td>
+                                <td class="model-td4 model-vet" colspan="2">
+                                    <select class="model-select">
+                                        <option value="1">件数</option>
+                                        <option value="2">韵达</option>
+                                        <option value="3">中通</option>
+                                    </select>
+                                    <div class="model-full">
+                                        <span class="model-full-word">满</span>
+                                        <input type="text" class="model-input model-input-unit">
+                                        <span class="model-unit">件</span>包邮
+                                    </div>
+                                </td>
+                                <td class="model-td3">
+                                    <span class="model-delete">删除</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    <span class="model-do model-add">为指定地区城市设置运费</span>
+                                    <span class="model-do model-alldel">批量删除</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <input class="model-btn" type="submit" value="保存并返回">
+                <input class="model-btn" type="reset" value="取消">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="overlay overlay-edit disnone">
+    <div class="overlay-add-cont">
+        <div class="overlay-addr-title">编辑收货人信息<span class="icon-exit"></span></div>
+        <form class="add-addr">
+            <div class="add-item add-item1">
+                <label for="" class="add-label"><span class="need">*</span>所在地区</label>
+                <select id="m_province" name="s_province"></select>
+                <select id="m_city" name="s_city" ></select>
+                <select id="m_county" name="s_county"></select>
+            </div>
+
+            <input type="submit" class="save-new" value="保存修改">
+        </form>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/area.js"></script>
+<script src="js/script.js"></script>
+<script>
+    $(function () {
+        _init_area();
+        _init_area2();
+        //选择显示内容
+        $(".waycheck").on("click",function () {
+            if($(this).prop("checked")){
+                $(this).parents(".template-way-top").siblings(".template-way-box").show();
+            }else{
+                $(this).parents(".template-way-top").siblings(".template-way-box").hide();
+            }
+        });
+        //编辑弹窗
+        $("body").on("click",".model-edit",function () {
+
+        });
+    });
+</script>
+</body>
+</html>
