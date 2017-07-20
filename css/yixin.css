@@ -4578,3 +4578,184 @@
     padding: 9px 0;
     line-height: 20px;
 }
+
+/*新增运费模版*/
+.template-container{
+    width: 950px;
+    margin: 0 auto;
+}
+.template-add{
+    line-height: 75px;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #343434;
+    font-weight: bold;
+}
+.template-con{
+    font-size: 16px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.template-key{
+    float: left;
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+}
+.template-val{
+    min-height: 32px;
+}
+.template-name{
+    float: left;
+    width: 410px;
+    height: 32px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+}
+.send-time{
+    width: 88px;
+    height: 32px;
+}
+.send-hint{
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #4c4c4c;
+}
+.send-rule{
+    height: 32px;
+    font-size: 14px;
+    color: #0083e6;
+}
+.template-radio{
+    float: left;
+    height: 32px;
+}
+.template-text{
+    float: left;
+    width: 130px;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 12px;
+}
+.template-way{
+    margin-bottom: 20px;
+}
+.template-way-top{
+    height: 35px;
+    overflow: hidden;
+}
+.waycheck{
+    float: left;
+    margin: 11px 0 0 11px;
+}
+.template-way-name{
+    float: left;
+    line-height: 35px;
+    padding: 0 20px;
+}
+.template-way-box{
+    border: 1px solid #dadada;
+}
+.template-way-default{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    font-size: 16px;
+    background-color: #ffebeb;
+}
+.template-way-default input{
+    width: 90px;
+    height: 32px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.model-table{
+    width: 100%;
+    border: 1px solid #dadada;
+}
+
+.model-table th{
+    background-color: #f6f6f6;
+}
+.model-table td{
+    border-top: 1px solid #dadada;
+}
+.model-td1{
+    width: 378px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0 10px;
+    text-align: left;
+    overflow: hidden;
+}
+.model-td2{
+    width: 130px;
+    text-align: center;
+}
+.model-td3{
+    width: 50px;
+    text-align: center;
+}
+.model-td4{
+    width: 260px;
+    text-align: center;
+}
+.model-area{
+    float: left;
+    width: 250px;
+    padding: 10px 0;
+}
+
+.model-edit{
+    float: right;
+    width: 100px;
+    height: 38px;
+    line-height: 38px;
+    color: #0083e6;
+    cursor: pointer;
+}
+
+.model-do{
+    display: inline-block;
+    padding: 0 10px;
+    height: 38px;
+    line-height: 38px;
+    color: #0083e6;
+    cursor: pointer;
+}
+
+.model-input{
+    display: inline-block;
+    width: 72px;
+    height: 26px;
+    text-align: center;
+}
+
+.model-delete{
+    color: #e60012;
+    cursor: pointer;
+}
+
+.model-vet{
+    vertical-align: top;
+}
+
+.model-select{
+    width: 72px;
+    height: 26px;
+    margin: 7px 0 13px 0;
+}
+
+.model-full{
+    margin-bottom: 7px;
+}
+
+.model-full-word{
+    margin-left: 28px;
+}
+.model-input-unit{
+    margin: 0 10px;
+}
