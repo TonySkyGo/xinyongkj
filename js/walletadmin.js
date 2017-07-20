@@ -15,19 +15,41 @@ $(function() {
         if($(this).attr("class")=="icon-down"){
             $(this).attr("class","icon-up");
         }
-
         if($(this).attr("class")=="icon-up"){
             $(this).attr("class","icon-down");
             $("#zhifumima-input-text").find("input").val("");
-
         }
-
     });
     $("#zhifumima-change").bind("click",function(){
         if($(this).attr("class")=="icon-down"){
             $(this).attr("class","icon-up");
         }
     });
+
+    //判断输入内容
+    //手机判断
+    var haoma="12345678998"
+    var phone=$("#zhifumima-input-text").find("input#phone");
+    phone.keyup(function(event){
+        console.log(event.keyCode);
+        if (((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105))){
+            $(this).maxLength(11);
+        }else if (event.keyCode == "13"){
+            var inputtext=$(this).val();
+            if(inputtext==haoma){
+                $(this).removeClass("icon-error");
+                $(this).addClass("icon-ture");
+            }else if(inputtext!=haoma){
+                $(this).removeClass("icon-ture");
+                $(this).addClass("icon-error");
+                $(this).val("");
+            }
+        }else {
+            $(this).val("");
+        }
+    })
+    //手机验证码
+
 });
 
 //获取手机验证码倒计时
@@ -113,7 +135,7 @@ function func() {
             console.log(event.keyCode);
             if ((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105))  {    /*输入0-9*/
                 changeDiv();
-                errorPoint.style.display = "none";
+                //errorPoint.style.display = "none";
             } else if (event.keyCode == "8") {    /*退格回删事件*/
                 firstDiv();
             } else if (event.keyCode == "13") {    /*回车事件*/
@@ -170,8 +192,32 @@ var firstDiv = function () {
 /*获取输入密码*/
 var getPassword = function () {
     var n = "";
+    var yuanmima,xinmima_1,xinmima_2;
     for (var i = 0; i < pawDivCount; i++) {
         n += paw[i].value;
+    }
+    yuanmima=n.substring(0,6);
+    xinmima_1=n.substring(6,12);
+    xinmima_2=n.substring(12,20);
+    if(yuanmima==123456){
+        $(".zhifumima-possword-box").find("div.gaimima-icon-ture").show();
+    }
+    if(yuanmima!=123456 && xinmima_1!=xinmima_2){
+        $(".zhifumima-possword-box").find("div.gaimima-icon-ture").attr("class","gaimima-icon-error");
+        $(".zhifumima-possword-box1").find("div.gaimima-icon-ture").attr("class","gaimima-icon-error");
+        $(".zhifumima-possword-box2").find("div.gaimima-icon-ture").attr("class","gaimima-icon-error");
+        alert("原支付密码错误或设置密码不一致！");
+        for (var b = 0; b < pawDivCount; b++) {
+            paw[b].value = "";
+            pawDiv[0].setAttribute("style", "border: 2px solid deepskyblue;");
+            paw[0].readOnly = false;
+            paw[0].focus();
+            pawDiv[b].setAttribute("style", "border:none");
+        }
+    }else if(yuanmima==123456 && xinmima_1==xinmima_2 && xinmima_1!="" && xinmima_2!=""){
+        $(".zhifumima-possword-box").find("div.gaimima-icon-error").attr("class","gaimima-icon-ture");
+        $(".zhifumima-possword-box1").find("div.gaimima-icon-error").attr("class","gaimima-icon-ture");
+        $(".zhifumima-possword-box2").find("div.gaimima-icon-error").attr("class","gaimima-icon-ture");
     }
 };
 var getPasswordBtn = document.getElementsByClassName("getPasswordBtn")[0];

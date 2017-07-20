@@ -29,7 +29,7 @@
 .center-state-btn-Fsize:hover,.balance-showbig-topframe p a:hover{color: #0083e6;}
 .account-choice{width: 1020px; min-height: 40px; margin-top:10px;  background: #ffffff; }
 .center-state-btn-xiegang{float: left; padding-left:15px; margin-top: 38px; color:#cccccc;}
-.ware-state-title{  float: left;}
+.ware-state-title{  float: left; margin-right: 10px;}
 .no-conent{ width: 100px; height: 106px; margin:20px  auto 50px; background: url("../img/center/none.png") no-repeat center;  text-align: center;}
 .no-conent p{ display: block; padding-top: 126px; font-size: 14px; color: #4c4c4c;}
 .balance-news-frame{ position: relative; width: 260px; height: 20px; margin:-38px 0 0 180px; padding-left: 30px; font-size: 12px; line-height: 20px; color: #666666; background: url("../img/walletadmin/horn-icon.png") no-repeat;}
@@ -75,8 +75,13 @@
 .zhifumima-possword .pawDiv {  display: inline-block;  width: 50px;  height: 49px;  margin-top: -2px;  float: left;  }
 .gaimima-icon-ture{ position: absolute; margin: 16px 0 0 316px; width: 16px; height: 16px; background:url("../img/walletadmin/icon.png") no-repeat 0 -76px;}
 .gaimima-icon-error{ position: absolute; margin: 16px 0 0 316px; width: 16px; height: 16px; background:url("../img/walletadmin/icon.png") no-repeat 0 -142px;}
-
-
-
+/*日期选择样式-start*/
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+/*日期选择样式-end*/
 
 

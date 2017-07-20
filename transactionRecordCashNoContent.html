@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/yixin.css">
     <link rel="stylesheet" href="css/chenchun.css">
     <link rel="stylesheet" href="css/pack.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
 </head>
 <body>
 
@@ -108,8 +109,8 @@
             <form class="ware-search">
                 <div class="account-choice">
                     <span class="ware-state-title">状态：</span>
-                    <input type="radio" name="radio" checked="checked" class="ware-radio" value="个人账户（黄晓明）"><span class="ware-radio-column">个人账户（黄晓明）</span>
-                    <input type="radio" name="radio" class="ware-radio" value="企业账户（某某公司名）"><span class="ware-radio-column">企业账户（某某公司名）</span>
+                    <input type="radio" name="radiostate" checked="checked" class="ware-radio" value="个人账户（黄晓明）"><span class="ware-radio-column">个人账户（黄晓明）</span>
+                    <input type="radio" name="radiostate" class="ware-radio" value="企业账户（某某公司名）"><span class="ware-radio-column">企业账户（某某公司名）</span>
                 </div>
                 <div class="account-choice">
                 <span class="ware-column">状态：</span>
@@ -126,9 +127,9 @@
                     <input type="radio" name="radio" class="ware-radio" value="完成时间"><span class="ware-radio-column">完成时间</span>
                 </div>
                 <div class="time-choice-frame-2">
-                    <input type="text" value="2017-06-10 00:00:00" class="ware-time-s" placeholder="请选择时间范围开始">
+                    <input type="text" value="" class="ware-time-s" id="datepickerStart" placeholder="请选择时间范围开始">
                     <span class="ware-line"></span>
-                    <input type="text" value="" class="ware-time-s" placeholder="请选择时间范围结束">
+                    <input type="text" value="" class="ware-time-s" id="datepickerEnd" placeholder="请选择时间范围结束">
                     <span class="time-date"><a href="javascrpit:;"> 今天</a><em>/</em>
                         <a href="javascrpit:;" class="color-hover"> 1个月</a><em>/</em><a href="javascrpit:;"> 3个月</a>
                         <em>/</em><a href="javascrpit:;"> 1年</a></span>
@@ -210,5 +211,28 @@
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/walletadmin.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#datepickerStart").datetimepicker({
+            numberOfMonths: 2,
+            dateFormat:"yy-mm-dd",
+            timeFormat: "hh:mm:ss",
+            stepHour: 1,
+            stepMinute: 1,
+            stepSecond: 1
+        });
+
+        $("#datepickerEnd").datetimepicker({
+            numberOfMonths: 2,
+            dateFormat:"yy-mm-dd",
+            timeFormat: "hh:mm:ss",
+            stepHour: 1,
+            stepMinute: 1,
+            stepSecond: 1
+        });
+    })
+</script>
 </body>
 </html>

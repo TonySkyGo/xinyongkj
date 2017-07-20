@@ -48,7 +48,7 @@ function func() {
             console.log(event.keyCode);
             if (((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105))){    /*输入0-9*/
                 changeDiv();
-                errorPoint.style.display = "none";
+                //errorPoint.style.display = "none";
             } else if (event.keyCode == "8") {    /*退格回删事件*/
                 firstDiv();
             } else if (event.keyCode == "13") {    /*回车事件*/
@@ -105,12 +105,30 @@ var firstDiv = function () {
 /*获取输入密码*/
 var getPassword = function () {
     var n = "";
+    var zhifumima_1,zhifumima_2;
     for (var i = 0; i < pawDivCount; i++) {
         n += paw[i].value;
     }
+    zhifumima_1=n.substring(0,6);
+    zhifumima_2=n.substring(6,12);
+    if( zhifumima_1!=zhifumima_2){
+        $(".zhifumima-possword-zhifu").find("div.gaimima-icon-ture").attr("class","gaimima-icon-error");
+        $(".zhifumima-possword-zhifu1").find("div.gaimima-icon-ture").attr("class","gaimima-icon-error");
+        alert("支付密码错误！");
+        for (var b = 0; b < pawDivCount; b++) {
+            paw[b].value = "";
+            pawDiv[0].setAttribute("style", "border: 2px solid deepskyblue;");
+            paw[0].readOnly = false;
+            paw[0].focus();
+            pawDiv[b].setAttribute("style", "border:none");
+        }
+    }else if( zhifumima_1==zhifumima_2 && zhifumima_1!="" && zhifumima_2!=""){
+        $(".zhifumima-possword-zhifu").find("div.gaimima-icon-error").attr("class","gaimima-icon-ture");
+        $(".zhifumima-possword-zhifu1").find("div.gaimima-icon-error").attr("class","gaimima-icon-ture");
+    }
 };
 var getPasswordBtn = document.getElementsByClassName("getPasswordBtn")[0];
-getPasswordBtn.addEventListener("click", getPassword);
+//getPasswordBtn.addEventListener("click", getPassword);
 /*键盘事件*/
 document.onkeyup = function (event) {
     if (event.keyCode == "13") {  /*回车事件*/
