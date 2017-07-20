@@ -11,13 +11,13 @@
 	</head>
 	<body>
 		<div class="top-wrapper">
-			<div class="new-top104">
+			<!--<div class="new-top104">
 				<img src="img/home/yixin-top.png" class="top-img">
-			</div>
+			</div>-->
 			<div class="top-bottom">
 				<div class="top-bar container clear">
 					<div class="top-left">
-					 	<a href="">Hi，欢迎进入信用空间！</a>	
+					 	<a href="">信用，让交易简单起来！</a>	
 					</div>
 					<div class="top-right">
 						<div class="top-item hasLogin">
@@ -36,6 +36,28 @@
 						</div>
 						
 						<div class="top-item noLogin">
+							<a href="" class="top-menus pls-login">请登录</a>
+						</div>
+						<div class="top-item">
+							<a href="" class="top-menus">免费注册</a>
+						</div>
+						<div class="top-item">
+							<a href="" class="top-menus">个人中心</a>
+						</div>
+						<div class="top-item">
+							<a href="" class="top-menus">企业入驻</a>
+						</div>
+						<div class="top-item">
+							<a href="" class="top-menus">帮助中心</a>
+						</div>
+						<div class="top-item top-qr-item">
+							<a href="javasript:;" class="top-menus qr-item-btn">下载App</a>
+							<div class="qr-outer">
+								<img src="img/home/qr.png" alt="" />
+							</div>
+						</div>
+						
+						<!--<div class="top-item noLogin">
 							<a href="" class="top-menus top-menus1">亲，请登录</a>
 						</div>
 						<div class="top-item">
@@ -49,10 +71,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="top-item">
-							<a href="" class="top-menus">个人中心</a>
-							<span class="down-icon"></span>
-						</div>
+						
 						<div class="top-item">
 							<a href="" class="top-menus">我的收藏</a>
 							<span class="down-icon"></span>
@@ -66,7 +85,7 @@
 						<div  class="top-item top-item5">
 							<span class="list-icom"></span>
 							<a href="" class="top-menus">进货单<span>(0)</span></a>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>
@@ -98,8 +117,8 @@
 							</div>	
 						</form>
 					</div>
-					<a href="" class="regist-btn">注册</a>
-					<a href="" class="login-btn">登录</a>
+					<!--<a href="" class="regist-btn">注册</a>
+					<a href="" class="login-btn">登录</a>-->
 				</div>	
 				<div class="menus-bar clear">
 					<div class="classification">行业分类</div>
@@ -115,9 +134,9 @@
 						<span class="menus-item"><a href="">关于我们</a></span>
 					</div>
 				</div>
-				<div class="qr">
+				<!--<div class="qr">
 					<img src="img/home/two-dimensioncode.png" alt="" />
-				</div>
+				</div>-->
 			</div>
 		</div>
 		<div class="kindsBanner">
@@ -670,7 +689,9 @@
 						</div>
 					</div>
 					<div class="credibility">
-						<div class="credibilityTitle">诚信通要让企业路路通</div>
+						<div class="credibilityTitle">
+							<div class="credibilityTitle-inner">诚信通要让企业路路通</div>
+						</div>
 						<div class="credibilityAd">
 							<a href="">
 								<img src="img/home/jt.png" alt="" />
@@ -2991,6 +3012,14 @@
 			     //       _p.eq(num).addClass(_s);
 			        }
 			    };
+				
+				//下载App
+				$(".qr-item-btn").hover(function(){
+					$(".qr-outer").show();
+				},function(){
+					$(".qr-outer").hide();
+				});
+				
 				
 				$(".type-choosed").click(function(){
 					$(".seller-types").toggle();
