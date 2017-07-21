@@ -108,11 +108,6 @@
             </div>
             <form class="ware-search">
                 <div class="account-choice">
-                    <span class="ware-state-title">状态：</span>
-                    <input type="radio" name="radiostate" checked="checked" class="ware-radio" value="个人账户（黄晓明）"><span class="ware-radio-column">个人账户（黄晓明）</span>
-                    <input type="radio" name="radiostate" class="ware-radio" value="企业账户（某某公司名）"><span class="ware-radio-column">企业账户（某某公司名）</span>
-                </div>
-                <div class="account-choice">
                 <span class="ware-column">状态：</span>
                 <select class="ware-state ccselect-state" name="state">
                     <option value="1">全部状态</option>
@@ -122,25 +117,24 @@
                     <option value="3">提现成功</option>
                 </select>
                 </div>
-                <div class="time-choice-frame-1">
-                    <input type="radio" name="radio" checked="checked" class="ware-radio" value="创建时间"><span class="ware-radio-column">创建时间</span>
-                    <input type="radio" name="radio" class="ware-radio" value="完成时间"><span class="ware-radio-column">完成时间</span>
-                </div>
-                <div class="time-choice-frame-2">
-                    <input type="text" value="" class="ware-time-s" id="datepickerStart" placeholder="请选择时间范围开始">
-                    <span class="ware-line"></span>
-                    <input type="text" value="" class="ware-time-s" id="datepickerEnd" placeholder="请选择时间范围结束">
-                    <span class="time-date" id="time-date">
-                        <a href="javascrpit:;" class="color-hover"> 今天</a><em>/</em>
-                        <a href="javascrpit:;"> 1个月</a><em>/</em>
-                        <a href="javascrpit:;"> 3个月</a><em>/</em>
-                        <a href="javascrpit:;"> 1年</a>
+                <div class="account-choice">
+                    <span class="ware-column">时间：</span>
+                    <div class=" time-choice-frame-state time-choice-frame-2">
+                        <input type="text" value="" class="ware-time-s" id="datepickerStart" placeholder="请选择时间范围开始">
+                        <span class="ware-line"></span>
+                        <input type="text" value="" class="ware-time-s" id="datepickerEnd" placeholder="请选择时间范围结束">
+                        <span class="time-date" id="time-date">
+                        <a href="javascript:void(0);" class="color-hover"> 今天</a><em>/</em>
+                        <a href="javascript:void(0);"> 1个月</a><em>/</em>
+                        <a href="javascript:void(0);"> 3个月</a><em>/</em>
+                        <a href="javascript:void(0);"> 1年</a>
                     </span>
-                    <input type="button" value="查询" class="time-choice-btn">
+                        <input type="button" value="查询" class="time-choice-btn">
+                    </div>
                 </div>
             </form>
             <div class="center-state clear" id="wallet-tab">
-                <a href="javascript:;" class="center-state-btn center-state-btn-Fsize color-hover">交易记录</a><em class="center-state-btn-xiegang">|</em>
+                <a href="javascript:;" class="center-state-btn center-state-btn-Fsize color-hover">交易明细</a><em class="center-state-btn-xiegang">|</em>
                 <a href="javascript:;" class="center-state-btn center-state-btn-Fsize">提现明细</a><em class="center-state-btn-xiegang">|</em>
                 <a href="javascript:;" class="center-state-btn center-state-btn-Fsize">收支明细</a>
                 <a href="javascript:;" class="export-notes">导出记录</a>

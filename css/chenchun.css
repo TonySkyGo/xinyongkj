@@ -34,7 +34,7 @@ div.time-choice-frame-state{clear: none; padding-top: 5px;}
 .ware-state-title{  float: left; margin-right: 10px;}
 .no-conent{ width: 100px; height: 106px; margin:20px  auto 50px; background: url("../img/center/none.png") no-repeat center;  text-align: center;}
 .no-conent p{ display: block; padding-top: 126px; font-size: 14px; color: #4c4c4c;}
-.balance-news-frame{ position: relative; width: 260px; height: 20px; margin:-38px 0 0 180px; padding-left: 30px; font-size: 12px; line-height: 20px; color: #666666; background: url("../img/walletadmin/horn-icon.png") no-repeat;}
+.balance-news-frame{ position: absolute; width: 260px; height: 20px; margin:-38px 0 0 180px; padding-left: 30px; font-size: 12px; line-height: 20px; color: #666666; background: url("../img/walletadmin/horn-icon.png") no-repeat;}
 .balance-showbig-frame{ width: 1020px; height: 100px; margin: 30px 0; color: #333333;}
 .balance-showbig-left{float: left; min-width: 230px; height: 100px; border-right: 1px solid #d9d9d9;}
 .balance-showbig-right{float: left; min-width: 230px; height: 100px;}
