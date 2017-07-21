@@ -1169,7 +1169,9 @@
 	line-height: 0;
 }
 .right-nav-busket {
-	width: 10px; height: 60px; padding: 20px 10px 16px 10px;
+	width: 10px; 
+	height: 60px; 
+	padding: 20px 10px 16px 10px;
 	margin-top: 5px;
     position:relative;
 }
@@ -2340,7 +2342,15 @@
 	margin: 32px auto 0;
 	width: 582px;
 	height: 28px;
+}
+.cs-img-status1{
 	background: url(../img/personal/choosesort1.png) no-repeat left top;
+}
+.cs-img-status2{
+	background: url(../img/personal/choosesort2.png) no-repeat left top;
+}
+.cs-img-status3{
+	background: url(../img/personal/choosesort3.png) no-repeat left top;
 }
 .cs-wrap{
 	width: 1200px;

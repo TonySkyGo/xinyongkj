@@ -12,18 +12,18 @@
 
 	<body class="publish-choose-bg">
 		<div class="cs-top">
-			<div class="cs-img"></div>
+			<div class="cs-img cs-img-status1"></div>
 		</div>
 		<div class="cs-wrap">
 			<div class="cs-search">
 				<div class="cs-seach-text">您常用的商品分类：</div>
 				<select name="" class="cs-search-input">
 					<option value="">请选择</option>
-					<option value="">日用百货>家具日用>表>手表</option>
-					<option value="">日用百货>家具日用>表>手表</option>
-					<option value="">日用百货>家具日用>表>手表</option>
-					<option value="">日用百货>家具日用>表>手表</option>
-					<option value="">日用百货>家具日用>表>手表</option>
+					<option value="">衣>男装>衬衫</option>
+					<option value="">衣>男装>其它</option>
+					<option value="">衣>配饰</option>
+					<option value="">行>汽车</option>
+					<option value="">住>家居</option>
 				</select>
 				<!--<input type="text" name="" id="" value="" class="cs-search-input" placeholder="输入商品名称，系统自动为您推荐分类" />
 				<input type="button" name="" id="" value="搜索" class="cs-search-btn" />-->
@@ -92,15 +92,13 @@
 				<span class="haschoose-items choosesort-sort-box"></span>
 			</div>
 			<div class="next-wrap">
-				<form action="">
-					<input type="hidden" name="" id="" value="" />
-					<input type="hidden" name="" id="" value="" />
-					<input type="hidden" name="" id="" value="" />
+				<!--<form action="">-->
+					<input type="hidden" name="typeName" id="" value="" class="last-classify" />
 					<input class="next-step-btn" disabled="disabled" type="submit" name="" id="" value="下一步，填写商品信息" />
 				
 					<!--<a class="next-step-btn" href="javascript:;">下一步，填写商品信息</a>-->
 					<a class="need-know" href="javascript:void(0)">商品发布须知</a>
-				</form>
+				<!--</form>-->
 			</div>
 		</div>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
@@ -237,9 +235,51 @@
 							}
 						});
 						$('.choosesort-content').eq(ind + 1).html(tab);
+						$(".next-step-btn").attr("disabled",true);
+						$(".last-classify").val("");
 					} else { //最后一个子级，执行函数
 						$('.choosesort-sort-box').append('<span class="choosesort-sort">' + $(this).text() + '</span>');
 						$(this).addClass('check').siblings().removeClass('check');
+						$(".next-step-btn").attr("disabled",false);
+						$(".last-classify").val($(this).text());
+					}
+				});
+				
+				$(".next-step-btn").click(function(){
+						window.location.href="http://www.baidu.com?class_id="+$(".last-classify").val();
+				});
+				
+				$(".cs-search-input").change(function(){
+					
+					var selectedText = $(".cs-search-input").find("option:selected").text();
+					var selectedArr;
+					if(selectedText!="请选择")
+					{
+						selectedArr = selectedText.split(">");
+						for(var i=0;i<selectedArr.length;i++)
+						{
+							var chooseDetails = $(".choosesort-content").eq(i).find(".choosesort-detail");
+							for(var j=0;j<chooseDetails.length;j++)
+							{
+								if(chooseDetails.eq(j).text()==selectedArr[i].trim())
+								{
+									chooseDetails.eq(j).click();
+									break;
+								}
+							}
+						}
+					}
+					else
+					{
+						for(var k=1;k<$(".choosesort-content").length;k++)
+						{
+							$(".choosesort-content").eq(k).empty();
+						};
+						$(".choosesort-detail").each(function(){
+							$(this).removeClass("check");
+						});
+						$(".choosesort-sort-box").empty();
+						$(".next-step-btn").attr("disabled",true);
 					}
 				});
 				
