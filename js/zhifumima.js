@@ -122,6 +122,8 @@ var getPassword = function () {
             paw[0].focus();
             pawDiv[b].setAttribute("style", "border:none");
         }
+        $(".zhifumima-possword-zhifu").find("div span").remove();
+        $(".zhifumima-possword-zhifu1").find("div span").remove();
         $(".zhifumima-possword-zhifu").find("div").eq(0).append("<span class='error-ts'>密码输入错误！</span>");
         $(".zhifumima-possword-zhifu1").find("div").eq(0).append("<span class='error-ts'>密码输入错误！</span>");
     }else if( zhifumima_1==zhifumima_2 && zhifumima_1!="" && zhifumima_2!=""){
