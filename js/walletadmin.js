@@ -36,7 +36,6 @@ $(document).ready(function() {
 
     //判断输入内容
     //手机判断
-    var haoma="12345678998"
     var phone=$("#zhifumima-input-text").find("input#phone");
     phone.focus();
     phone.blur(function(){
@@ -52,13 +51,13 @@ $(document).ready(function() {
         }
     });
     function inputfun() {
-        var inputtext=phone.val();
-        if(inputtext==haoma){
+        var inputtext=phone.val().length;
+        if(inputtext==11){
             $("#zhifumima-input-text").find("input:text").next("input").focus();
             phone.removeClass("icon-error");
             phone.removeClass("icon-null");
             phone.addClass("icon-ture");
-        }else if(inputtext!=haoma){
+        }else if(inputtext!=11){
             phone.removeClass("icon-ture");
             phone.removeClass("icon-null");
             phone.addClass("icon-error");
