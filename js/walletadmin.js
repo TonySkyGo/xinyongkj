@@ -130,18 +130,42 @@ $(document).ready(function() {
         }
     }
     //“运费模版”添加“运送到”空行
-    //var gettr=$("#modelnull").html();
-    var htmlval='<tr id="modeltr"><td class="model-td1"><input type="checkbox" class="areacheck" name="area"><div class="model-area">未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、</div><div class="model-edit">编辑</div></td><td class="model-td2"><input type="text" class="model-input"></td><td class="model-td2"><input type="text" class="model-input"></td><td class="model-td2"><input type="text" class="model-input"></td><td class="model-td2"><input type="text" class="model-input"></td><td class="model-td3"><span class="model-delete" id="model-delete" onclick="modeldelete(this)">删除</span></td></tr>';
+    //添加一行
+    var htmlval='<tr id="modeltr"><td class="model-td1"><input type="checkbox" class="areacheck" name="area"><div class="model-area">未添加地区</div><div class="model-edit">编辑</div></td><td class="model-td2"><input type="text" class="model-input"></td><td class="model-td2"><input type="text" class="model-input"></td><td class="model-td2"><input type="text" class="model-input"></td><td class="model-td2"><input type="text" class="model-input"></td><td class="model-td3"><span class="model-delete" id="model-delete" onclick="modeldelete(this)">删除</span></td></tr>';
+    var htmlvals='<tr><td class="model-td1"><input type="checkbox" class="areacheck" name="area"><div class="model-area">未添加地区</div><div class="model-edit">编辑</div></td><td class="model-td2 model-vet"><select class="model-select" id="model-select"><option value="1">申通</option><option value="2">韵达</option><option value="3">中通</option></select></td><td class="model-td2"><p class="model-express" id="getselectval">申通快递</p></td><td class="model-td4 model-vet" colspan="2"  id="selectdataval"><select class="model-select" id="model-selectdata"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select><div class="model-full"><span class="model-full-word">满</span><input type="text" class="model-input model-input-unit" id="selectdataval"><span class="model-unit">件</span>包邮</div></td><td class="model-td3"><span class="model-delete"  onclick="modeldeletes(this)">删除</span></td></tr>';
     $("#model-add").click(function () {
         $("#modelnull").find("tr").eq(0).after(htmlval);
-    })
+    });
+    $("#model-adds").click(function () {
+        $("#modelnulls").find("tr").eq(0).after(htmlvals);
+    });
+    //批量删除
     $("#model-alldel").click(function () {
-        $("#modelnull").find("input.areacheck").attr("checked","checked");
-    })
-    //删除行
-    function modeldelete(obj) {
-        obj.remove();
+        var idval=$("table#modelnull");
+        piliangdel(idval);
+    }) ;
+    $("#model-alldels").click(function () {
+        var idval=$("table#modelnulls");
+        piliangdel(idval);
+    });
+    function piliangdel(a){
+        $("input:checked.areacheck").each(function() {
+            var n = $(this).parents("tr").index();
+            a.find("tr:eq("+n+")").remove();
+        });
     }
+    //.......
+
+   // $("select#model-select").change(function(){
+    $(document).on("change", "select#model-select", function () {
+        var ctext=$(this).find("option:selected").text();
+        $(this).parent().parent().find("td p#getselectval").html(ctext+"快递");
+    })
+    //$("select#model-selectdata").change(function(){
+    $(document).on("change", "select#model-selectdata", function () {
+        var ctext=$(this).find("option:selected").text();
+        $(this).parent().find("div input#selectdataval").val(ctext);
+    })
 });
 
 //获取手机验证码倒计时

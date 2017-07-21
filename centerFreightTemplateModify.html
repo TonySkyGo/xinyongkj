@@ -149,30 +149,6 @@
                                 <th class="model-td2">续费(kg)</th>
                                 <th class="model-td3">操作</th>
                             </tr>
-                            <!--<tr>-->
-                                <!--<td class="model-td1">-->
-                                    <!--<input type="checkbox" checked="checked" class="areacheck" name="area">-->
-                                    <!--<div class="model-area">-->
-                                        <!--未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、-->
-                                    <!--</div>-->
-                                    <!--<div class="model-edit">编辑</div>-->
-                                <!--</td>-->
-                                <!--<td class="model-td2">-->
-                                    <!--<input type="text" class="model-input">-->
-                                <!--</td>-->
-                                <!--<td class="model-td2">-->
-                                    <!--<input type="text" class="model-input">-->
-                                <!--</td>-->
-                                <!--<td class="model-td2">-->
-                                    <!--<input type="text" class="model-input">-->
-                                <!--</td>-->
-                                <!--<td class="model-td2">-->
-                                    <!--<input type="text" class="model-input">-->
-                                <!--</td>-->
-                                <!--<td class="model-td3">-->
-                                    <!--<span class="model-delete" id="model-delete">删除</span>-->
-                                <!--</td>-->
-                            <!--</tr>-->
                             <tr>
                                 <td colspan="6">
                                     <span class="model-do model-add" id="model-add">为指定地区城市设置运费</span>
@@ -199,7 +175,7 @@
                             <input type="text">
                             <span>元，</span>
                         </div>
-                        <table class="model-table" cellspacing="0">
+                        <table class="model-table" cellspacing="0" id="modelnulls">
                             <tr>
                                 <th class="model-td1">运送到</th>
                                 <th class="model-td2">选择运送方式</th>
@@ -208,44 +184,9 @@
                                 <th class="model-td3">操作</th>
                             </tr>
                             <tr>
-                                <td class="model-td1">
-                                    <div class="model-area">
-                                        未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、未添加地区、
-                                    </div>
-                                    <div class="model-edit">编辑</div>
-                                </td>
-                                <td class="model-td2 model-vet">
-                                    <select class="model-select">
-                                        <option value="1">申通</option>
-                                        <option value="2">韵达</option>
-                                        <option value="3">中通</option>
-                                    </select>
-                                </td>
-                                <td class="model-td2">
-                                    <p class="model-express">申通快递</p>
-                                    <p class="model-express">韵达快递</p>
-                                    <p class="model-express">中通快递</p>
-                                </td>
-                                <td class="model-td4 model-vet" colspan="2">
-                                    <select class="model-select">
-                                        <option value="1">件数</option>
-                                        <option value="2">韵达</option>
-                                        <option value="3">中通</option>
-                                    </select>
-                                    <div class="model-full">
-                                        <span class="model-full-word">满</span>
-                                        <input type="text" class="model-input model-input-unit">
-                                        <span class="model-unit">件</span>包邮
-                                    </div>
-                                </td>
-                                <td class="model-td3">
-                                    <span class="model-delete">删除</span>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td colspan="6">
-                                    <span class="model-do model-add">为指定地区城市设置运费</span>
-                                    <span class="model-do model-alldel">批量删除</span>
+                                    <span class="model-do model-add" id="model-adds">为指定地区城市设置运费</span>
+                                    <span class="model-do model-alldel" id="model-alldels">批量删除</span>
                                 </td>
                             </tr>
                         </table>
@@ -266,6 +207,15 @@
     $(function () {
         _init_area();
     });
+
+    //删除行
+    function modeldelete(obj) {
+        obj.parentNode.parentNode.remove();
+    }
+    function modeldeletes(obj) {
+        obj.parentNode.parentNode.remove();
+    }
+
 </script>
 </body>
 </html>
