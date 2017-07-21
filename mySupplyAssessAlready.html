@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>采购订单评价成功</title>
+    <title>我的供应已评价</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/yixin.css">
     <link rel="stylesheet" href="css/pack.css">
@@ -98,17 +98,87 @@
         </div>
         <div class="center-container">
             <div class="center-state clear">
-                <span class="center-state-btn active">评价订单</span>
+                <a href="" class="center-state-btn">待评价</a>
+                <a href="" class="center-state-btn active">已评价</a>
             </div>
-            <div class="review-info">
-                商品评价成功！
+            <div class="business-container mt10">
+                <div class="business-store">
+                    <p class="business-store-time">2016-11-07 12:12:12</p>
+                    <p class="business-store-num">订单号：2016110720030004610060347</p>
+                    <a href="" class="business-store-name">店铺名称</a>
+                </div>
+                <div class="comment-box clear">
+                    <img src="img/home/good2.png" alt="" class="comment-cover">
+                    <div class="comment-mid">
+                        <p class="comment-star star-four"></p>
+                        <p class="comment-cont">评价：很好不错非常好！很好不错非常好！很好不错非常好！</p>
+                        <p class="comment-cont col999">回复：很好不错非常好！很好不错非常好！很好不错非常好！</p>
+                    </div>
+                    <div class="comment-right">
+                        <img src="img/home/good2.png" alt="" class="comment-img">
+                        <img src="img/home/good2.png" alt="" class="comment-img">
+                    </div>
+                </div>
+                <div class="comment-box clear">
+                    <img src="img/home/good2.png" alt="" class="comment-cover">
+                    <div class="comment-mid">
+                        <p class="comment-star star-four"></p>
+                        <p class="comment-cont">评价：很好不错非常好！很好不错非常好！很好不错非常好！</p>
+                    </div>
+                    <div class="comment-right">
+                        <img src="img/home/good2.png" alt="" class="comment-img">
+                        <img src="img/home/good2.png" alt="" class="comment-img">
+                    </div>
+                </div>
+            </div>
+            <div class="business-container mt10">
+                <div class="business-store">
+                    <p class="business-store-time">2016-11-07 12:12:12</p>
+                    <p class="business-store-num">订单号：2016110720030004610060347</p>
+                    <a href="" class="business-store-name">店铺名称</a>
+                </div>
+                <div class="comment-box clear">
+                    <img src="img/home/good2.png" alt="" class="comment-cover">
+                    <div class="comment-mid">
+                        <p class="comment-star star-four"></p>
+                        <p class="comment-cont">评价：很好不错非常好！很好不错非常好！很好不错非常好！</p>
+                    </div>
+                    <div class="comment-right">
+                        <img src="img/home/good2.png" alt="" class="comment-img">
+                        <img src="img/home/good2.png" alt="" class="comment-img">
+                    </div>
+                </div>
+                <div class="comment-box clear">
+                    <img src="img/home/good2.png" alt="" class="comment-cover">
+                    <div class="comment-mid">
+                        <p class="comment-star star-four"></p>
+                        <p class="comment-cont">评价：很好不错非常好！很好不错非常好！很好不错非常好！</p>
+                    </div>
+                    <div class="comment-right">
+                        <img src="img/home/good2.png" alt="" class="comment-img">
+                        <img src="img/home/good2.png" alt="" class="comment-img">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/script.js"></script>
+<script>
+    $(function () {
+//        查看物流弹出层
+        $(".order-store-operate").on('click',function (e) {
+            e.preventDefault();
+           $(this).siblings(".order-express-con").toggle();
+        });
+//        提醒发货
+        $(".send-hint").on('click',function (e) {
+            e.preventDefault();
+            $(".overlay").show();
+        });
+    });
+</script>
 </body>
 </html>

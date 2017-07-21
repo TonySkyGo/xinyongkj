@@ -1608,6 +1608,10 @@
     color: #0083e6;
 }
 
+.pay-hint{
+    width: 100px;
+}
+
 /*弹出层*/
 .overlay {
     /*display: none;*/
@@ -1764,9 +1768,9 @@
 
 .order-status-btn {
     display: inline-block;
-    width: 76px;
     height: 30px;
     line-height: 30px;
+    padding: 0 10px;
     margin-right: 12px;
     color: #fff;
     text-align: center;
@@ -1804,6 +1808,11 @@
     background: url("../img/center/dianpu.png") left center no-repeat;
     padding-left: 36px;
     color: #333;
+}
+
+.order-info-line{
+    height: 2px;
+    margin: 10px 0;background-color: #e6e6e6;
 }
 
 .order-ware {
@@ -1903,8 +1912,6 @@
 .comment-mid {
     float: left;
     width: 190px;
-    height: 65px;
-    overflow: hidden;
 }
 
 .comment-star {
@@ -1934,9 +1941,7 @@
 
 .comment-cont {
     font-size: 12px;
-    height: 60px;
     line-height: 20px;
-    overflow: hidden;
 }
 
 .comment-right {
@@ -1953,7 +1958,6 @@
     margin: 9px 7px;
 }
 
-/*P133*/
 .comment-con {
     height: 280px;
     padding: 20px;
@@ -2065,6 +2069,11 @@
 
 .star_score a.clibg {
     background: url(../img/center/starsy.png);
+}
+.review-info{
+    padding-top: 180px;
+    text-align: center;
+    background: url("../img/personal/pass.png") center 60px no-repeat;
 }
 
 /*申请售后*/
@@ -4194,6 +4203,62 @@
     cursor: pointer;
 }
 
+.order-modify-price{
+    display: block;
+    color: #0083e6;
+}
+
+.supply-fact{
+    text-align: right;
+    color: #666;
+}
+
+.supply-money{
+    font-size: 18px;
+    color: #e60012;
+}
+
+.assess-box{
+    display: none;
+    margin: 5px 0;
+}
+
+.assess-con{
+    position: relative;
+    float: left;
+    width: 860px;
+    height: 32px;
+    background-color: #fff;
+}
+
+.assess-input{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px 0 80px;
+}
+
+.assess-reply-word{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.assess-submit{
+    float: right;
+    width: 76px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    background-color: #f95555;
+    border: none;
+    cursor: pointer;
+}
+
 /*系统消息*/
 .message-none {
     padding-top: 180px;
@@ -4616,7 +4681,7 @@
     width: 88px;
     height: 32px;
 }
-.send-hint{
+.send-word{
     height: 32px;
     line-height: 32px;
     padding: 0 10px;
