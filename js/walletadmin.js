@@ -251,9 +251,11 @@ function func() {
         paw[i].onkeyup = function (event) {
             console.log(event.keyCode);
             if ((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105))  {    /*输入0-9*/
+                debugger
                 changeDiv();
                 //errorPoint.style.display = "none";
             } else if (event.keyCode == "8") {    /*退格回删事件*/
+                debugger
                 firstDiv();
             } else if (event.keyCode == "13") {    /*回车事件*/
                 getPassword();
@@ -298,6 +300,9 @@ var firstDiv = function () {
             console.log(i);
             //paw[i].blur();
             /*处理上一个输入框*/
+            if(i <= 1){
+                i=1
+            }
             paw[i - 1].focus();
             paw[i - 1].readOnly = false;
             paw[i - 1].value = "";
@@ -344,7 +349,7 @@ paw[5].onkeyup=function(){
     if(paw[5].value.length>=1){
         if(yuanmima==123456){
             $(".zhifumima-possword-box").find("div").eq(0).attr("class","gaimima-icon-ture");
-            changeDiv();
+            // changeDiv();
         }else{
             $(".zhifumima-possword-box").find("div").eq(0).attr("class","gaimima-icon-error");
             for (var b = 0; b < pawDivCount; b++) {
