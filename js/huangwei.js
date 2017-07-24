@@ -33,10 +33,14 @@ function watchClassification() {
 		$(".classifyPop").hide();
 	})
 	$(".popItem").mouseover(function() {
+		var index = $(this).index();
+		$(".kindItem").eq(index).removeClass("noChoose").addClass("choose");
 		$(this).show();
 		$(".classifyPop").show();
 	})
 	$(".popItem").mouseout(function() {
+		var index = $(this).index();
+		$(".kindItem").eq(index).removeClass("choose").addClass("noChoose");
 		$(this).hide();
 		$(".classifyPop").hide();
 	})

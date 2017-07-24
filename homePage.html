@@ -7,7 +7,6 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="css/pack.css"/>
 		<link rel="stylesheet" type="text/css" href="css/huangwei.css"/>
-		
 	</head>
 	<body>
 		<div class="top-wrapper">
@@ -615,8 +614,8 @@
 								<img src="img/home/icon_headportrait.png" alt="" />
 							</div>
 							<div class="personalInfo">
-								<p class="personalInfoName nowrap">123456789</p>
-								<p class="personalInfoName nowrap">公司名称</p>
+								<p class="personalInfoName nowrap">Hi,早上好！</p>
+								<p class="personalInfoName nowrap">公司名称公司名称</p>
 							</div>
 						</div>
 						<div class="manufacturerType clear">
@@ -706,7 +705,7 @@
 		</div>
 		<div class="hotProduct">
 			<div class="hotProductWrap container">
-				<h3 class="hotProductTitle">热门产品</h3>
+				<h3 class="hotProductTitle">最新供应</h3>
 				<div class="swiper-container2">
 			        <div class="swiper-wrapper">
 			            <div class="swiper-slide">
@@ -2888,15 +2887,36 @@
 		</div>
 		<div class="right-nav">
 	    	<div class="right-nav-main">
-	    		<!--<img class="vt-splite" src="img/icon-vt-splite.png">-->
-				<!--<a href="">
-					<div class="right-nav-busket">
-											<div class="right-nav-num" style="display:none;">0</div>					<i class="fa fa-shopping-cart"></i>
-						<!--<a href="">购物车</a>-->
-					<!--</div>
-				</a>-->
-	           <!-- <img class="vt-splite" src="img/icon-vt-splite.png">-->
-	            <div class="right-nav-menu">
+	    		<a href="" class="right-nav-btn right-nav-btn1">
+	    			<!--<img src="img/home/icon_personalcenter02.png" alt="" class="right-nav-icon" />-->
+	    			<p class="right-nav-text">我</p>
+	    			<p class="right-nav-pop">个人中心</p>
+	    		</a>
+	    		<a href="" class="right-nav-btn right-nav-btn2">
+	    			<!--<img src="img/home/icon_collect02.png" alt="" class="right-nav-icon" />-->
+	    			<p class="right-nav-text">收藏</p>
+	    			<p class="right-nav-pop">我的收藏</p>
+	    		</a>
+	    		<a href="" class="right-nav-btn right-nav-btn3">
+	    			<!--<img src="img/home/icon-service02.png" alt="" class="right-nav-icon" />-->
+	    			<p class="right-nav-text">客服</p>
+	    			<p class="right-nav-pop">联系客服</p>
+	    		</a>
+	    		<a href="" class="right-nav-btn right-nav-btn4">
+	    			<!--<img src="img/home/icon_list02.png" alt="" class="right-nav-icon" />-->
+	    			<p class="right-nav-text">订单</p>
+	    			<p class="right-nav-pop">查看订单</p>
+	    		</a>
+	    		<a href="" class="right-nav-btn right-nav-btn5">
+	    			<!--<img src="img/home/icon_iphone02.png" alt="" class="right-nav-icon" />-->
+	    			<p class="right-nav-text">APP</p>
+	    			<img src="img/home/qr.png" alt="" class="right-nav-pop right-nav-pop-img" />
+	    		</a>
+	    		<div class="go-top2">
+	    			<img src="img/home/icon-nav-gotop.png" alt="" />
+	    		</div>
+	    		
+	            <!--<div class="right-nav-menu">
 	            	<img class="vt-splite" src="img/home/icon-vt-splite.png">
 					<a href="">
 						<div class="right-nav-cell-main">
@@ -2941,24 +2961,15 @@
 					<a href="">
 						<div class="right-nav-cell-main">
 							<div class="right-nav-left right-nav-left-hide qr-wrap cell33">
-								<!--<img src="img/bg-nav-right-cell.png">
-								<span>我的足迹</span>-->
 								<img src="img/home/two-dimensioncode.png" alt="" class="cellphone-qr"/>
 							</div>
 							<div class="right-nav-right-img cell3"><img src="img/home/icon-phone.png"></div>
 						</div>
 					</a>
-					<!--<div class="right-nav-cell-main">
-						<div class="right-nav-left right-nav-left-hide cell44">
-							<img src="img/bg-nav-right-cell.png">
-							<span>客服</span>
-						</div>
-						<div class="right-nav-right-img chat cell4"><img src="img/icon-nav-chat.png"></div>
-					</div>-->
 	            	<img class="vt-splite" src="img/home/icon-vt-splite.png">
 	            	<div class="right-nav-right-img go-top" id="backTop-up"><img src="img/home/icon-nav-gotop.png"></div>
 	            	<img class="vt-splite" src="img/home/icon-vt-splite.png">
-	            </div>
+	            </div>-->
 	    	</div>
 	    </div>
 
@@ -2967,7 +2978,9 @@
 		<script src="js/huangwei.js"></script>
 		<script type="text/javascript">
 
-			$(function(){				
+			$(function(){		
+				
+				//多行文字轮播
 				$.fn.FontScroll = function(options){
 			    	var d = {time: 3000,s: 'fontColor',num: 1};
 			        var o = $.extend(d,options);
@@ -3033,6 +3046,8 @@
 					$(".type-choosed>span").text($(this).text());
 				});
 				
+				
+				//为轮播商品添加颜色边框
 				for(var i=0;i<$(".goods").length;i++)
 				{
 					$(".goods").eq(i).addClass("boderTop"+i%5);
@@ -3057,7 +3072,7 @@
 				    loop: true,
 				    prevButton:'.swiper-button-prev',
 					nextButton:'.swiper-button-next'
-			    })
+			    });
 				var mySwiper2 = new Swiper ('.swiper-container2', {
 				    direction: 'horizontal',
 //				    loop: true,
@@ -3069,12 +3084,12 @@
 				
 				$('.noticeWrap').FontScroll({time: 2000,num: 1});
 				
-				$(".right-nav-cell-main").hover(function(){
-					$(this).find(".right-nav-left-hide").show();
-				},function(){
-					$(this).find(".right-nav-left-hide").hide();
-				});
-				$('.go-top').click(function(){ 
+//				$(".right-nav-cell-main").hover(function(){
+//					$(this).find(".right-nav-left-hide").show();
+//				},function(){
+//					$(this).find(".right-nav-left-hide").hide();
+//				});
+				$('.go-top2').click(function(){ 
 					$('html, body').animate({scrollTop: 0}, 300); 
 					return false; 
 				}); 
