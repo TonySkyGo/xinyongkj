@@ -621,7 +621,7 @@
 .opSteps{
 	width: 218px;
 	height: 75px;
-	padding:0 10px;
+	/*padding:0 10px;*/
 	overflow: hidden;
 	background: #fff;
 }
@@ -629,6 +629,8 @@
 	height: 75px;
 	border-bottom: 1px dashed #dddddd;
 	overflow: hidden;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 .stepWrap{
 	width: 196px;
