@@ -1778,6 +1778,7 @@
 
 .order-status-btn {
     display: inline-block;
+    min-width: 70px;
     height: 30px;
     line-height: 30px;
     padding: 0 10px;
@@ -3244,6 +3245,7 @@
     height: 40px;
     line-height: 40px;
     margin: 0 auto;
+    margin-top: 20px;
     color: #fffefe;
     font-size: 20px;
     font-weight: bold;
@@ -3305,7 +3307,7 @@
 }
 
 .enter-step1 {
-    background: url("../img/enter/icon_ruzhubiaozhun01.png") center top no-repeat;
+    background: url("../img/enter/icon_ruzhuliucheng01.png") center top no-repeat;
     background-size: 102px 102px;
 }
 
@@ -3325,7 +3327,7 @@
 }
 
 .enter-step1:hover {
-    background: url("../img/enter/icon_ruzhubiaozhun02.png") center top no-repeat;
+    background: url("../img/enter/icon_ruzhuliucheng02.png") center top no-repeat;
     background-size: 102px 102px;
 }
 
@@ -3335,12 +3337,12 @@
 }
 
 .enter-step3:hover {
-    background: url("../img/enter/icon_ruzhubiaozhun02.png") center top no-repeat;
+    background: url("../img/enter/icon_hezuoxize02.png") center top no-repeat;
     background-size: 102px 102px;
 }
 
 .enter-step4:hover {
-    background: url("../img/enter/icon_ruzhubiaozhun02.png") center top no-repeat;
+    background: url("../img/enter/icon_hezuopingpai02.png") center top no-repeat;
     background-size: 102px 102px;
 }
 
@@ -4184,6 +4186,7 @@
     line-height: 32px;
     margin: 5px;
     color: #333;
+    white-space: nowrap;
 }
 
 .supply-input {
@@ -4869,7 +4872,7 @@
 }
 .supply-title{
     color: #323232;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 .supply-content{
     color: #808080;
@@ -4920,4 +4923,27 @@
     line-height: 15px;
     font-size: 12px;
     resize: none;
+}
+
+/*采购售后 退货弹窗*/
+.overlay-form-box{
+    padding-top: 20px;
+}
+.overlay-form{
+    height: 38px;
+    line-height: 38px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.overlay-form-key{
+    float: left;
+    width: 140px;
+    text-align: center;
+}
+.overlay-form-input{
+    width: 220px;
+    height: 38px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
