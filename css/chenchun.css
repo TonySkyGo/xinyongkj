@@ -492,13 +492,14 @@ div.time-choice-frame-state {
 
 .zhifumima-possword input.paw {
 	width: 46px;
-	height: 37px;
+	height: 45px;
 	margin-left: -9px;
-	margin-top: 7px;
+
 	border: none;
 	border-right: 1px solid #d9d9d9;
 	text-align: center;
-	font-size: 50px;
+	font-size: 40px;
+	line-height: 45px;
 }
 
 .zhifumima-possword input.paw:nth-child(1) {
@@ -517,8 +518,9 @@ div.time-choice-frame-state {
 	display: inline-block;
 	width: 50px;
 	height: 49px;
-	margin-top: -2px;
+	/*margin-top: -2px;*/
 	float: left;
+	/*padding-top: 2px;*/
 }
 
 .gaimima-icon-ture {
@@ -582,4 +584,8 @@ div.time-choice-frame-state {
 
 .has-no-content{
 	display: none;
+}
+
+.warm{
+	color: #ff0000;
 }

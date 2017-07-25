@@ -69,7 +69,7 @@ $(document).ready(function() {
     var phoneyanzheng=$("#zhifumima-input-text").find("input#phoneyanzheng");
     phoneyanzheng.blur(function(){
         var inputtext=$(this).val();
-        if(inputtext==yanzhengma){
+        if(inputtext == yanzhengma){
             $(this).removeClass("icon-null");
             $(this).removeClass("icon-error");
             $(this).addClass("icon-ture");
@@ -194,185 +194,210 @@ function settime(obj) {
 
 //输入密码框效果代码;(原支付密码/新支付密码/确认支付密码)
 //原支付密码
-var box = document.getElementsByClassName("zhifumima-possword-box")[0];
-//新支付密码
-var box1 = document.getElementsByClassName("zhifumima-possword-box1")[0];
-//确认支付密码
-var box2 = document.getElementsByClassName("zhifumima-possword-box2")[0];
-function createDIV(num) {
-    for (var i = 0; i < num; i++) {
-        var pawDiv = document.createElement("div");
-        pawDiv.className = "pawDiv";
-        box.appendChild(pawDiv);
-        var paw = document.createElement("input");
-        paw.type = "password";
-        paw.className = "paw";
-        paw.maxLength = "1";
-        paw.readOnly = "readonly";
-        pawDiv.appendChild(paw);
-    }
-    for (var i = 0; i < num; i++) {
-        var pawDiv = document.createElement("div");
-        pawDiv.className = "pawDiv";
-        box1.appendChild(pawDiv);
-        var paw = document.createElement("input");
-        paw.type = "password";
-        paw.className = "paw";
-        paw.maxLength = "1";
-        paw.readOnly = "readonly";
-        pawDiv.appendChild(paw);
-    }
-    for (var i = 0; i < num; i++) {
-        var pawDiv = document.createElement("div");
-        pawDiv.className = "pawDiv";
-        box2.appendChild(pawDiv);
-        var paw = document.createElement("input");
-        paw.type = "password";
-        paw.className = "paw";
-        paw.maxLength = "1";
-        paw.readOnly = "readonly";
-        pawDiv.appendChild(paw);
-    }
-}
-createDIV(6);
-var pawDiv = document.getElementsByClassName("pawDiv");
-var paw = document.getElementsByClassName("paw");
-var pawDivCount = pawDiv.length;
-/*设置第一个输入框默认选中*/
-pawDiv[0].setAttribute("style", "border: 2px solid deepskyblue;");
-paw[0].readOnly = false;
-paw[0].focus();
-/*绑定pawDiv点击事件*/
-function func() {
-    for (var i = 0; i < pawDivCount; i++) {
-        pawDiv[i].addEventListener("click", function () {
-            pawDivClick(this);
-        });
-        paw[i].onkeyup = function (event) {
-            console.log(event.keyCode);
-            if ((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105))  {    /*输入0-9*/
-                debugger
-                changeDiv();
-                //errorPoint.style.display = "none";
-            } else if (event.keyCode == "8") {    /*退格回删事件*/
-                debugger
-                firstDiv();
-            } else if (event.keyCode == "13") {    /*回车事件*/
-                getPassword();
-                for (var b = 0; b < pawDivCount; b++) {
-                    paw[b].value = "";
-                    pawDiv[0].setAttribute("style", "border: 2px solid deepskyblue;");
-                    paw[0].readOnly = false;
-                    paw[0].focus();
-                    pawDiv[b].setAttribute("style", "border:none");
-                }
-            } else {    /*输入非0-9*/
-                this.value = "";
-            }
-        };
-    }
-}
-func();
-/*定义pawDiv点击事件*/
-var pawDivClick = function (e) {
-    for (var i = 0; i < pawDivCount; i++) {
-        pawDiv[i].setAttribute("style", "border:none");
-    }
-    e.setAttribute("style", "border: 2px solid deepskyblue;");
-};
-/*定义自动选中下一个输入框事件*/
-var changeDiv = function () {
-    for (var i = 0; i < pawDivCount; i++) {
-        if (paw[i].value.length == "1") {   /*处理当前输入框*/
-            //paw[i].blur();
-            /*处理上一个输入框*/
-            paw[i + 1].focus();
-            paw[i + 1].readOnly = false;
-            pawDivClick(pawDiv[i + 1]);
-        }
-    }
-};
-/*回删时选中上一个输入框事件*/
-var firstDiv = function () {
-    for (var i = 0; i < pawDivCount; i++) {
-        console.log(i);
-        if (paw[i].value.length == "0") {   /*处理当前输入框*/
-            console.log(i);
-            //paw[i].blur();
-            /*处理上一个输入框*/
-            if(i <= 1){
-                i=1
-            }
-            paw[i - 1].focus();
-            paw[i - 1].readOnly = false;
-            paw[i - 1].value = "";
-            pawDivClick(pawDiv[i - 1]);
-            break;
-        }
-    }
-};
+// var box = document.getElementsByClassName("zhifumima-possword-box")[0];
+// //新支付密码
+// var box1 = document.getElementsByClassName("zhifumima-possword-box1")[0];
+// //确认支付密码
+// var box2 = document.getElementsByClassName("zhifumima-possword-box2")[0];
+// function createDIV(num) {
+//     for (var i = 0; i < num; i++) {
+//         var pawDiv = document.createElement("div");
+//         pawDiv.className = "pawDiv";
+//         box.appendChild(pawDiv);
+//         var paw = document.createElement("input");
+//         paw.type = "password";
+//         paw.className = "paw";
+//         paw.maxLength = "1";
+//         paw.readOnly = "readonly";
+//         pawDiv.appendChild(paw);
+//     }
+//     for (var i = 0; i < num; i++) {
+//         var pawDiv = document.createElement("div");
+//         pawDiv.className = "pawDiv";
+//         box1.appendChild(pawDiv);
+//         var paw = document.createElement("input");
+//         paw.type = "password";
+//         paw.className = "paw";
+//         paw.maxLength = "1";
+//         paw.readOnly = "readonly";
+//         pawDiv.appendChild(paw);
+//     }
+//     for (var i = 0; i < num; i++) {
+//         var pawDiv = document.createElement("div");
+//         pawDiv.className = "pawDiv";
+//         box2.appendChild(pawDiv);
+//         var paw = document.createElement("input");
+//         paw.type = "password";
+//         paw.className = "paw";
+//         paw.maxLength = "1";
+//         paw.readOnly = "readonly";
+//         pawDiv.appendChild(paw);
+//     }
+// }
+// createDIV(6);
+$("#zhifumima-input-text").find('.pawDiv').click(function () {
+    $('.pawDiv').css({"border":""});
+    $(this).css({"border":"2px solid deepskyblue"})
+})
+var newPassText = [];
 
-/*获取输入密码*/
-var getPassword = function () {
-    var n = "";
-    var xinmima_1,xinmima_2;
-    for (var i = 0; i < pawDivCount; i++) {
-        n += paw[i].value;
-    }
-    xinmima_1=n.substring(6,12);
-    xinmima_2=n.substring(12,20);
-    if(xinmima_1!=xinmima_2){
-        $(".zhifumima-possword-box1").find("div").eq(0).attr("class","gaimima-icon-error");
-        $(".zhifumima-possword-box2").find("div").eq(0).attr("class","gaimima-icon-error");
-        alert("设置密码不一致！");
-        for (var b = 0; b < pawDivCount; b++) {
-            paw[b].value = "";
-            pawDiv[0].setAttribute("style", "border: 2px solid deepskyblue;");
-            paw[0].readOnly = false;
-            paw[0].focus();
-            pawDiv[b].setAttribute("style", "border:none");
-        }
-    }else if(xinmima_1==xinmima_2 && xinmima_1!="" && xinmima_2!=""){
-        $(".zhifumima-possword-box1").find("div").eq(0).attr("class","gaimima-icon-ture");
-        $(".zhifumima-possword-box2").find("div").eq(0).attr("class","gaimima-icon-ture");
-    }
-};
+var padOld = $(".old");
+var pawOldInp = $(".old").find('input');
+var padOldCount = padOld.length;
+padOld[0].setAttribute("style", "border: 2px solid deepskyblue;");
+pawOldInp[0].readOnly = false;
+pawOldInp[0].focus();
+var newPass = '';
 
-/*判断旧密码是否正确*/
-paw[5].onkeyup=function(){
-    var m = "";
-    var yuanmima;
-    for (var i = 0; i < pawDivCount; i++) {
-        m += paw[i].value;
-    }
-    yuanmima=m.substring(0,6);
-    if(paw[5].value.length>=1){
-        if(yuanmima==123456){
-            $(".zhifumima-possword-box").find("div").eq(0).attr("class","gaimima-icon-ture");
-            // changeDiv();
-        }else{
-            $(".zhifumima-possword-box").find("div").eq(0).attr("class","gaimima-icon-error");
-            for (var b = 0; b < pawDivCount; b++) {
-                paw[b].value = "";
-                pawDiv[0].setAttribute("style", "border: 2px solid deepskyblue;");
-                paw[0].readOnly = false;
-                paw[0].focus();
-                pawDiv[b].setAttribute("style", "border:none");
-            }
+pawOldInp.keyup(function(event){
+    if((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105)){
+        $(this).parent().next().css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
 
-        }
+        $(this).parent().next().find('input').readOnly = false;
+        $(this).parent().next().find('input').focus();
+        $('.zhifumima-possword-ts-gai1').removeClass('warm')
 
-    }
-}
+    }else if(event.keyCode == 8){
+        $(this).parent().prev('.pawDiv').css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
 
-var getPasswordBtn = document.getElementsByClassName("getPasswordBtn")[0];
-getPasswordBtn.addEventListener("click", getPassword);
-/*键盘事件*/
-document.onkeyup = function (event) {
-    if (event.keyCode == "13") {  /*回车事件*/
-        getPassword();
+        $(this).parent().prev().find('input').readOnly = false;
+        $(this).parent().prev().find('input').focus();
+
+    }else{
+        $(this).val("");
+        $('.zhifumima-possword-ts-gai1').addClass('warm')
     }
-};
+   for(var i = 0; i < 6; i++){
+       newPassText.push(pawOldInp[i].value);
+   }
+});
+var padNew = $(".new");
+var pawNewInp = $(".new").find('input');
+pawNewInp.keyup(function(event){
+    if((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105)){
+        $(this).parent().next().css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
+
+        $(this).parent().next().find('input').readOnly = false;
+        $(this).parent().next().find('input').focus();
+        $('.zhifumima-possword-ts-gai2').removeClass('warm')
+    }else if(event.keyCode == 8){
+        $(this).parent().prev('.pawDiv').css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
+
+        $(this).parent().prev().find('input').readOnly = false;
+        $(this).parent().prev().find('input').focus();
+    }else{
+        $(this).val("");
+        $('.zhifumima-possword-ts-gai2').addClass('warm')
+    }
+});
+var padConfirm = $(".confirm");
+var pawConfirmInp = $(".confirm").find('input');
+var padConfirmCount = padConfirm.length;
+pawConfirmInp.keyup(function(event){
+    if((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105)){
+        $(this).parent().next().css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
+
+        $(this).parent().next().find('input').readOnly = false;
+        $(this).parent().next().find('input').focus();
+        $('.zhifumima-possword-ts-gai3').removeClass('warm')
+    }else if(event.keyCode == 8){
+        $(this).parent().prev('.pawDiv').css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
+
+        $(this).parent().prev().find('input').readOnly = false;
+        $(this).parent().prev().find('input').focus();
+    }else{
+        $(this).val("");
+        $('.zhifumima-possword-ts-gai3').addClass('warm')
+    }
+});
+
+
+// /*回删时选中上一个输入框事件*/
+// var firstDiv = function () {
+//
+//     for (var i = 0; i < pawDivCount; i++) {
+//         console.log(i);
+// debugger
+//         if (paw[i].value.length == "0") {   /*处理当前输入框*/
+//             console.log(i);
+//             debugger
+//             //paw[i].blur();
+//             /*处理上一个输入框*/
+//             if(i <= 1){
+//                 i=1
+//             }
+//
+//             paw[i - 1].focus();
+//             paw[i - 1].readOnly = false;
+//             pawDivClick(pawDiv[i - 1]);
+//             break;
+//         }
+//     }
+// };
+//
+// /*获取输入密码*/
+// var getPassword = function () {
+//     var n = "";
+//     var xinmima_1,xinmima_2;
+//     for (var i = 0; i < pawDivCount; i++) {
+//         n += paw[i].value;
+//     }
+//     xinmima_1=n.substring(6,12);
+//     xinmima_2=n.substring(12,20);
+//     if(xinmima_1!=xinmima_2){
+//         $(".zhifumima-possword-box1").find("div").eq(0).attr("class","gaimima-icon-error");
+//         $(".zhifumima-possword-box2").find("div").eq(0).attr("class","gaimima-icon-error");
+//         alert("设置密码不一致！");
+//         for (var b = 0; b < pawDivCount; b++) {
+//             paw[b].value = "";
+//             pawDiv[0].setAttribute("style", "border: 2px solid deepskyblue;");
+//             paw[0].readOnly = false;
+//             paw[0].focus();
+//             pawDiv[b].setAttribute("style", "border:none");
+//         }
+//     }else if(xinmima_1==xinmima_2 && xinmima_1!="" && xinmima_2!=""){
+//         $(".zhifumima-possword-box1").find("div").eq(0).attr("class","gaimima-icon-ture");
+//         $(".zhifumima-possword-box2").find("div").eq(0).attr("class","gaimima-icon-ture");
+//     }
+// };
+//
+// /*判断旧密码是否正确*/
+// paw[5].onkeyup=function(){
+//     var m = "";
+//     var yuanmima;
+//     for (var i = 0; i < pawDivCount; i++) {
+//         m += paw[i].value;
+//     }
+//     yuanmima=m.substring(0,6);
+//     if(yuanmima.length == 6){
+//
+//         if(yuanmima==123456){
+//             // $(".zhifumima-possword-box").find("div").eq(0).attr("class","gaimima-icon-ture");
+//             changeDiv()
+//         }else{
+//             changeDiv()
+//             // $(".zhifumima-possword-box").find("div").eq(0).attr("class","gaimima-icon-error");
+//             // for (var b = 0; b < pawDivCount; b++) {
+//             //     paw[b].value = "";
+//             //     pawDiv[0].setAttribute("style", "border: 2px solid deepskyblue;");
+//             //     paw[0].readOnly = false;
+//             //     paw[0].focus();
+//             //     pawDiv[b].setAttribute("style", "border:none");
+//             // }
+//
+//         }
+//     }
+//
+// }
+//
+// var getPasswordBtn = document.getElementsByClassName("getPasswordBtn")[0];
+// getPasswordBtn.addEventListener("click", getPassword);
+// /*键盘事件*/
+// document.onkeyup = function (event) {
+//     if (event.keyCode == "13") {  /*回车事件*/
+//         getPassword();
+//     }
+// };
 
 
 
