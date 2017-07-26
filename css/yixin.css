@@ -319,6 +319,11 @@
     border: none;
 }
 
+.regist-submit:disabled{
+    background-color: #ccc;
+    cursor: auto;
+}
+
 .regist-cont label.error {
     position: absolute;
     right: -330px;

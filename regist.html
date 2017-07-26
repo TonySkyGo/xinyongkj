@@ -52,13 +52,13 @@
         <div class="regist-check">
            <span class="checkbox-box checkregist-box">
                 <span class="checkbox-box-icon">
-                    <input type="checkbox" name="buschk" class="input-hide buschk"/>
+                    <input type="checkbox" name="buschk" class="protocolchk"/>
                     同意
                 </span>
                <a href="" class="regist-protocol" target="_blank">《信用空间用户注册协议》</a>
             </span>
         </div>
-        <input type="submit" class="regist-submit" value="注册"/>
+        <input type="submit" class="regist-submit" disabled value="注册"/>
     </form>
 </div>
 
@@ -68,6 +68,14 @@
 <script src="js/script.js"></script>
 <script>
     $(function () {
+        //勾选协议才点击注册
+        $(".protocolchk").on("click",function () {
+            if($(this).prop("checked")){
+                $(".regist-submit").attr("disabled",false);
+            }else{
+                $(".regist-submit").attr("disabled",true);
+            }
+        });
         //聚焦显示提示
         $(".regist-value").focus(function () {
            $(this).siblings(".regist-move").show();
