@@ -191,7 +191,23 @@ function settime(obj) {
             settime(obj) }
         ,1000)
 }
+//判断是否输入数字
+var isNum= $(".pawDiv").find(".paw");
+isNum.keyup(function(event){
 
+    if((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105)){
+
+        $(this).parent().parent().next('.gailWarm').removeClass('warm')
+
+    }else if(event.keyCode == 8){
+
+    }else{
+
+        $(this).val("")
+        $(this).parent().parent().next('.gailWarm').addClass('warm')
+    }
+
+});
 //输入密码框效果代码;(原支付密码/新支付密码/确认支付密码)
 //原支付密码
 // var box = document.getElementsByClassName("zhifumima-possword-box")[0];
@@ -235,81 +251,82 @@ function settime(obj) {
 //     }
 // }
 // createDIV(6);
-$("#zhifumima-input-text").find('.pawDiv').click(function () {
-    $('.pawDiv').css({"border":""});
-    $(this).css({"border":"2px solid deepskyblue"})
-})
-var newPassText = [];
-
-var padOld = $(".old");
-var pawOldInp = $(".old").find('input');
-var padOldCount = padOld.length;
-padOld[0].setAttribute("style", "border: 2px solid deepskyblue;");
-pawOldInp[0].readOnly = false;
-pawOldInp[0].focus();
-var newPass = '';
-
-pawOldInp.keyup(function(event){
-    if((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105)){
-        $(this).parent().next().css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
-
-        $(this).parent().next().find('input').readOnly = false;
-        $(this).parent().next().find('input').focus();
-        $('.zhifumima-possword-ts-gai1').removeClass('warm')
-
-    }else if(event.keyCode == 8){
-        $(this).parent().prev('.pawDiv').css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
-
-        $(this).parent().prev().find('input').readOnly = false;
-        $(this).parent().prev().find('input').focus();
-
-    }else{
-        $(this).val("");
-        $('.zhifumima-possword-ts-gai1').addClass('warm')
-    }
-   for(var i = 0; i < 6; i++){
-       newPassText.push(pawOldInp[i].value);
-   }
-});
-var padNew = $(".new");
-var pawNewInp = $(".new").find('input');
-pawNewInp.keyup(function(event){
-    if((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105)){
-        $(this).parent().next().css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
-
-        $(this).parent().next().find('input').readOnly = false;
-        $(this).parent().next().find('input').focus();
-        $('.zhifumima-possword-ts-gai2').removeClass('warm')
-    }else if(event.keyCode == 8){
-        $(this).parent().prev('.pawDiv').css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
-
-        $(this).parent().prev().find('input').readOnly = false;
-        $(this).parent().prev().find('input').focus();
-    }else{
-        $(this).val("");
-        $('.zhifumima-possword-ts-gai2').addClass('warm')
-    }
-});
-var padConfirm = $(".confirm");
-var pawConfirmInp = $(".confirm").find('input');
-var padConfirmCount = padConfirm.length;
-pawConfirmInp.keyup(function(event){
-    if((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105)){
-        $(this).parent().next().css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
-
-        $(this).parent().next().find('input').readOnly = false;
-        $(this).parent().next().find('input').focus();
-        $('.zhifumima-possword-ts-gai3').removeClass('warm')
-    }else if(event.keyCode == 8){
-        $(this).parent().prev('.pawDiv').css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
-
-        $(this).parent().prev().find('input').readOnly = false;
-        $(this).parent().prev().find('input').focus();
-    }else{
-        $(this).val("");
-        $('.zhifumima-possword-ts-gai3').addClass('warm')
-    }
-});
+// $("#zhifumima-input-text").find('.pawDiv').click(function () {
+//     $('.pawDiv').css({"border":""});
+//     $(this).css({"border":"2px solid deepskyblue"})
+// })
+// var newPassText = [];
+//
+// var padOld = $(".old");
+// var pawOldInp = $(".old").find('input');
+// var padOldCount = padOld.length;
+// padOld[0].setAttribute("style", "border: 2px solid deepskyblue;");
+// pawOldInp[0].readOnly = false;
+// pawOldInp[0].focus();
+// var newPass = '';
+//
+// pawOldInp.keyup(function(event){
+//
+//     if((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105)){
+//
+//         $(this).parent().next().css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
+//         $(this).parent().next().find('input').readOnly = false;
+//         $(this).parent().next().find('input').focus();
+//         $('.zhifumima-possword-ts-gai1').removeClass('warm')
+//
+//     }else if(event.keyCode == 8){
+//         $(this).parent().prev('.pawDiv').css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
+//
+//         $(this).parent().prev().find('input').readOnly = false;
+//         $(this).parent().prev().find('input').focus();
+//
+//     }else{
+//         $(this).val("");
+//         $('.zhifumima-possword-ts-gai1').addClass('warm')
+//     }
+//    for(var i = 0; i < 6; i++){
+//        newPassText.push(pawOldInp[i].value);
+//    }
+// });
+// var padNew = $(".new");
+// var pawNewInp = $(".new").find('input');
+// pawNewInp.keyup(function(event){
+//     if((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105)){
+//         $(this).parent().next().css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
+//
+//         $(this).parent().next().find('input').readOnly = false;
+//         $(this).parent().next().find('input').focus();
+//         $('.zhifumima-possword-ts-gai2').removeClass('warm')
+//     }else if(event.keyCode == 8){
+//         $(this).parent().prev('.pawDiv').css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
+//
+//         $(this).parent().prev().find('input').readOnly = false;
+//         $(this).parent().prev().find('input').focus();
+//     }else{
+//         $(this).val("");
+//         $('.zhifumima-possword-ts-gai2').addClass('warm')
+//     }
+// });
+// var padConfirm = $(".confirm");
+// var pawConfirmInp = $(".confirm").find('input');
+// var padConfirmCount = padConfirm.length;
+// pawConfirmInp.keyup(function(event){
+//     if((event.keyCode>=48 && event.keyCode<=57)||(event.keyCode>=96 && event.keyCode<=105)){
+//         $(this).parent().next().css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
+//
+//         $(this).parent().next().find('input').readOnly = false;
+//         $(this).parent().next().find('input').focus();
+//         $('.zhifumima-possword-ts-gai3').removeClass('warm')
+//     }else if(event.keyCode == 8){
+//         $(this).parent().prev('.pawDiv').css({"border":"2px solid deepskyblue"}).siblings().css({"border":""});
+//
+//         $(this).parent().prev().find('input').readOnly = false;
+//         $(this).parent().prev().find('input').focus();
+//     }else{
+//         $(this).val("");
+//         $('.zhifumima-possword-ts-gai3').addClass('warm')
+//     }
+// });
 
 
 // /*回删时选中上一个输入框事件*/
